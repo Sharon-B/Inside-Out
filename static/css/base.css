@@ -24,6 +24,10 @@ main {
     background-color: #F6F6F6;
 }
 
+#bg-color-footer {
+    background-color: #B2CAD8;
+}
+
 /*------ Logo -------*/
 #logo {
     font-family: "Playfair Display", serif;
@@ -87,7 +91,7 @@ main {
 #nav-menu {
     width: 100%;
     justify-content: center;
- }
+}
 
 /*------ Icons -------*/
 
@@ -120,6 +124,42 @@ main {
 .grand-total {
     font-size: 1.5rem;
     color: #2D3636;
+}
+
+/*------ Footer -------*/
+
+.footer {
+    min-height: 3rem;
+    position: absolute;
+    width: 100%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+#social-icon-links {
+    list-style: none;
+    text-align: right;
+    padding-top: 1rem;
+}
+
+#social-icon-links li {
+    display: inline;
+    font-size: 2rem;
+}
+
+#social-icon-links li a {
+    text-decoration: none;
+}
+
+#social-icon-links .fab {
+    font-size: 2rem;
+    padding: 1rem;
+    color:  #2D3636;
+}
+
+#social-icon-links .fab:hover {
+    opacity: .5;
 }
 
 /*----------------- Media Queries ----------------*/
