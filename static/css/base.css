@@ -70,20 +70,39 @@ main {
     border-bottom-right-radius: 1rem;
 }
 
+.search-dd-menu {
+    width: 30rem;
+    border: none;
+}
+
+#nav-menu .nav-link {
+    font-size: 1.8rem;
+    margin-right: 3rem;
+}
+
+.navbar {
+    width: 100%;
+}
+
+#nav-menu {
+    width: 100%;
+    justify-content: center;
+ }
+
 /*------ Icons -------*/
 
 .icons {
     color: #2D3636;
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
+
 
 #account .icons {
     font-size: 2.5rem;
-    margin-right: 1rem;
 }
 
 .fa-shopping-cart {
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 
 .user-account {
