@@ -121,3 +121,60 @@ main {
     font-size: 1.5rem;
     color: #2D3636;
 }
+
+/*----------------- Media Queries ----------------*/
+
+/*-- Medium Screen--*/
+@media only screen and (min-width: 768px) {
+
+    #logo-top {
+        font-size: 4rem;
+    }
+
+    #logo-bottom {
+        font-size: 2rem;
+    }
+
+    .navigation {
+        padding-top: 1.5rem;
+    }
+
+    #nav-menu .nav-link {
+        font-size: 2.6rem;
+    }
+
+    .account-status {
+        justify-content: flex-end;
+    }
+
+    .user-account {
+        margin-right: 3rem;
+    }
+    
+}
+
+/*-- Large Screen--*/
+@media only screen and (min-width: 992px) {
+
+    .user-account {
+        margin-right: 4rem;
+    }
+
+    main {
+        padding-top: 18rem;
+    }
+
+    #logo-top {
+        font-size: 5rem;
+    }
+
+    #logo-bottom {
+        font-size: 2.5rem;
+    }
+
+    #account .icons {
+        font-size: 2.5rem;
+        margin-right: 1rem;
+    }
+
+}
