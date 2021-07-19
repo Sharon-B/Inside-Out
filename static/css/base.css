@@ -79,6 +79,8 @@ main {
     background-color: #F6F6F6;
 }
 
+/*------ Navigation -------*/
+
 #nav-menu .nav-link {
     font-size: 1.8rem;
     margin-right: 3rem;
@@ -89,8 +91,28 @@ main {
 }
 
 #nav-menu {
-    width: 100%;
+    width: 95%;
     justify-content: center;
+    position: absolute;
+    background-color: #F6F6F6;
+    border: 1px solid rgba(0,0,0,.15);
+}
+
+.nav-item {
+    margin-left: 1rem;
+ }
+
+.dropdown-item {
+    font-size: 1.8rem;
+    color: #2D3636;
+ }
+
+.dd-menu {
+    background-color: #F6F6F6;                    
+ }
+
+ .navbar-light .navbar-nav .nav-link {      
+    color: #2D3636;
 }
 
 /*------ Icons -------*/
@@ -179,6 +201,14 @@ main {
         width: 24rem;
     }
 
+    .account-status {
+        justify-content: flex-end;
+    }
+
+    .user-account {
+        margin-right: 3rem;
+    }
+
     .navigation {
         padding-top: 1.5rem;
     }
@@ -186,6 +216,11 @@ main {
     #nav-menu .nav-link {
         font-size: 2.6rem;
     }
+
+    #nav-menu {                 
+        width: 100%;
+        border: none;
+     }
 
     .account-status {
         justify-content: flex-end;
