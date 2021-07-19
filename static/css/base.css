@@ -76,6 +76,7 @@ main {
 .search-dd-menu {
     width: 30rem;
     border: none;
+    background-color: #F6F6F6;
 }
 
 #nav-menu .nav-link {
@@ -174,6 +175,10 @@ main {
         font-size: 2rem;
     } */
 
+    .search-input {
+        width: 24rem;
+    }
+
     .navigation {
         padding-top: 1.5rem;
     }
@@ -214,6 +219,10 @@ main {
     #account .icons {
         font-size: 2.5rem;
         margin-right: 1rem;
+    }
+
+    .search-input {
+        width: 30rem;
     }
 
 }
