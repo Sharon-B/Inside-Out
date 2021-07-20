@@ -148,10 +148,16 @@ main {
     color: #2D3636;
 }
 
+/*------ Header Container -------*/
+
+.header-container {
+    padding-top: 16rem;
+}
+
 /*------ Hero-Image -------*/
 
 #hero-image {
-    padding-top: 16rem;
+    /* padding-top: 16rem; */
 }
 
 /*------ Footer -------*/
@@ -266,8 +272,12 @@ main {
         width: 30rem;
     }
 
+    .header-container {
+        padding-top: 18rem;
+    }
+
     #hero-image {  
-        padding-top: 15rem;                  
+        /* padding-top: 15rem; */
         max-height: 85vh;
         object-fit: cover;
     }
