@@ -174,8 +174,14 @@ main {
     margin-top: 4rem;
 }
 
+/*------ Product Cards -------*/
+
 .product-card {
     border: none;
+}
+
+.product-info {
+    font-size: 1.8rem;
 }
 
 /*------ Footer -------*/
@@ -258,6 +264,10 @@ main {
 
     .user-account {
         margin-right: 3rem;
+    }
+
+    .heading {
+        font-size: 3.2rem;
     }
     
 }
