@@ -157,7 +157,9 @@ main {
 /*------ Hero-Image -------*/
 
 #hero-image {
-    /* padding-top: 16rem; */
+    object-fit: cover;
+    max-width: 100%;
+    height: auto;
 }
 
 /*------ Footer -------*/
@@ -274,12 +276,6 @@ main {
 
     .header-container {
         padding-top: 18rem;
-    }
-
-    #hero-image {  
-        /* padding-top: 15rem; */
-        max-height: 85vh;
-        object-fit: cover;
     }
 
 }
