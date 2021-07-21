@@ -19,7 +19,8 @@ body {
 
 /*------ Colors -------*/
 
-#bg-body-color {
+#bg-body-color,
+#bg-header-color {
     background-color: #F6F6F6;
 }
 
