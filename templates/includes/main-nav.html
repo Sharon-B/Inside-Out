@@ -6,7 +6,15 @@
             <a class="nav-link" href="#">Home</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">Shop</a>
+            <div class="dropdown">
+                <span class="nav-link" id="shop-dropdown" role="button" href="" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Shop <i class="fas fa-caret-down icons"></i></span>
+                <div class="dropdown-menu dd-menu" aria-labelledby="shop-dropdown">
+                    <a class="dropdown-item dd-item" href="{% url 'products' %}?category=dining_sets,bistro_sets">Dining</a>
+                    <a class="dropdown-item dd-item" href="{% url 'products' %}?category=lounge_sets,chairs,sofas,benches">Seating</a>
+                    <a class="dropdown-item dd-item" href="{% url 'products' %}?category=new_arrivals">New Arrivals</a>
+                    <a class="dropdown-item dd-item" href="{% url 'products' %}">All Products</a>
+                </div>
+            </div>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="#">Blog</a>
