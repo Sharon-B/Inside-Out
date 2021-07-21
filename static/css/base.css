@@ -16,10 +16,6 @@ body {
     display: flex;
     flex-direction: column;
 }
-   
-main {
-    padding-top: 16rem;
-}
 
 /*------ Colors -------*/
 
@@ -227,14 +223,6 @@ main {
 /*-- Medium Screen--*/
 @media only screen and (min-width: 768px) {
 
-    /* #logo-top {
-        font-size: 4rem;
-    }
-
-    #logo-bottom {
-        font-size: 2rem;
-    } */
-
     .search-input {
         width: 24rem;
     }
@@ -258,14 +246,6 @@ main {
     #nav-menu {                 
         width: 100%;
         border: none;
-     }
-
-    .account-status {
-        justify-content: flex-end;
-    }
-
-    .user-account {
-        margin-right: 3rem;
     }
 
     .heading {
@@ -279,10 +259,6 @@ main {
 
     .user-account {
         margin-right: 4rem;
-    }
-
-    main {
-        padding-top: 18rem;
     }
 
     #logo-top {
