@@ -162,6 +162,31 @@ main {
     height: auto;
 }
 
+/*------ Headings -------*/
+
+.heading {                          
+    /* font-family: "Source Serif Pro", serif;    REMOVE GOOGLE FONT */
+    font-weight: 400;
+    font-size: 2.4rem;
+    margin: 0 auto; 
+    text-align: center;
+    margin-bottom: 3rem;
+    margin-top: 4rem;
+}
+
+/*------ Product Cards -------*/
+
+.product-card {
+    border: none;
+}
+
+.product-info {
+    font-size: 1.8rem;
+}
+
+.product-desc {
+    font-size: 1.6rem;
+}
 /*------ Footer -------*/
 
 .footer {
@@ -242,6 +267,10 @@ main {
 
     .user-account {
         margin-right: 3rem;
+    }
+
+    .heading {
+        font-size: 3.2rem;
     }
     
 }
