@@ -209,6 +209,35 @@ body {
     box-shadow: 0 1.2rem 1.6rem 0 rgba(0,0,0,0.24),0 1.7rem 5rem 0 rgba(0,0,0,0.19);
 }
 
+/*------ Products Count ------*/
+
+.products-count {
+    text-align: center;
+}
+
+.products-count,
+.products-count a,
+.products-count strong,
+#sort-selector {
+    font-size: 1.2rem;
+}
+
+.products-count a {
+    color: #0E5CA5;
+}
+
+/*------ Sort Selector Box ------*/
+
+#sort-selector {
+    padding: .2rem;
+    width: 60%;
+}
+
+.sort-select-wrapper {
+    text-align: center;
+}
+
+
 /*------ Footer -------*/
 
 .footer {
