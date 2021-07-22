@@ -187,6 +187,28 @@ body {
 .product-desc {
     font-size: 1.6rem;
 }
+
+/*------ Category Badges ------*/
+
+.category-badge {
+    margin-left: 1.5rem;
+    text-decoration: none;
+    text-align: center;
+}
+
+.category-badge .rounded-pill {
+    color: #2D3636;;
+    padding: 1rem 2rem;
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+    border: .1rem solid #2d36365c;
+}
+
+.category-badge .rounded-pill:hover {
+    transform: scale(1.1);
+    box-shadow: 0 1.2rem 1.6rem 0 rgba(0,0,0,0.24),0 1.7rem 5rem 0 rgba(0,0,0,0.19);
+}
+
 /*------ Footer -------*/
 
 .footer {
