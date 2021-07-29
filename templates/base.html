@@ -95,7 +95,7 @@
 
                         <!-- Shopping Cart -->
                         <li class="shopping-cart">
-                            <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="#">
+                            <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_cart' %}">
                                 <div>
                                     <div class="cart"><i class="fas fa-shopping-cart icons"></i></div>
                                     <p class="grand-total">
