@@ -11,5 +11,21 @@
 {% endblock %}
 
 {% block content %}
-
+    <div class="container">
+        <div class="row">
+            <div class="col page-heading">
+                <h1 class="heading">Shopping Cart</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                {% if cart_items %}
+                    <div class="table-responsive"></div>
+                {% else %}
+                    <p class="p-text">There are no items in your shopping cart.</p>
+                    <a class="btn button" href="{% url 'products' %}?category=dining_sets,bistro_set,lounge_sets,chairs,sofas,benches,new_arrivals">Continue Shopping</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
 {% endblock %}

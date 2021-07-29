@@ -162,7 +162,7 @@ body {
     height: auto;
 }
 
-/*------ Headings -------*/
+/*------ Headings/Text -------*/
 
 .heading {                          
     /* font-family: "Source Serif Pro", serif;    REMOVE GOOGLE FONT */
@@ -172,6 +172,21 @@ body {
     text-align: center;
     margin-bottom: 3rem;
     margin-top: 4rem;
+}
+
+.p-text {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+}
+
+/*------ Button -------*/
+
+.button {
+    background-color: #0e5ca53b;
+    font-size: 1.6rem;
+    border: .1rem solid #2d36362e;
+    border-radius: 2rem;
+    padding: 1rem 2rem;
 }
 
 /*------ Product Cards -------*/
