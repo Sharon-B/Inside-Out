@@ -109,7 +109,8 @@ body {
  }
 
 .dd-menu {
-    background-color: #F6F6F6;                    
+    background-color: #F6F6F6;
+    border: none;                    
  }
 
  .navbar-light .navbar-nav .nav-link {      
