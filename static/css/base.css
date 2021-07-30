@@ -24,7 +24,8 @@ body {
     background-color: #F6F6F6;
 }
 
-#bg-color-footer {
+#bg-color-footer,
+#bg-color-banner {
     background-color: #B2CAD8;
 }
 
@@ -146,6 +147,18 @@ body {
 .grand-total {
     font-size: 1.5rem;
     color: #2D3636;
+}
+
+/*------ Banner -------*/
+
+.banner {
+    padding: .5rem;
+}
+
+.banner-text, 
+.banner-text strong {
+    font-size: 1.8rem;
+    margin: auto;
 }
 
 /*------ Header Container -------*/
@@ -288,8 +301,7 @@ body {
     opacity: .5;
 }
 
-/*----------------- Media Queries ----------------*/
-
+/*------------------- Media Queries ------------------*/
 /*-- Medium Screen--*/
 @media only screen and (min-width: 768px) {
 
@@ -316,6 +328,10 @@ body {
     #nav-menu {                 
         width: 100%;
         border: none;
+    }
+
+    .banner {
+        margin-top: 2rem;
     }
 
     .heading {
