@@ -195,6 +195,10 @@ body {
     margin-bottom: 2rem;
 }
 
+.text-bold {
+    font-weight: 600;
+}
+
 /*------ Button -------*/
 
 .button {
