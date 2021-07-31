@@ -48,7 +48,33 @@
                                 </a>
                             </p>
                         {% endif %}
-                        
+                        <!-- Add to Cart -->
+                        <form class="form" action="" method="POST">
+                            {% csrf_token %}
+                            <div class="form-row">
+                                <!-- Quantity select -->
+                                <div class="col-12 quantity">
+                                    <p class="p-text text-bold">Quantity:</p>
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <input class="form-control qty_input" type="number" name="quantity"
+                                                value="1" min="1" max="99" data-item_id="{{ product.id }}"
+                                                id="id_qty_{{ product.id }}">
+                                        </div>
+                                    </div>
+                                </div> 
+                                <div class="col">
+                                    <!-- Continue shopping button -->
+                                    <a href="{% url 'products' %}" class="shopping-btn btn">
+                                        <span class="p-text">Continue Shopping</span>
+                                    </a>
+                                    <!-- Add to cart button -->
+                                    <input type="submit" class="btn button" value="Add to cart">
+                                </div>
+                                <!-- Hidden redirect -->
+                                <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
