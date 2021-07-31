@@ -20,7 +20,9 @@
         <div class="row">
             <div class="col">
                 {% if cart_items %}
-                    <div class="table-responsive"></div>
+                    <div class="table-responsive">
+                        {{ cart_items }}
+                    </div>
                 {% else %}
                     <p class="p-text">There are no items in your shopping cart.</p>
                     <a class="btn button" href="{% url 'products' %}?category=dining_sets,bistro_set,lounge_sets,chairs,sofas,benches,new_arrivals">Continue Shopping</a>
