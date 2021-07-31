@@ -293,8 +293,13 @@ body {
 
 /*------ Shopping Cart -------*/
 
-.cart-items td p {
+.cart-items td p,
+.cart-quantity {
     padding: 3rem 0;
+}
+
+.cart-quantity {
+    width: 80%;
 }
 
 .cart-item-img {
