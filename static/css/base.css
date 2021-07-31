@@ -293,12 +293,16 @@ body {
 
 /*------ Shopping Cart -------*/
 
-.cart-items td p,
-.cart-quantity {
+.cart-items td p {
     padding: 3rem 0;
 }
 
 .cart-quantity {
+    padding-top: 3rem;
+}
+
+.cart-quantity,
+.update-remove {
     width: 80%;
 }
 
@@ -309,6 +313,16 @@ body {
 .cart-img {
     padding: 3rem;
 }
+
+.update-remove {
+    padding-top: 1rem;
+}
+
+.update-link,
+.remove-item {
+    cursor: pointer;
+}
+
 
 /*------ Footer -------*/
 
