@@ -20,8 +20,65 @@
         <div class="row">
             <div class="col">
                 {% if cart_items %}
-                    <div class="table-responsive">
-                        {{ cart_items }}
+                    <div class="table-responsive-lg">
+                        <table class="table table-borderless">
+                            <thead>
+                                <tr>
+                                    <th class="p-text text-bold" scope="col">Product Info</th>
+                                    <th class="p-text text-bold" scope="col"></th>
+                                    <th class="p-text text-bold" scope="col">Price</th>
+                                    <th class="p-text text-bold" scope="col">Qty</th>
+                                    <th class="p-text text-bold" scope="col">Subtotal</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                {% for item in cart_items %}
+                                    <tr class="cart-items">
+                                        <td class="cart-item-img">
+                                            <img class="img-fluid cart-img" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+                                        </td>
+                                        <td>
+                                            <p class="p-text text-bold">{{ item.product.name }}</p>
+                                        </td>
+                                        <td>
+                                            <p class="p-text">€{{ item.product.price }}</p>
+                                        </td>
+                                        <td>
+                                            <p class="p-text">{{ item.quantity }}</p>
+                                        </td>
+                                        <td>
+                                            <p class="p-text">€{{ item.product.price }}</p>
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                                <tr class="cart-total">
+                                    <td colspan="5" class="text-end">
+                                            <p class="p-text text-bold">Cart Total: ${{ total|floatformat:2 }}</p>
+                                            <p class="p-text">Delivery: ${{ delivery|floatformat:2 }}</p>
+                                            <p class="p-text text-bold">Grand Total: ${{ grand_total|floatformat:2 }}</p>
+                                            {% if free_delivery_delta > 0 %}
+                                                <p class="text-info">
+                                                    You could get free delivery by spending just <strong>€{{ free_delivery_delta }}</strong> more!
+                                                </p>
+                                            {% endif %}
+                                    </td>
+                                </tr>
+                                <tr class="cart-buttons">
+                                    <td colspan="5" class="text-end">
+                                        <!-- Continue shopping button -->
+                                        <a href="{% url 'products' %}?category=dining_sets,bistro_set,lounge_sets,chairs,sofas,benches,new_arrivals" class="shopping-btn btn">
+                                            <span class="p-text">Continue Shopping</span>
+                                        </a>
+                                        <!-- Checkout button -->
+                                        <a href="" class="button btn">
+                                            <span class="p-text">Checkout</span>
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+
+                        </table>
                     </div>
                 {% else %}
                     <p class="p-text">There are no items in your shopping cart.</p>

@@ -291,6 +291,19 @@ body {
     text-align: center;
 }
 
+/*------ Shopping Cart -------*/
+
+.cart-items td p {
+    padding: 3rem 0;
+}
+
+.cart-item-img {
+    width: 30%;
+}
+
+.cart-img {
+    padding: 3rem;
+}
 
 /*------ Footer -------*/
 
