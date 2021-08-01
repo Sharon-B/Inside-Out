@@ -20,7 +20,8 @@ body {
 /*------ Colors -------*/
 
 #bg-body-color,
-#bg-header-color {
+#bg-header-color,
+.bg-toast-color {
     background-color: #F6F6F6;
 }
 
@@ -28,6 +29,7 @@ body {
 #bg-color-banner {
     background-color: #B2CAD8;
 }
+
 
 /*------ Logo -------*/
 #logo {
@@ -330,6 +332,14 @@ body {
     top: 7.2rem;
     right: 1.5rem;
     z-index: 9999;
+}
+
+.toast-capper {
+    height: .5rem;
+}
+
+.custom-toast {
+    overflow: visible;
 }
 
 
