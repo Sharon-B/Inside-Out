@@ -200,14 +200,32 @@ body {
     font-weight: 600;
 }
 
-/*------ Button -------*/
+/*------ Buttons -------*/
 
 .button {
     background-color: #0e5ca53b;
     font-size: 1.6rem;
     border: .1rem solid #2d36362e;
     border-radius: 2rem;
-    padding: 1rem 2rem;
+    padding: .8rem 1.8rem;
+}
+
+.shopping-btn {
+    font-size: 1.6rem;
+    border: .1rem solid #2d36362e;
+    border-radius: 2rem;
+    padding: .8rem 1.8rem;
+    margin-right: 1rem;
+}
+
+/*------ Quantity selector -------*/
+
+.quantity {
+    margin: 2rem 0;
+}
+
+.quantity .input-group {
+    width: 30%;
 }
 
 /*------ Product Cards -------*/
@@ -271,6 +289,38 @@ body {
 
 .sort-select-wrapper {
     text-align: center;
+}
+
+/*------ Shopping Cart -------*/
+
+.cart-items td p {
+    padding: 3rem 0;
+}
+
+.cart-quantity {
+    padding-top: 3rem;
+}
+
+.cart-quantity,
+.update-remove {
+    width: 80%;
+}
+
+.cart-item-img {
+    width: 30%;
+}
+
+.cart-img {
+    padding: 3rem;
+}
+
+.update-remove {
+    padding-top: 1rem;
+}
+
+.update-link,
+.remove-item {
+    cursor: pointer;
 }
 
 
