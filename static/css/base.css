@@ -323,6 +323,15 @@ body {
     cursor: pointer;
 }
 
+/*------ Toast Messages -------*/
+
+.message-container {
+    position: fixed;
+    top: 7.2rem;
+    right: 1.5rem;
+    z-index: 9999;
+}
+
 
 /*------ Footer -------*/
 
