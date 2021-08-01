@@ -370,6 +370,11 @@ body {
     border-bottom-color: #17a2b8 !important;
 }
 
+.cart-preview {
+    height: 15rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
 
 /*------ Footer -------*/
 

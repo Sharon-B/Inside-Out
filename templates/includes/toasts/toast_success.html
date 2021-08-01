@@ -10,6 +10,39 @@
     </div>
     <!-- Toast Body-->
     <div class="toast-body p-text bg-toast-color">
-        {{ message }}
+        <div class="row">
+            <div class="col">
+                {{ message }}
+            </div>
+        </div>
+        {% if grand_total %}
+            <p class="p-text">Your Cart ({{ product_count }})</p>
+            <div class="cart-preview">
+                {% for item in cart_items %}
+                <div class="row">
+                    <div class="col-3">
+                        <img class="img-fluid" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+                    </div>
+                    <div class="col-9">
+                        <p class="p-text text-bold">{{ item.product.name }}</p>
+                        <p class="p-text">Qty: {{ item.quantity }}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p class="p-text text-bold">Total{% if free_delivery_delta > 0 %}(Exc. Delivery){% endif %}:
+                        <span class="p-text float-end">€{{ total|floatformat:2 }}</span>
+                    </p>
+                    {% if free_delivery_delta > 0 %}
+                        <p class="p-text">Spend €{{ free_delivery_delta }} more for <strong>FREE</strong> delivery.
+                        </p>
+                    {% endif %}
+                    <a href="{% url 'view_cart' %}" class="button btn">View Cart</a>
+
+                </div>
+            </div>
+        {% endif %}
     </div>
 </div>
