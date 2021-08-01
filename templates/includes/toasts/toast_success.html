@@ -9,9 +9,9 @@
         </button>
     </div>
     <!-- Toast Body-->
-    <div class="toast-body p-text bg-toast-color">
+    <div class="toast-body">
         <div class="row">
-            <div class="col">
+            <div class="col p-text">
                 {{ message }}
             </div>
         </div>
@@ -39,8 +39,7 @@
                         <p class="p-text">Spend €{{ free_delivery_delta }} more for <strong>FREE</strong> delivery.
                         </p>
                     {% endif %}
-                    <a href="{% url 'view_cart' %}" class="button btn">View Cart</a>
-
+                    <a href="{% url 'view_cart' %}" class="button btn w-100">View Cart</a>
                 </div>
             </div>
         {% endif %}
