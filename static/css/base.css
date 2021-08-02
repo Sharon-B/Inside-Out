@@ -199,7 +199,8 @@ body {
 
 .p-text {
     font-size: 1.6rem;
-    margin-bottom: 2rem;
+    /* margin-bottom: 2rem; */
+    margin-bottom: 1rem;
 }
 
 .text-bold {
@@ -337,9 +338,10 @@ body {
 
 .message-container {
     position: fixed;
-    top: 9rem;
-    right: 5rem;
+    top: 15rem;
+    right: 1rem;
     z-index: 9999;
+    width: 90%;
 }
 
 .toast-capper {
@@ -445,7 +447,16 @@ body {
     .sort-select-wrapper {
         text-align: right;
     }
-    
+
+    .message-container {
+        top: 9rem;
+        right: 3rem;
+        width: 40%;
+    }
+
+    .cart-preview {
+        height: 30rem;
+    }
 }
 
 /*-- Large Screen--*/
@@ -483,4 +494,16 @@ body {
         font-size: 1.4rem;
     }
 
+    .message-container {
+        width: 30%;
+    }
+
+}
+
+/*-- X-Large Screen--*/
+@media only screen and (min-width: 1200px) {
+
+    .message-container {
+        width: 20%;
+    }
 }
