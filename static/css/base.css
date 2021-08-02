@@ -150,6 +150,12 @@ body {
     font-size: 1.5rem;
 }
 
+.shopping-cart a:hover,
+#account:hover {
+    transform: scale(1.1);
+    color: #2D3636;
+}
+
 /*------ Banner -------*/
 
 .banner {
