@@ -342,38 +342,15 @@ body {
     overflow: visible;
 }
 
-/* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
-.arrow-up {
-    width: 0; 
-    height: 0; 
-    border-left: 2rem solid transparent;
-    border-right: 2rem solid transparent; 
-    border-bottom: 1rem solid black;
-    position: absolute;
-    top: -1rem;
-    right: 1.5rem;
-}
-
-.arrow-success {
-    border-bottom-color: #28a745 !important;
-}
-
-.arrow-danger {
-    border-bottom-color: #dc3545 !important;
-}
-
-.arrow-warning {
-    border-bottom-color: #ffc107 !important;
-}
-
-.arrow-info {
-    border-bottom-color: #17a2b8 !important;
-}
-
 .cart-preview {
     height: 15rem;
     overflow-x: hidden;
     overflow-y: auto;
+}
+
+.toast-product-info {
+    display: flex;
+    justify-content: space-between;
 }
 
 /*------ Footer -------*/

@@ -1,15 +1,18 @@
 <!-- Bootstrap Toast -->
 <div class="toast bg-toast-color custom-toast" role="alert" data-bs-autohide="false" aria-live="assertive" aria-atomic="true">
-    <div class="arrow-up arrow-info"></div>
     <div class="toast-capper bg-info"></div>
     <!-- Toast Header -->
     <div class="toast-header bg-toast-color">
-        <strong class="me-auto p-text">Alert!</strong>
-        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close">
+        <p class="me-auto p-text text-bold">Alert!</p>
+        <button type="button" class="btn-close p-text" data-bs-dismiss="toast" aria-label="Close">
         </button>
     </div>
     <!-- Toast Body-->
-    <div class="toast-body p-text">
-        {{ message }}
+    <div class="toast-body">
+        <div class="row">
+            <div class="col p-text">
+                {{ message }}
+            </div>
+        </div>
     </div>
 </div>
