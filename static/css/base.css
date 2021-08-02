@@ -126,7 +126,6 @@ body {
     font-size: 2rem;
 }
 
-
 #account .icons {
     font-size: 2.5rem;
 }
@@ -149,7 +148,6 @@ body {
 
 .grand-total {
     font-size: 1.5rem;
-    color: #2D3636;
 }
 
 /*------ Banner -------*/
@@ -200,6 +198,10 @@ body {
 
 .text-bold {
     font-weight: 600;
+}
+
+.text-color {
+    color: #2D3636;
 }
 
 /*------ Buttons -------*/
