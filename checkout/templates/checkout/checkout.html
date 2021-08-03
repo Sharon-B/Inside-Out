@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
+{% endblock %}
+
+{% block page_header %}
+    <div class="header-container container">
+        <div class="row">
+            <div class="col">
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col page-heading">
+                <h1 class="heading">Checkout</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p class="p-text">Please enter your details below</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}
