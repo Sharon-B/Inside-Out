@@ -1,0 +1,17 @@
+fieldset {
+    margin-bottom: 1.8rem;
+    border-radius: 1.5rem 4rem;
+    padding: 2rem 2rem 2rem 2rem;
+    background-color: #B2CAD8;
+}
+
+legend {
+    font-weight: 600;
+    font-size: 2rem;
+    padding-bottom: 1rem;
+}
+
+.checkout-btn {
+    background-color: #0E5CA5;
+    color: #f6f6f6;
+}
