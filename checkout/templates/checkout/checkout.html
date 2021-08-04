@@ -24,6 +24,53 @@
             </div>
         </div>
         <div class="row">
+            <!-- Order Summary -->
+            <div class="col-12 col-md-6 order-md-last">
+            <p class="p-text">Order Summary</p>
+                <div class="row">
+                    <div class="col">
+                        <p class="p-text text-bold">Item</p>
+                    </div>
+                    <div class="col">
+                        <p class="p-text text-bold">Subtotal</p>
+                    </div>
+                </div>
+                <!-- Items in cart -->
+                {% for item in cart_items %}
+                    <div class="row">
+                        <div class="col-2">
+                            <a href="{% url 'product_detail' item.product.id %}">
+                                {% if item.product.image %}
+                                    <img src="{{ item.product.image.url }}" alt="{{ product.name }}" class="img-fluid">
+                                {% else %}
+                                    <img src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}" class="img-fluid">
+                                {% endif %}
+                            </a>
+                        </div>
+                        <div class="col-7">
+                            <p class="p-text text-bold">{{ item.product.name }}</p>
+                            <p class="p-text">Qty: {{ item.quantity }}</p>
+                        </div>
+                        <div class="col-3">
+                            <p class="p-text text-bold">€{{ item.product.price | calc_subtotal:item.quantity }}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+                <!-- Price Totals -->
+                <div class="row summary-totals">
+                    <div class="col-7 offset-2">
+                        <p class="p-text">Order Total:</p>
+                        <p class="p-text">Delivery:</p>
+                        <p class="p-text">Grand Total:</p>
+                    </div>
+                    <div class="col-3">
+                        <p class="p-text">€{{ total | floatformat:2 }}</p>
+                        <p class="p-text">€{{ delivery | floatformat:2 }}</p>
+                        <p class="p-text text-bold">€{{ grand_total | floatformat:2 }}</p>
+                    </div>
+                </div>
+            </div>
+
             <div class="col-12 col-md-6 payment-form">
                 <!-- Checkout payment form -->
                 <p class="p-text">Please enter your details below</p>
