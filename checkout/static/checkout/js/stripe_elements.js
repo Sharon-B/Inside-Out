@@ -1,9 +1,8 @@
-
+// Set up Stripe card element
 let stripe_public_key = $('#id_stripe_public_key').text().slice(1, -1)
 let client_secret = $('#id_client_secret').text().slice(1, -1)
 
 let stripe = Stripe(stripe_public_key);
-
 let elements = stripe.elements();
 
 let style = {
@@ -21,8 +20,21 @@ let style = {
         iconColor: '#dc3545'
     }
 };
-
 let card = elements.create('card', {style: style});
-
 card.mount('#card-element');
 
+// Handle realtime validation errors on the card element
+card.addEventListener('change', function (event) {
+    let errorDiv = document.getElementById('card-errors');
+    if (event.error) {
+        let html = `
+            <span class="icons text-danger" role="alert">
+                <i class="fas fa-times"></i>
+            </span>
+            <span>${event.error.message}</span>
+        `;
+        $(errorDiv).html(html);
+    } else {
+        errorDiv.textContent = '';
+    }
+});
