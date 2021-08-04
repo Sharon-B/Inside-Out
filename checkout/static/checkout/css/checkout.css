@@ -1,0 +1,55 @@
+#payment-form .form-control,
+#card-element {
+    color: #2D3636;
+    border: .1rem solid #0E5CA5;
+}
+
+fieldset {
+    margin-bottom: 1.8rem;
+    border-radius: 1.5rem 4rem;
+    padding: 2rem 2rem 2rem 2rem;
+    background-color: #B2CAD8;
+}
+
+legend {
+    font-weight: 600;
+    font-size: 2rem;
+    padding-bottom: 1rem;
+}
+
+#payment-form label,
+.card-charge-warning > span,
+.form-check-label > a {
+    font-size: 1.6rem;
+}
+
+.card-charge-warning {
+    margin-top: 1rem;
+}
+
+.checkout-btn {
+    background-color: #0E5CA5;
+    color: #f6f6f6;
+}
+
+.summary-totals {
+    margin: 2rem 1rem;
+    border: .1rem solid #0E5CA5;
+    width: 90%;
+    padding-right: 3rem;
+}
+
+.checkout-items {
+    margin-bottom: 2rem;
+}
+
+
+/*------------------- Media Queries ------------------*/
+/*-- Medium Screen--*/
+@media only screen and (min-width: 768px) {
+
+    .checkout-submit,
+    fieldset {
+        width: 80%;
+    }
+}
