@@ -25,19 +25,19 @@
         </div>
         <div class="row">
             <!-- Order Summary -->
-            <div class="col-12 col-md-6 order-md-last">
-            <p class="p-text">Order Summary</p>
+            <div class="col-12 col-md-6 order-md-last order-summary">
+            <p class="p-text text-center text-bold">Order Summary</p>
                 <div class="row">
                     <div class="col">
-                        <p class="p-text text-bold">Item</p>
+                        <p class="p-text text-center">Item</p>
                     </div>
                     <div class="col">
-                        <p class="p-text text-bold">Subtotal</p>
+                        <p class="p-text text-center">Subtotal</p>
                     </div>
                 </div>
                 <!-- Items in cart -->
                 {% for item in cart_items %}
-                    <div class="row">
+                    <div class="row checkout-items">
                         <div class="col-2">
                             <a href="{% url 'product_detail' item.product.id %}">
                                 {% if item.product.image %}
@@ -59,9 +59,9 @@
                 <!-- Price Totals -->
                 <div class="row summary-totals">
                     <div class="col-7 offset-2">
-                        <p class="p-text">Order Total:</p>
-                        <p class="p-text">Delivery:</p>
-                        <p class="p-text">Grand Total:</p>
+                        <p class="p-text text-bold">Order Total:</p>
+                        <p class="p-text text-bold">Delivery:</p>
+                        <p class="p-text text-bold">Grand Total:</p>
                     </div>
                     <div class="col-3">
                         <p class="p-text">€{{ total | floatformat:2 }}</p>
@@ -115,7 +115,7 @@
                     </fieldset>
                     
                     <!-- Submit -->
-                    <div class="text-end">
+                    <div class="text-end checkout-submit">
                         <a href="{% url 'view_cart' %}" class="btn shopping-btn">
                             <span class="p-text">Update Cart</span>
                         </a>
