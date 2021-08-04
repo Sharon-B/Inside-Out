@@ -27,7 +27,7 @@
             <div class="col-12 col-md-6 payment-form">
                 <!-- Checkout payment form -->
                 <p class="p-text">Please enter your details below</p>
-                <form method="POST" action="{% url 'checkout' %}" id="payment=form">
+                <form method="POST" action="{% url 'checkout' %}" id="payment-form">
                     {% csrf_token %}
                     <!-- User Details -->
                     <fieldset>
