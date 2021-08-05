@@ -28,9 +28,14 @@ def checkout(request):
         currency=settings.STRIPE_CURRENCY,
     )
 
-    print(intent)       # Test Payment Intent is created
+    # print(intent)       # Test Payment Intent is created
 
     order_form = OrderForm()
+
+    if not stripe_public_key:
+        messages.warning(request, 'Stripe public key not found. \
+            Are you sure you set it in your environment?')
+
     template = 'checkout/checkout.html'
     context = {
         'order_form': order_form,
