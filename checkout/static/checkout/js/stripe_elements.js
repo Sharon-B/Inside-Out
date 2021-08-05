@@ -1,8 +1,8 @@
 // Set up Stripe card element
-let stripe_public_key = $('#id_stripe_public_key').text().slice(1, -1)
-let client_secret = $('#id_client_secret').text().slice(1, -1)
+let stripePublicKey = $('#id_stripe_public_key').text().slice(1, -1)
+let clientSecret = $('#id_client_secret').text().slice(1, -1)
 
-let stripe = Stripe(stripe_public_key);
+let stripe = Stripe(stripePublicKey);
 let elements = stripe.elements();
 
 let style = {
@@ -37,4 +37,37 @@ card.addEventListener('change', function (event) {
     } else {
         errorDiv.textContent = '';
     }
+});
+
+// Add event listener for form submit
+let form = document.getElementById('payment-form');
+form.addEventListener('submit', function(ev) {
+    ev.preventDefault();
+    card.update({'disabled': true});
+    $('#submit-button').attr('disabled', true);
+
+    stripe.confirmCardPayment(clientSecret, {
+        payment_method: {
+            card: card,
+        }
+    }).then(function(result) {
+        // if theres an error show the error message
+        if (result.error) {
+            let errorDiv = document.getElementById('card-errors');
+            let html = `
+                <span class="icons text-danger" role="alert">
+                    <i class="fas fa-times"></i>
+                </span>
+                <span>${result.error.message}</span>`;
+            $(errorDiv).html(html);
+            // re-enable the card element & submit button so user can rectify the error
+            card.update({'disabled': false});
+            $('#submit-button').attr('disabled', false);
+        } else {
+            // if payment intent succeeds submit the form
+            if (result.paymentIntent.status === 'succeeded') {
+                form.submit();
+            }
+        }
+    });
 });
