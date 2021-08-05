@@ -73,6 +73,21 @@ legend {
     margin-bottom: 2rem;
 }
 
+.order-confirmation {
+    border: .1rem solid #0E5CA5;
+    border-radius: 2rem;
+    padding: 3rem;
+    margin-bottom: 3rem;
+}
+
+.billing-info {
+    margin-top: 2rem;
+}
+
+.cs-button-wrapper {
+    margin-top: 2rem;
+}
+
 
 /*------------------- Media Queries ------------------*/
 /*-- Medium Screen--*/
@@ -81,5 +96,9 @@ legend {
     .checkout-submit,
     fieldset {
         width: 80%;
+    }
+
+    .billing-info {
+        margin-top: 0;
     }
 }
