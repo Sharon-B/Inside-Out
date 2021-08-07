@@ -133,4 +133,20 @@
             </div>
         </div>
     </div>
+
+    <!-- Payment processing overlay -->
+    <div id="processing-overlay">
+        <div class="processing-spinner">
+            <i class="fas fa-spinner fa-spin fa-3x"></i>
+            <p class="p-text"> Processing...</p>
+        </div>
+    </div>
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    <!-- Render stripe template variables using json_script filter -->
+    {{ stripe_public_key|json_script:"id_stripe_public_key" }}
+    {{ client_secret|json_script:"id_client_secret" }}
+    <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
 {% endblock %}
