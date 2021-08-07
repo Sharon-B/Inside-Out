@@ -45,6 +45,8 @@ form.addEventListener('submit', function(ev) {
     ev.preventDefault();
     card.update({'disabled': true});
     $('#submit-button').attr('disabled', true);
+    $('#payment-form').fadeToggle(100);
+    $('#processing-overlay').fadeToggle(100);
 
     stripe.confirmCardPayment(clientSecret, {
         payment_method: {
@@ -63,6 +65,8 @@ form.addEventListener('submit', function(ev) {
             // re-enable the card element & submit button so user can rectify the error
             card.update({'disabled': false});
             $('#submit-button').attr('disabled', false);
+            $('#payment-form').fadeToggle(100);
+            $('#processing-overlay').fadeToggle(100);
         } else {
             // if payment intent succeeds submit the form
             if (result.paymentIntent.status === 'succeeded') {
