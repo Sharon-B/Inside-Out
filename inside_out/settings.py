@@ -84,6 +84,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',    # Required to access the HTTP request object
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.media',
                 'cart.contexts.cart_contents',
             ],
             'builtins': [               
