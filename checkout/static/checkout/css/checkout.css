@@ -88,6 +88,29 @@ legend {
     margin-top: 2rem;
 }
 
+/*----- Processing Overlay ------*/
+
+#processing-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #f6f6f6;
+    background: rgba(14, 92, 165, .8);
+    z-index: 9999;
+}
+
+.processing-spinner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    margin: 0;
+    height: 100%;
+}
+
 
 /*------------------- Media Queries ------------------*/
 /*-- Medium Screen--*/
