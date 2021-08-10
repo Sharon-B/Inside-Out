@@ -56,6 +56,8 @@ class StripeWH_Handler:
                     postcode__iexact=shipping_details.address.postal_code,
                     country__iexact=shipping_details.address.country,
                     grand_total=grand_total,
+                    original_cart=cart,
+                    stripe_pid=pid,
                 )
 
                 order_exists = True
@@ -81,6 +83,8 @@ class StripeWH_Handler:
                     county=shipping_details.address.state,
                     postcode=shipping_details.address.postal_code,
                     country=shipping_details.address.country,
+                    original_cart=cart,
+                    stripe_pid=pid,
                 )
                 for item_id, quantity in json.loads(cart).items():
                     product = get_object_or_404(Product, pk=item_id)
