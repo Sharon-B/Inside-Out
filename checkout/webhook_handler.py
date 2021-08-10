@@ -1,4 +1,9 @@
 from django.http import HttpResponse
+from django.shortcuts import get_object_or_404
+from .models import Order, OrderLineItem
+from products.models import Product
+
+import json
 
 
 class StripeWH_Handler:
@@ -22,7 +27,67 @@ class StripeWH_Handler:
         Handle the payment_intent.succeeded webhook from Stripe
         """
         intent = event.data.object
-        print(intent)       # Test payment intent contains the form data
+        # print(intent)       # Test payment intent contains the form data
+        pid = intent.id
+        cart = intent.metadata.cart
+        save_info = intent.metadata.save_info
+
+        billing_details = intent.charges.data[0].billing_details
+        shipping_details = intent.shipping
+        grand_total = round(intent.charges.data[0].amount / 100, 2)
+
+        for field, value in shipping_details.address.items():
+            if value == "":
+                shipping_details.address[field] = None
+
+        order_exists = False
+        try:
+            order = Order.objects.get(
+                full_name__iexact=shipping_details.name,
+                email__iexact=billing_details.email,
+                phone_number__iexact=shipping_details.phone,
+                street_address1__iexact=shipping_details.address.line1,
+                street_address2__iexact=shipping_details.address.line2,
+                city_town__iexact=shipping_details.address.city,
+                county__iexact=shipping_details.address.state,
+                postcode__iexact=shipping_details.address.postal_code,
+                country__iexact=shipping_details.address.country,
+                grand_total=grand_total,
+            )
+
+            order_exists = True
+            return HttpResponse(
+                    content=f'Webhook received: {event["type"]} | Success: Verified order already exists in database',
+                    status=200)
+
+        except Order.DoesNotExist:
+            try:
+                order = Order.objects.create(
+                    full_name=shipping_details.name,
+                    email=billing_details.email,
+                    phone_number=shipping_details.phone,
+                    street_address1=shipping_details.address.line1,
+                    street_address2=shipping_details.address.line2,
+                    city_town=shipping_details.address.city,
+                    county=shipping_details.address.state,
+                    postcode=shipping_details.address.postal_code,
+                    country=shipping_details.address.country,
+                )
+                for item_id, quantity in json.loads(cart).items():
+                    product = get_object_or_404(Product, pk=item_id)
+                    order_line_item = OrderLineItem(
+                        order=order,
+                        product=product,
+                        quantity=quantity,
+                    )
+                    order_line_item.save()
+            except Exception as e:
+                if order:
+                    order.delete()
+                return HttpResponse(
+                    content=f'Webhook received: {event["type"]} | Error: {e}',
+                    status=500)
+
         return HttpResponse(
             content=f'Webhook received: {event["type"]}',
             status=200)
