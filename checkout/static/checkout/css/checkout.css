@@ -32,6 +32,7 @@
 #card-element {
     color: #2D3636;
     border: .1rem solid #0E5CA5;
+    font-size: 1.6rem;
 }
 
 fieldset {
@@ -87,6 +88,22 @@ legend {
 .cs-button-wrapper {
     margin-top: 2rem;
 }
+
+#payment-form select {
+    font-size: 1.6rem;
+}
+
+select,
+select option {
+    color: #2D3636;
+}
+
+select:invalid,
+select option[value=""] {
+    color: #aab7c4 !important;
+}
+
+
 
 /*----- Processing Overlay ------*/
 
