@@ -149,7 +149,7 @@ class StripeWH_Handler:
 
         self._send_confirmation_email(order)
         return HttpResponse(
-            content=f'Webhook received: {event["type"]}',
+            content=f'Webhook received: {event["type"]} | Success: Order created in webhook',
             status=200)
 
     def handle_payment_intent_payment_failed(self, event):
@@ -157,5 +157,5 @@ class StripeWH_Handler:
         Handle the payment_intent.payment_failed webhook from Stripe
         """
         return HttpResponse(
-            content=f'Webhook received: {event["type"]} | Success: Order created in webhook',
+            content=f'Webhook received: {event["type"]}',
             status=200)
