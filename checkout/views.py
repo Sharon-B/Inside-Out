@@ -86,8 +86,25 @@ def checkout(request):
         )
 
         # print(intent)       # Test Payment Intent is created
+        if request.user.is_authenticated:
+            try:
+                profile = UserProfile.objects.get(user=request.user)
+                order_form = OrderForm(initial={
+                    'full_name': profile.default_full_name,
+                    'email': profile.default_email,
+                    'phone_number': profile.default_phone_number,
+                    'street_address1': profile.default_street_address1,
+                    'street_address2': profile.default_street_address2,
+                    'city_town': profile.default_city_town,
+                    'county': profile.default_county,
+                    'country': profile.default_country,
+                    'postcode': profile.default_postcode,
+                })
+            except UserProfile.DoesNotExist:
+                order_form = OrderForm()
 
-        order_form = OrderForm()
+        else:
+            order_form = OrderForm()
 
     if not stripe_public_key:
         messages.warning(request, 'Stripe public key not found. \
@@ -117,6 +134,8 @@ def checkout_success(request, order_number):
         # Save users info
         if save_info:
             profile_data = {
+                'default_full_name': order.full_name,
+                'default_email': order.email,
                 'default_phone_number': order.phone_number,
                 'default_street_address1': order.street_address1,
                 'default_street_address2': order.street_address2,
