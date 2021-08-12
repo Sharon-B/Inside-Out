@@ -14,7 +14,7 @@
                 {{ message }}
             </div>
         </div>
-        {% if grand_total %}
+        {% if grand_total and not on_profile_page %}
             <p class="p-text text-bold">Your Cart ({{ product_count }})</p>
             <div class="cart-preview">
                 {% for item in cart_items %}

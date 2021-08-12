@@ -1,0 +1,33 @@
+#update-profile-form label {
+    font-size: 1.6rem;
+}
+
+.profile-form-input {
+    color: #2D3636;
+    border: .1rem solid #0E5CA5;
+    font-size: 1.6rem;
+    border-radius: 1.5rem;
+    width: 80%;
+}
+
+.profile-form-input::placeholder {
+    color: #aab7c4;
+    font-size:  1.4rem;
+}
+
+#id_default_country,
+#id_default_country option:not(:first-child) {
+    color: #2D3636;
+}
+
+#id_default_country option:first-child {
+    color: #aab7c4;
+}
+
+.order-history {
+    max-height: 64rem;
+    overflow: auto;
+    border: .1rem solid #0E5CA5;
+    border-radius: 2rem;
+    padding: 3rem;
+}
