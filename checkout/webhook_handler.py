@@ -73,7 +73,7 @@ class StripeWH_Handler:
         username = intent.metadata.username
         if username != 'AnonymousUser':
             profile = UserProfile.objects.get(user__username=username)
-            if save_info:
+            if save_info is True:
                 profile.default_full_name = shipping_details.name,
                 profile.default_email = billing_details.email,
                 profile.default_phone_number = shipping_details.phone,
