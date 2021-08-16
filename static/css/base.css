@@ -197,6 +197,11 @@ body {
     margin-top: 4rem;
 }
 
+.sub-heading {
+    font-size: 2.2rem;
+    margin: 1rem;
+}
+
 .p-text {
     font-size: 1.6rem;
     /* margin-bottom: 2rem; */
@@ -363,6 +368,12 @@ body {
     justify-content: space-between;
 }
 
+/*------ Form -------*/
+
+.form {
+    margin: 1rem;
+}
+
 /*------ Footer -------*/
 
 .footer-buffer {
@@ -494,6 +505,10 @@ body {
 
     .cart-preview {
         height: 30rem;
+    }
+
+    .form {
+        width: 80%;
     }
 }
 
