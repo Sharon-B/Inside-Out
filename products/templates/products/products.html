@@ -76,6 +76,14 @@
                                 <div class="card-body">
                                     <p class="product-info">{{ product.name }}</p>
                                     <p class="product-info">€{{ product.price }}</p>
+                                    <!-- Product edit/delete links -->
+                                    {% if request.user.is_superuser %}
+                                        <div class="edit-delete-links">
+                                            <a href="{% url 'edit_product' product.id %}" class="edit-link text-blue">Edit</a>
+                                            <span> | </span>
+                                            <a href="{% url 'delete_product' product.id %}" class="delete-link text-danger">Delete</a>
+                                        </div>
+                                    {% endif %}
                                 </div>
                             </div>
                         </div>
