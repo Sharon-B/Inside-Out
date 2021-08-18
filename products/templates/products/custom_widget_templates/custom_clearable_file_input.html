@@ -1,0 +1,19 @@
+<!-- Custom widget template for ImageField in ProductForm -->
+{% if widget.is_initial %}
+    <p>{{ widget.initial_text }}:</p> 
+    <a href="{{ widget.value.url }}">
+        <img width="96" height="96" src="{{ widget.value.url }}" alt="">
+    </a>
+    {% if not widget.required %}
+        <div class="custom-control custom-checkbox">
+            <input class="custom-control-input" type="checkbox" name="{{ widget.checkbox_name }}" id="{{ widget.checkbox_id }}"{% if widget.attrs.disabled %} disabled{% endif %}>
+            <label class="custom-control-label text-danger" for="{{ widget.checkbox_id }}">{{ widget.clear_checkbox_label }}</label>
+        </div>
+    {% endif %}<br>
+    {{ widget.input_text }}
+{% endif %}
+<span class="btn button btn-file">
+    <label for="new-image">Select Image</label>
+    <input id="new-image" type="{{ widget.type }}" name="{{ widget.name }}"{% include "django/forms/widgets/attrs.html" %}>
+</span>
+<p class="text-bold text-danger" id="filename"></p>
