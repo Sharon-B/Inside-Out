@@ -97,3 +97,22 @@ def add_product(request):
     }
 
     return render(request, template, context)
+
+
+# Edit Product
+def edit_product(request, product_id):
+    """
+    Allow an admin user to edit a product to the store
+    """
+    product = get_object_or_404(Product, pk=product_id)
+    form = ProductForm(instance=product)
+    messages.info(request, f'Editing {product.name}')
+
+    template = 'products/edit_product.html'
+
+    context = {
+        'form': form,
+        'product': product,
+    }
+
+    return render(request, template, context)
