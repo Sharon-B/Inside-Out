@@ -197,6 +197,11 @@ body {
     margin-top: 4rem;
 }
 
+.sub-heading {
+    font-size: 2.2rem;
+    margin: 1rem;
+}
+
 .p-text {
     font-size: 1.6rem;
     /* margin-bottom: 2rem; */
@@ -361,6 +366,61 @@ body {
 .toast-product-info {
     display: flex;
     justify-content: space-between;
+}
+
+/*------ Form -------*/
+
+.form {
+    margin: 1rem;
+}
+
+.form-control,
+.form-select,
+.form-label {
+    font-size: 1.6rem;
+}
+
+.form-select,
+.form-control {
+    border-radius: 1.5rem;
+}
+
+/*------ Product Form -------*/
+
+.custom-widget {
+    margin: 3rem 0;
+}
+
+.btn-file label {
+    margin: 0;
+}
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-file input[type="file"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.custom-checkbox {
+    margin-top: 2rem;
+}
+
+.custom-checkbox .custom-control-label::before {
+    border-color: #dc3545;
+}
+
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    background-color: #dc3545;
+    border-color: #dc3545;
 }
 
 /*------ Footer -------*/
@@ -543,5 +603,9 @@ body {
 
     .message-container {
         width: 20%;
+    }
+
+    .form {
+        width: 80%;
     }
 }

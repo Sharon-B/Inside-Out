@@ -1,8 +1,10 @@
 from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 from .models import Product, Category
+from .forms import ProductForm
 
 
 # Create your views here.
@@ -70,3 +72,88 @@ def product_detail(request, product_id):
         'product': product,
     }
     return render(request, 'products/product_detail.html', context)
+
+
+# Product Admin:
+# Add Product
+@login_required
+def add_product(request):
+    """
+    Allow an admin user to add a product to the store
+    """
+    if request.user.is_superuser:
+
+        if request.method == 'POST':
+            form = ProductForm(request.POST, request.FILES)
+            if form.is_valid():
+                product = form.save()
+                messages.success(request, 'Product added successfully!')
+                return redirect(reverse('product_detail', args=[product.id]))
+            else:
+                messages.error(request, 'Please check the form for errors. Product failed to add.')
+        else:
+            form = ProductForm()
+
+    else:
+        messages.error(request, 'Sorry, you do not have permission for that.')
+        return redirect(reverse('home'))
+
+    template = 'products/add_product.html'
+
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
+
+
+# Edit Product
+@login_required
+def edit_product(request, product_id):
+    """
+    Allow an admin user to edit a product to the store
+    """
+    if request.user.is_superuser:
+
+        product = get_object_or_404(Product, pk=product_id)
+
+        if request.method == 'POST':
+            form = ProductForm(request.POST, request.FILES, instance=product)
+            if form.is_valid():
+                form.save()
+                messages.success(request, 'Product updated successfully!')
+                return redirect(reverse('product_detail', args=[product.id]))
+            else:
+                messages.error(request, 'Please check the form for errors. Product failed to update.')
+        else:
+            form = ProductForm(instance=product)
+            messages.info(request, f'Editing {product.name}')
+    else:
+        messages.error(request, 'Sorry, you do not have permission for that.')
+        return redirect(reverse('home'))
+
+    template = 'products/edit_product.html'
+
+    context = {
+        'form': form,
+        'product': product,
+    }
+
+    return render(request, template, context)
+
+
+# Delete Product
+@login_required
+def delete_product(request, product_id):
+    """
+    Allow an admin user to delete a product from the store
+    """
+    if request.user.is_superuser:
+        product = get_object_or_404(Product, pk=product_id)
+        product.delete()
+        messages.success(request, 'Product deleted!')
+    else:
+        messages.error(request, 'Sorry, you do not have permission for that.')
+        return redirect(reverse('home'))
+
+    return redirect(reverse('products'))

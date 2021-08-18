@@ -20,7 +20,11 @@
                 {% for item in cart_items %}
                 <div class="row">
                     <div class="col-4">
-                        <img class="img-fluid" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+                        {% if item.product.image %}
+                            <img class="img-fluid" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+                        {% else %}
+                            <img class="img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}">
+                        {% endif %}
                     </div>
                     <div class="col-8">
                         <p class="p-text text-bold">{{ item.product.name }}</p>

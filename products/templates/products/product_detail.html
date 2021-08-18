@@ -48,6 +48,14 @@
                                 </a>
                             </p>
                         {% endif %}
+                        <!-- Product edit/delete links -->
+                        {% if request.user.is_superuser %}
+                            <div class="edit-delete-links">
+                                <a href="{% url 'edit_product' product.id %}" class="edit-link text-blue">Edit</a>
+                                <span> | </span>
+                                <a href="{% url 'delete_product' product.id %}" class="delete-link text-danger">Delete</a>
+                            </div>
+                        {% endif %}
                         <!-- Add to Cart -->
                         <form class="form" action="{% url 'add_to_cart' product.id %}" method="POST">
                             {% csrf_token %}
