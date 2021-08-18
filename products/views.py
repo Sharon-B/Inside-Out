@@ -126,3 +126,15 @@ def edit_product(request, product_id):
     }
 
     return render(request, template, context)
+
+
+# Delete Product
+def delete_product(request, product_id):
+    """
+    Allow an admin user to delete a product from the store
+    """
+    product = get_object_or_404(Product, pk=product_id)
+    product.delete()
+    messages.success(request, 'Product deleted!')
+
+    return redirect(reverse('products'))
