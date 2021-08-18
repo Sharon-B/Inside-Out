@@ -79,7 +79,16 @@ def add_product(request):
     """
     Allow an admin user to add a product to the store
     """
-    form = ProductForm()
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Product added successfully!')
+            return redirect(reverse('add_product'))
+        else:
+            messages.error(request, 'Please check the form for errors. Product failed to add.')
+    else:
+        form = ProductForm()
 
     template = 'products/add_product.html'
 
