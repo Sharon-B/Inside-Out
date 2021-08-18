@@ -374,7 +374,26 @@ body {
     margin: 1rem;
 }
 
+.form-control,
+.form-select,
+.form-label {
+    font-size: 1.6rem;
+}
+
+.form-select,
+.form-control {
+    border-radius: 1.5rem;
+}
+
 /*------ Product Form -------*/
+
+.custom-widget {
+    margin: 3rem 0;
+}
+
+.btn-file label {
+    margin: 0;
+}
 
 .btn-file {
     position: relative;
@@ -389,6 +408,10 @@ body {
     min-height: 100%;
     opacity: 0;
     cursor: pointer;
+}
+
+.custom-checkbox {
+    margin-top: 2rem;
 }
 
 .custom-checkbox .custom-control-label::before {
@@ -532,10 +555,6 @@ body {
     .cart-preview {
         height: 30rem;
     }
-
-    .form {
-        width: 80%;
-    }
 }
 
 /*-- Large Screen--*/
@@ -584,5 +603,9 @@ body {
 
     .message-container {
         width: 20%;
+    }
+
+    .form {
+        width: 80%;
     }
 }
