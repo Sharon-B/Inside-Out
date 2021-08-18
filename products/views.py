@@ -105,8 +105,18 @@ def edit_product(request, product_id):
     Allow an admin user to edit a product to the store
     """
     product = get_object_or_404(Product, pk=product_id)
-    form = ProductForm(instance=product)
-    messages.info(request, f'Editing {product.name}')
+
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES, instance=product)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Product updated successfully!')
+            return redirect(reverse('product_detail', args=[product.id]))
+        else:
+            messages.error(request, 'Please check the form for errors. Product failed to update.')
+    else:
+        form = ProductForm(instance=product)
+        messages.info(request, f'Editing {product.name}')
 
     template = 'products/edit_product.html'
 
