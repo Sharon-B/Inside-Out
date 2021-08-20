@@ -66,8 +66,24 @@ def add_blog_post(request):
     """
     Allow an admin user to add a blog post
     """
+    if request.user.is_superuser:
 
-    form = BlogForm()
+        if request.method == 'POST':
+            form = BlogForm(request.POST, request.FILES)
+            if form.is_valid():
+                blog_post = form.save(commit=False)
+                blog_post.user = request.user
+                blog_post.save()
+                messages.success(request, 'Blog added successfully!')
+                return redirect(reverse('blog_detail', args=[blog_post.id]))
+            else:
+                messages.error(request, 'Please check the form for errors. \
+                    Blog failed to add.')
+        else:
+            form = BlogForm()
+    else:
+        messages.error(request, 'Sorry, you do not have permission for that.')
+        return redirect(reverse('home'))
 
     template = 'blog/add_blog.html'
 
