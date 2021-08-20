@@ -34,12 +34,12 @@
                         <!-- Bootstrap Card -->
                         <div class="card blog-card h-100">
                             {% if blog_post.image %}
-                            <a href="#">
-                                <img src="{{ post.image.url }}" alt="{{ post.title }}" class="card-img-top img-fluid">
+                            <a href="{% url 'blog_detail' blog_post.id %}">
+                                <img src="{{ blog_post.image.url }}" alt="{{ blog_post.title }}" class="card-img-top img-fluid">
                             </a>
                             {% else %}
-                            <a href="#">
-                                <img src="{{ MEDIA_URL }}noimage.png" alt="{{ post.title }}" class="card-img-top img-fluid">
+                            <a href="{% url 'blog_detail' blog_post.id %}">
+                                <img src="{{ MEDIA_URL }}noimage.png" alt="{{ blog_post.title }}" class="card-img-top img-fluid">
                             </a>
                             {% endif %}
                             <div class="card-body">
