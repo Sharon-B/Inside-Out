@@ -1,7 +1,8 @@
 from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from .models import BlogPost
-from .forms import BlogCommentForm
+from .forms import BlogCommentForm, BlogForm
 
 
 # All blog posts view
@@ -53,6 +54,25 @@ def blog_detail(request, blog_post_id):
         'comments': comments,
         'comment_form': comment_form,
         'new_comment': new_comment,
+    }
+
+    return render(request, template, context)
+
+
+# Blog Admin:
+# Add blog
+@login_required
+def add_blog_post(request):
+    """
+    Allow an admin user to add a blog post
+    """
+
+    form = BlogForm()
+
+    template = 'blog/add_blog.html'
+
+    context = {
+        'form': form,
     }
 
     return render(request, template, context)
