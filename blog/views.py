@@ -22,14 +22,16 @@ def all_blog_posts(request):
 # Blog detail view
 def blog_detail(request, blog_post_id):
     """
-    A view to show individual blog post.
+    A view to show individual blog post and comments.
     """
     blog_post = get_object_or_404(BlogPost, pk=blog_post_id)
+    comments = blog_post.comments.all()
 
     template = 'blog/blog_detail.html'
 
     context = {
         'blog_post': blog_post,
+        'comments': comments,
     }
 
     return render(request, template, context)
