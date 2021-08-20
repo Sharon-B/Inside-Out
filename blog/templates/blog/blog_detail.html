@@ -46,6 +46,29 @@
                 </div>
             </div>
         </div>
+
+        <!-- Comments -->
+        <div class="row comments-container">
+            <div class="col-12 col-md-4 offset-md-4 mt-3 mb-3">
+                <span class="sub-heading">Comments</span>
+                <span class="p-text text-end ms-auto">{{ comments.count }}</span>
+            </div>
+            {% for comment in comments %}   
+                <div class="row">
+                    <div class="col-12 col-md-6 offset-md-3">
+                        <div class="card mb-3">
+                            <div class="card-header">
+                                <p class="p-text text-bold">{{ comment.user }}'s Comment</p>
+                                <p class="text-muted text-end">{{ comment.created_on }}</p>
+                            </div>
+                            <div class="card-body">
+                                <p class="p-text">{{ comment.comment }}</p>
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
         
     </div> 
 {% endblock %}
