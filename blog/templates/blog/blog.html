@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_title %}- Blog{% endblock %}
+
+{% block page_header %}
+    <div class="header-container container">
+        <div class="row">
+            <div class="col">
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <!-- Page Heading -->
+                <div class="col page-heading">
+                    <h1 class="heading">Inspiration</h1>
+                    <p class="p-text">Welcome to our inspiration blog, where you can find creative ideas for creating and maintaining your outside room.
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col product-container col-10 offset-1">
+                <!-- Blog Posts -->
+                <div class="row">
+                    {% for blog_post in blog_posts %}
+                    <div class="col-12 col-md-6 col-lg-4 col-xl-3 g-4">
+                        <!-- Bootstrap Card -->
+                        <div class="card blog-card h-100">
+                            {% if blog_post.image %}
+                            <a href="#">
+                                <img src="{{ post.image.url }}" alt="{{ post.title }}" class="card-img-top img-fluid">
+                            </a>
+                            {% else %}
+                            <a href="#">
+                                <img src="{{ MEDIA_URL }}noimage.png" alt="{{ post.title }}" class="card-img-top img-fluid">
+                            </a>
+                            {% endif %}
+                            <div class="card-body">
+                                <p class="blog-info sub-heading">{{ blog_post.title }}</p>
+                                <p class="blog-info p-text">{{ blog_post.body_text|slice:":200" }}</p>
+                                <p class="blog-info text-muted">{{ blog_post.user }} | {{ blog_post.created_on}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>                    
+            </div>
+        </div>
+    </div>
+{% endblock %}
