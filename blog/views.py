@@ -1,4 +1,5 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect, reverse
+from django.contrib import messages
 from .models import BlogPost
 from .forms import BlogCommentForm
 
@@ -23,12 +24,27 @@ def all_blog_posts(request):
 # Blog detail view
 def blog_detail(request, blog_post_id):
     """
-    A view to show individual blog post and comments.
+    A view to show individual blog post, comments
+    and to allow logged in users to leave a comment.
     """
     blog_post = get_object_or_404(BlogPost, pk=blog_post_id)
     comments = blog_post.comments.all()
+    new_comment = None
 
-    comment_form = BlogCommentForm()
+    if request.method == 'POST':
+        comment_form = BlogCommentForm(request.POST)
+        if comment_form.is_valid():
+            new_comment = comment_form.save(commit=False)
+            new_comment.blog_post = blog_post
+            new_comment.user = request.user
+            new_comment.save()
+            messages.success(request, 'Comment added successfully!')
+            return redirect(reverse('blog_detail', args=[blog_post.id]))
+        else:
+            messages.error(request, 'Please check the form for errors. \
+                Comment failed to post.')
+    else:
+        comment_form = BlogCommentForm()
 
     template = 'blog/blog_detail.html'
 
@@ -36,6 +52,7 @@ def blog_detail(request, blog_post_id):
         'blog_post': blog_post,
         'comments': comments,
         'comment_form': comment_form,
+        'new_comment': new_comment,
     }
 
     return render(request, template, context)
