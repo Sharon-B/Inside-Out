@@ -3,6 +3,10 @@
 
 {% block extra_title %}- {{ blog_post.title }}{% endblock %}
 
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'blog/css/blog.css' %}">
+{% endblock %}
+
 {% block page_header %}
     <div class="header-container container">
         <div class="row">
@@ -41,11 +45,11 @@
             
             <div class="col-12 col-md-8 offset-md-2">
                 <div class="blog-details-container">
-                    <p class="blog-info p-text mt-3">{{ blog_post.body_text }}</p>
-                    <p class="blog-info text-muted text-end">{{ blog_post.user }} | {{ blog_post.created_on}}</p>
+                    <p class="blog-info mt-5">{{ blog_post.body_text | linebreaks }}</p>
+                    <p class="blog-info text-muted mt-4 text-end">{{ blog_post.user }} | {{ blog_post.created_on}}</p>
                     <!-- Blog edit/delete links -->
                     {% if request.user.is_superuser %}
-                        <div class="edit-delete-links">
+                        <div class="edit-delete-links text-end">
                             <a href="{% url 'edit_blog' blog_post.id %}" class="edit-link text-blue">Edit</a>
                             <span> | </span>
                             <a href="{% url 'delete_blog_post' blog_post.id %}" class="delete-link text-danger">Delete</a>
