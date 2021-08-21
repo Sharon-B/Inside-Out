@@ -71,6 +71,9 @@
                             </div>
                             <div class="card-body">
                                 <p class="p-text">{{ comment.comment }}</p>
+                                {% if request.user.is_superuser %}
+                                    <a href="{% url 'delete_comment' comment.id %}" class="delete-link text-danger">Delete</a>
+                                {% endif %}
                             </div>  
                         </div>
                     </div>
