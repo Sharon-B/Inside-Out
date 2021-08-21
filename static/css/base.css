@@ -234,6 +234,13 @@ body {
     margin-right: 1rem;
 }
 
+/*------ Links -------*/
+
+.edit-link,
+.delete-link {
+    font-size: 1.4rem;
+}
+
 /*------ Quantity selector -------*/
 
 .quantity {
