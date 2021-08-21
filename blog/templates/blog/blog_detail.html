@@ -43,6 +43,14 @@
                 <div class="blog-details-container">
                     <p class="blog-info p-text mt-3">{{ blog_post.body_text }}</p>
                     <p class="blog-info text-muted text-end">{{ blog_post.user }} | {{ blog_post.created_on}}</p>
+                    <!-- Blog edit/delete links -->
+                    {% if request.user.is_superuser %}
+                        <div class="edit-delete-links">
+                            <a href="{% url 'edit_blog' blog_post.id %}" class="edit-link text-blue">Edit</a>
+                            <span> | </span>
+                            <a href="#" class="delete-link text-danger">Delete</a>
+                        </div>
+                    {% endif %}
                 </div>
             </div>
         </div>
