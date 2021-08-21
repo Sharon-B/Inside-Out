@@ -128,3 +128,20 @@ def edit_blog(request, blog_post_id):
     }
 
     return render(request, template, context)
+
+
+# Delete Blog Post
+@login_required
+def delete_blog_post(request, blog_post_id):
+    """
+    Allow an admin user to delete a blog post
+    """
+    if request.user.is_superuser:
+        blog_post = get_object_or_404(BlogPost, pk=blog_post_id)
+        blog_post.delete()
+        messages.success(request, 'Blog post deleted!')
+    else:
+        messages.error(request, 'Sorry, you do not have permission for that.')
+        return redirect(reverse('home'))
+
+    return redirect(reverse('blog'))
