@@ -51,7 +51,7 @@
                                     <div class="edit-delete-links">
                                         <a href="{% url 'edit_blog' blog_post.id %}" class="edit-link text-blue">Edit</a>
                                         <span> | </span>
-                                        <a href="#" class="delete-link text-danger">Delete</a>
+                                        <a href="{% url 'delete_blog_post' blog_post.id %}" class="delete-link text-danger">Delete</a>
                                     </div>
                                 {% endif %}
                             </div>
