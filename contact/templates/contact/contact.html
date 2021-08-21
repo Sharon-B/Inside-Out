@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_title %}- Contact Us{% endblock %}
+
+{% block page_header %}
+    <div class="header-container container">
+        <div class="row">
+            <div class="col">
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+
+        <div class="row">
+            <div class="col page-heading">
+                <h1 class="heading">Contact Us</h1>
+            </div>
+        </div>
+    
+        <div class="row">
+            <div class="col-12 col-md-8 offset-md-2">
+                <div>
+                    <form action="{% url 'contact' %}" method="POST" class="form">
+                        {% csrf_token %}
+                        {{ contact_form|crispy }}
+                        <div class="text-end">
+                            <button id="submit-button" class="btn button checkout-btn">
+                                <span class="p-text text-bold">Send Message</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+{% endblock %}
