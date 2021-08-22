@@ -381,6 +381,7 @@ body {
 .update-link,
 .remove-item {
     cursor: pointer;
+    font-size: 1.4rem;
 }
 
 /*------ Toast Messages -------*/
