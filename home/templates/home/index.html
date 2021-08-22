@@ -16,4 +16,54 @@
         <img class="card-img" id="hero-image" src="/media/hero-image-hp.png" alt="Outdoor patio area with a sofa, 2 chairs and 2 footstools surrounding a coffee table, all on a rug and with some potted plants at the sides.">
     </div>
 
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <!-- Page Heading -->
+                <div class="col page-heading">
+                    <h1 class="heading">New Arrivals</h1>
+                </div>
+            </div>
+        </div>
+        <!-- New Arrivals -->
+        <div class="row card-container">
+            {% for new_arrival in new_arrivals %}
+                <div class="col-12 col-md-6 col-lg-4 col-xl-3 g-4">
+                    <!-- Bootstrap Card -->
+                    <div class="card product-card h-100">
+                        {% if new_arrival.image %}
+                            <a href="{% url 'product_detail' new_arrival.id %}">
+                                <img src="{{ new_arrival.image.url }}" alt="{{ new_arrival.name }}" class="card-img-top img-fluid">
+                            </a>
+                        {% else %}
+                            <a href="{% url 'product_detail' new_arrival.id %}">
+                                <img src="{{ MEDIA_URL }}noimage.png" alt="{{ new_arrival.name }}" class="card-img-top img-fluid">
+                            </a>
+                        {% endif %}
+                        <div class="card-body">
+                            <p class="product-info">{{ new_arrival.name }}</p>
+                            <p class="product-info">€{{ new_arrival.price }}</p>
+                            <!-- Product edit/delete links -->
+                            {% if request.user.is_superuser %}
+                                <div class="edit-delete-links">
+                                    <a href="{% url 'edit_product' new_arrival.id %}" class="edit-link text-blue">Edit</a>
+                                    <span> | </span>
+                                    <a href="{% url 'delete_product' new_arrival.id %}" class="delete-link text-danger">Delete</a>
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div> 
+        <!-- New Arrivals button -->
+        <div class="row">
+            <div class="col text-center mt-4">
+                <a href="{% url 'products' %}?category=new_arrivals" class="button btn dark-bg-btn">
+                    <span class="p-text">Shop All New Arrivals</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
 {% endblock %}
