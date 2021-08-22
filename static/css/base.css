@@ -296,6 +296,20 @@ body {
     text-decoration: none;
 }
 
+.category-link:hover,
+.edit-link:hover,
+.delete-link:hover {
+    text-decoration: underline;
+}
+
+.edit-link:hover {
+    color: #0E5CA5;
+}
+
+.delete-link:hover {
+    color: #AE093E;
+}
+
 /*------ Quantity selector -------*/
 
 .quantity {
@@ -415,6 +429,20 @@ body {
 .remove-item {
     cursor: pointer;
     font-size: 1.4rem;
+    text-decoration: none;
+}
+
+.update-link:hover,
+.remove-item:hover {
+    text-decoration: underline;
+}
+
+.update-link:hover {
+    color: #0E5CA5;
+}
+
+.remove-item:hover {
+    color: #AE093E;
 }
 
 /*------ Toast Messages -------*/
