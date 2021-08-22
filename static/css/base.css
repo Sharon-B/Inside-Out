@@ -522,12 +522,12 @@ body {
 }
 
 .custom-checkbox .custom-control-label::before {
-    border-color: #dc3545;
+    border-color: #AE093E;
 }
 
 .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
-    background-color: #dc3545;
-    border-color: #dc3545;
+    background-color: #AE093E;
+    border-color: #AE093E;
 }
 
 /*------ Footer -------*/
