@@ -189,22 +189,23 @@ body {
 }
 
 .heading {                          
-    /* font-family: "Source Serif Pro", serif;    REMOVE GOOGLE FONT */
-    font-weight: 400;
-    font-size: 2.4rem;
+    font-family: "Playfair Display", serif;
+    font-weight: 500;
+    font-size: 3.2rem;
     margin: 0 auto; 
     margin-bottom: 3rem;
     margin-top: 4rem;
+    color: #0E5CA5;
 }
 
 .sub-heading {
     font-size: 2.2rem;
     margin: 1rem;
+    color: #0E5CA5;
 }
 
 .p-text {
     font-size: 1.6rem;
-    /* margin-bottom: 2rem; */
     margin-bottom: 1rem;
 }
 
@@ -578,7 +579,7 @@ body {
     }
 
     .heading {
-        font-size: 3.2rem;
+        font-size: 3.6rem;
     }
 
     .products-count {
@@ -622,6 +623,14 @@ body {
 
     .search-input {
         width: 30rem;
+    }
+
+    .heading {
+        font-size: 4rem;
+    }
+
+    .p-text {
+        font-size: 1.8rem;
     }
 
     #sort-selector {
