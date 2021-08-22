@@ -43,7 +43,7 @@
                         <!-- Category -->
                         {% if product.category %}
                             <p class="small mt-0">
-                                <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
+                                <a class="text-muted category-link" href="{% url 'products' %}?category={{ product.category.name }}">
                                     {{ product.category.display_name }}
                                 </a>
                             </p>

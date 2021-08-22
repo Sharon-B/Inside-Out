@@ -256,6 +256,7 @@ body {
 
 /*------ Links -------*/
 
+.category-link,
 .edit-link,
 .delete-link {
     font-size: 1.4rem;
@@ -269,6 +270,11 @@ body {
 
 .quantity .input-group {
     width: 30%;
+}
+
+.increment-qty,
+.decrement-qty {
+    font-size: 1.6rem;
 }
 
 /*------ Product Cards -------*/
