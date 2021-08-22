@@ -285,6 +285,16 @@ body {
     font-size: 1.6rem;
 }
 
+.card-img-top {
+    height: 21rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.card {
+    background-color: #f6f6f6;
+}
+
 /*------ Category Badges ------*/
 
 .category-badge {
