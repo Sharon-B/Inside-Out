@@ -89,11 +89,11 @@
                                 </div> 
                                 <div class="col">
                                     <!-- Continue shopping button -->
-                                    <a href="{% url 'products' %}" class="shopping-btn btn">
+                                    <a href="{% url 'products' %}" class="btn button no-bg-btn">
                                         <span class="p-text">Continue Shopping</span>
                                     </a>
                                     <!-- Add to cart button -->
-                                    <input type="submit" class="btn button" value="Add to cart">
+                                    <input type="submit" class="btn button dark-bg-btn text-bold" value="Add to cart">
                                 </div>
                                 <!-- Hidden redirect -->
                                 <input type="hidden" name="redirect_url" value="{{ request.path }}">
