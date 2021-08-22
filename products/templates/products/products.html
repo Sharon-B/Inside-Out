@@ -63,13 +63,13 @@
                 <!-- Bootstrap Card -->
                 <div class="card product-card h-100">
                     {% if product.image %}
-                    <a href="{% url 'product_detail' product.id %}">
-                        <img src="{{ product.image.url }}" alt="{{ product.name }}" class="card-img-top img-fluid">
-                    </a>
+                        <a href="{% url 'product_detail' product.id %}">
+                            <img src="{{ product.image.url }}" alt="{{ product.name }}" class="card-img-top img-fluid">
+                        </a>
                     {% else %}
-                    <a href="{% url 'product_detail' product.id %}">
-                        <img src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}" class="card-img-top img-fluid">
-                    </a>
+                        <a href="{% url 'product_detail' product.id %}">
+                            <img src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}" class="card-img-top img-fluid">
+                        </a>
                     {% endif %}
                     <div class="card-body">
                         <p class="product-info">{{ product.name }}</p>
