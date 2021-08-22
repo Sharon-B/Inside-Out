@@ -74,6 +74,12 @@ body {
 .search-button {
     border-top-right-radius: 1rem;
     border-bottom-right-radius: 1rem;
+    border-top-left-radius: 0rem !important;
+    border-bottom-left-radius: 0rem !important;
+}
+
+.fa-search {
+    font-size: 1.4rem;
 }
 
 .search-dd-menu {
