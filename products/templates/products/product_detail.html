@@ -51,9 +51,9 @@
                     <!-- Product edit/delete links -->
                     {% if request.user.is_superuser %}
                         <div class="edit-delete-links">
-                            <a href="{% url 'edit_product' product.id %}" class="edit-link text-blue">Edit</a>
+                            <a href="{% url 'edit_product' product.id %}" class="edit-link info-text">Edit</a>
                             <span> | </span>
-                            <a href="{% url 'delete_product' product.id %}" class="delete-link text-danger">Delete</a>
+                            <a href="{% url 'delete_product' product.id %}" class="delete-link error-text">Delete</a>
                         </div>
                     {% endif %}
                     <!-- Add to Cart -->

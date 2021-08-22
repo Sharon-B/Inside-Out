@@ -42,7 +42,7 @@
 </li>
 <!-- Shopping Cart -->
 <li class="shopping-cart col-3 d-block d-md-none">
-    <a class="{% if grand_total %}text-blue font-weight-bold{% else %}text-color{% endif %} nav-link" href="{% url 'view_cart' %}">
+    <a class="{% if grand_total %}info-text font-weight-bold{% else %}text-color{% endif %} nav-link" href="{% url 'view_cart' %}">
         <div>
             <div class="cart"><i class="fas fa-shopping-cart"></i></div>
             <p class="grand-total">

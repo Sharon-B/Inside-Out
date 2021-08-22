@@ -33,11 +33,11 @@
                 <div class="blog-image-container">
                     {% if blog_post.image %}
                         <a href="{{ blog_post.image.url }}" target="_blank">
-                            <img src="{{ blog_post.image.url }}" alt="{{ blog_post.title }}" class="card-img-top img-fluid">
+                            <img src="{{ blog_post.image.url }}" alt="{{ blog_post.title }}" class="img-fluid">
                         </a>
                     {% else %}
                         <a href="{{ MEDIA_URL }}noimage.png" target="_blank">
-                            <img src="{{ MEDIA_URL }}noimage.png" alt="{{ blog_post.title }}" class="card-img-top img-fluid">
+                            <img src="{{ MEDIA_URL }}noimage.png" alt="{{ blog_post.title }}" class="img-fluid">
                         </a>
                     {% endif %}
                 </div>
@@ -50,9 +50,9 @@
                     <!-- Blog edit/delete links -->
                     {% if request.user.is_superuser %}
                         <div class="edit-delete-links text-end">
-                            <a href="{% url 'edit_blog' blog_post.id %}" class="edit-link text-blue">Edit</a>
+                            <a href="{% url 'edit_blog' blog_post.id %}" class="edit-link info-text">Edit</a>
                             <span> | </span>
-                            <a href="{% url 'delete_blog_post' blog_post.id %}" class="delete-link text-danger">Delete</a>
+                            <a href="{% url 'delete_blog_post' blog_post.id %}" class="delete-link error-text">Delete</a>
                         </div>
                     {% endif %}
                 </div>
@@ -76,7 +76,7 @@
                             <div class="card-body">
                                 <p class="p-text">{{ comment.comment }}</p>
                                 {% if request.user.is_superuser %}
-                                    <a href="{% url 'delete_comment' comment.id %}" class="delete-link text-danger">Delete</a>
+                                    <a href="{% url 'delete_comment' comment.id %}" class="delete-link error-text">Delete</a>
                                 {% endif %}
                             </div>  
                         </div>
@@ -89,8 +89,8 @@
                     <div class="col-12 col-md-6 offset-md-3">
                         {% if request.user.is_anonymous %}
                             <p class="p-text">Please
-                                <a class="text-blue p-text" href="{% url 'account_login' %}"> Login </a> or
-                                <a class="text-blue p-text" href="{% url 'account_signup' %}">Signup</a>
+                                <a class="info-text p-text" href="{% url 'account_login' %}"> Login </a> or
+                                <a class="info-text p-text" href="{% url 'account_signup' %}">Signup</a>
                                 to add a comment.</p>
                         {% else %}
                             <form id="comment-form" method="POST" action="{% url 'blog_detail' blog_post.id %}">

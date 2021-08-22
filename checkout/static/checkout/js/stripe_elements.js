@@ -28,7 +28,7 @@ card.addEventListener('change', function (event) {
     let errorDiv = document.getElementById('card-errors');
     if (event.error) {
         let html = `
-            <span class="icons text-danger" role="alert">
+            <span class="icons error-text" role="alert">
                 <i class="fas fa-times"></i>
             </span>
             <span>${event.error.message}</span>
@@ -95,7 +95,7 @@ form.addEventListener('submit', function(ev) {
             if (result.error) {
                 let errorDiv = document.getElementById('card-errors');
                 let html = `
-                    <span class="icons text-danger" role="alert">
+                    <span class="icons error-text" role="alert">
                         <i class="fas fa-times"></i>
                     </span>
                     <span>${result.error.message}</span>`;

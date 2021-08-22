@@ -30,6 +30,21 @@ body {
     background-color: #B2CAD8;
 }
 
+.success-bg {
+    background-color: #097485;
+}
+
+.error-bg {
+    background-color: #AE093E;
+}
+
+.info-bg {
+    background-color: #0E5CA5;
+}
+
+.warning-bg {
+    background-color: #875531;
+}
 
 /*------ Logo -------*/
 #logo {
@@ -221,6 +236,23 @@ body {
     color: #2D3636;
 }
 
+.success-text {
+    color: #097485;
+}
+
+.error-text {
+    color: #AE093E;
+}
+
+.info-text {
+    color: #0E5CA5;
+}
+
+.warning-text {
+    color: #875531;
+}
+
+
 /*------ Buttons -------*/
 
 .button {               
@@ -261,6 +293,7 @@ body {
 .edit-link,
 .delete-link {
     font-size: 1.4rem;
+    text-decoration: none;
 }
 
 /*------ Quantity selector -------*/
