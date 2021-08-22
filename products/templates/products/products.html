@@ -13,85 +13,81 @@
 {% endblock %}
 
 {% block content %}
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <!-- Page Heading -->
-                    <div class="col page-heading">
-                        <h1 class="heading">Products</h1>
-                    
-                        <!-- Category Badges using bootstrap badge -->
-                        {% for c in current_categories %}
-                        <a class="category-badge" href="{% url 'products' %}?category={{ c.name }}">
-                            <span class="badge rounded-pill">{{ c.display_name }}</span>
-                        </a>
-                        {% endfor %}
-                    </div>
-                </div>
-            </div>
-            
-            <div class="row">
-                <div class="col product-container col-10 offset-1">
-                    <div class="row">
-                        <!-- Link to all products and product count -->
-                        <div class="col-12 col-md-6">
-                            <p class="text-muted products-count">
-                                {% if search_term or current_categories or current_sorting != 'None_None' %}
-                                    <span><a href="{% url 'products' %}?category=dining_sets,bistro_set,lounge_sets,chairs,sofas,benches,new_arrivals">All Products</a> | </span>
-                                {% endif %}
-                                {{ products|length }} Products{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
-                            </p>
-                        </div>
-                        <!-- Sort Selector Box -->
-                        <div class="col-12 col-md-6">
-                            <div class="sort-select-wrapper">
-                                <select id="sort-selector" class="custom-select custom-select-sm border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
-                                    <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
-                                    <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
-                                    <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
-                                    <option value="category_asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>Category (A-Z)</option>
-                                    <option value="category_desc" {% if current_sorting == 'category_desc' %}selected{% endif %}>Category (Z-A)</option>
-                                    <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)</option>
-                                    <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name (Z-A)</option>
-                                    
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Product Cards -->
-                    <div class="row">
-                        {% for product in products %}
-                        <div class="col-12 col-md-6 col-lg-4 col-xl-3 g-4">
-                            <!-- Bootstrap Card -->
-                            <div class="card product-card h-100">
-                                {% if product.image %}
-                                <a href="{% url 'product_detail' product.id %}">
-                                    <img src="{{ product.image.url }}" alt="{{ product.name }}" class="card-img-top img-fluid">
-                                </a>
-                                {% else %}
-                                <a href="{% url 'product_detail' product.id %}">
-                                    <img src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}" class="card-img-top img-fluid">
-                                </a>
-                                {% endif %}
-                                <div class="card-body">
-                                    <p class="product-info">{{ product.name }}</p>
-                                    <p class="product-info">€{{ product.price }}</p>
-                                    <!-- Product edit/delete links -->
-                                    {% if request.user.is_superuser %}
-                                        <div class="edit-delete-links">
-                                            <a href="{% url 'edit_product' product.id %}" class="edit-link text-blue">Edit</a>
-                                            <span> | </span>
-                                            <a href="{% url 'delete_product' product.id %}" class="delete-link text-danger">Delete</a>
-                                        </div>
-                                    {% endif %}
-                                </div>
-                            </div>
-                        </div>
-                        {% endfor %}
-                    </div>                    
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <!-- Page Heading -->
+                <div class="col page-heading">
+                    <h1 class="heading">Products</h1>
+
+                    <!-- Category Badges using bootstrap badge -->
+                    {% for c in current_categories %}
+                    <a class="category-badge" href="{% url 'products' %}?category={{ c.name }}">
+                        <span class="badge rounded-pill">{{ c.display_name }}</span>
+                    </a>
+                    {% endfor %}
                 </div>
             </div>
         </div>
+        
+        <div class="row">
+            <!-- Link to all products and product count -->
+            <div class="col-12 col-md-6">
+                <p class="text-muted products-count">
+                    {% if search_term or current_categories or current_sorting != 'None_None' %}
+                        <span><a href="{% url 'products' %}?category=dining_sets,bistro_set,lounge_sets,chairs,sofas,benches,new_arrivals">All Products</a> | </span>
+                    {% endif %}
+                    {{ products|length }} Products{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
+                </p>
+            </div>
+            <!-- Sort Selector Box -->
+            <div class="col-12 col-md-6">
+                <div class="sort-select-wrapper">
+                    <select id="sort-selector" class="custom-select custom-select-sm border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
+                        <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
+                        <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
+                        <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
+                        <option value="category_asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>Category (A-Z)</option>
+                        <option value="category_desc" {% if current_sorting == 'category_desc' %}selected{% endif %}>Category (Z-A)</option>
+                        <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)</option>
+                        <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name (Z-A)</option>
+                        
+                    </select>
+                </div>
+            </div>
+        </div>
+        <!-- Product Cards -->
+        <div class="row card-container">
+            {% for product in products %}
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3 g-4">
+                <!-- Bootstrap Card -->
+                <div class="card product-card h-100">
+                    {% if product.image %}
+                    <a href="{% url 'product_detail' product.id %}">
+                        <img src="{{ product.image.url }}" alt="{{ product.name }}" class="card-img-top img-fluid">
+                    </a>
+                    {% else %}
+                    <a href="{% url 'product_detail' product.id %}">
+                        <img src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}" class="card-img-top img-fluid">
+                    </a>
+                    {% endif %}
+                    <div class="card-body">
+                        <p class="product-info">{{ product.name }}</p>
+                        <p class="product-info">€{{ product.price }}</p>
+                        <!-- Product edit/delete links -->
+                        {% if request.user.is_superuser %}
+                            <div class="edit-delete-links">
+                                <a href="{% url 'edit_product' product.id %}" class="edit-link text-blue">Edit</a>
+                                <span> | </span>
+                                <a href="{% url 'delete_product' product.id %}" class="delete-link text-danger">Delete</a>
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>                    
+    </div>
 {% endblock %}
 
 {% block postloadjs %}
