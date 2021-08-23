@@ -1,0 +1,1 @@
+web: gunicorn inside_out.wsgi:application
