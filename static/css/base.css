@@ -337,10 +337,9 @@ body {
 
 .quantity {
     margin: 2rem 0;
-}
-
-.quantity .input-group {
-    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
 
 .increment-qty,
@@ -354,8 +353,8 @@ body {
     border: none;
 }
 
-.product-info {
-    font-size: 1.8rem;
+.product-price {
+    font-size: 2.2rem;
 }
 
 .product-desc {
@@ -370,6 +369,12 @@ body {
 
 .card {
     background-color: #f6f6f6;
+}
+
+.product-category {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
 }
 
 /*------ Category Badges ------*/
@@ -764,5 +769,9 @@ legend,
 
     .form {
         width: 80%;
+    }
+
+    .quantity-form {
+        max-width: 20%;
     }
 }
