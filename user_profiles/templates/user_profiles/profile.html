@@ -24,17 +24,33 @@
         </div>
         <div class="row">
             <div class="col-12 col-md-6">
-                <p class="p-text text-bold">Your Delivery Details</p>
                 <form action="{% url 'profile' %}" method="POST" id="update-profile-form">
                     {% csrf_token %}
-                    {{ form|crispy }}
-                    <button id="submit-button" class="btn button dark-bg-btn">
-                        <span class="p-text text-bold">Update Details</span>
-                    </button>
+                    <!-- User Details -->
+                    <fieldset>
+                        <legend>Your Details</legend>
+                        {{ form.default_full_name | as_crispy_field }}
+                        {{ form.default_email | as_crispy_field }}
+                        {{ form.default_phone_number | as_crispy_field }}
+                    </fieldset>
+                    <fieldset>
+                        <legend>Your Delivery Details</legend>
+                        {{ form.default_street_address1 | as_crispy_field }}
+                        {{ form.default_street_address2 | as_crispy_field }}
+                        {{ form.default_city_town | as_crispy_field }}
+                        {{ form.default_county | as_crispy_field }}
+                        {{ form.default_postcode | as_crispy_field }}
+                        {{ form.default_country | as_crispy_field }}
+                    </fieldset>
+                    <div class=text-end>
+                        <button id="submit-button" class="btn button dark-bg-btn">
+                            <span class="p-text text-bold">Update Details</span>
+                        </button>
+                    </div>
                 </form>
             </div>
             <div class="col-12 col-md-6">
-                <p class="p-text text-bold">Your Order History</p>
+                <p class="large-text">Your Order History</p>
                 <div class="order-history table-responsive-lg">
                     <table class="table-sm table table-borderless">
                         <thead>

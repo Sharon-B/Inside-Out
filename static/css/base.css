@@ -492,6 +492,20 @@ body {
     border: .1rem solid #0E5CA5;
 }
 
+fieldset {
+    margin-bottom: 1.8rem;
+    border-radius: 1.5rem 4rem;
+    padding: 2rem 2rem 2rem 2rem;
+    background-color: #B2CAD8;
+}
+
+legend,
+.large-text {
+    font-weight: 600;
+    font-size: 2rem;
+    padding-bottom: 1rem;
+}
+
 /*------ Product Form -------*/
 
 .custom-widget {
