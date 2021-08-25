@@ -287,6 +287,29 @@ body {
     color: #f6f6f6;
 }
 
+/*------ Back To Top Button -------*/
+
+.btt-button {
+    height: 4.2rem;
+    width: 4.2rem;
+    position: fixed;
+    bottom: 8rem;
+    right: 2rem;
+    border-radius: 50%;
+    border: .1rem solid #2d36365c;
+    background-color: #F6F6F6;
+}
+
+.btt-link {
+    cursor: pointer;
+    text-decoration: none;
+    color: #0E5CA5;
+}
+
+.btt-button:hover {
+    background-color: #B2CAD8;
+}
+
 /*------ Links -------*/
 
 .category-link,
