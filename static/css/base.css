@@ -144,14 +144,12 @@ body {
 
 #nav-menu .nav-link:hover,
 #nav-menu .nav-link:focus {
-    color: #0E5CA5;
-    transform: scale(1.2);
+    text-decoration: underline;
 }
 
 .dropdown-item:focus,
 .dropdown-item:hover {
-    color: #0E5CA5;
-    background-color: #e9ecef;
+    background-color: #B2CAD8;
 }
 
 /*------ Icons -------*/
