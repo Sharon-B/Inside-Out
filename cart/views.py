@@ -4,10 +4,11 @@ from products.models import Product
 from django.contrib import messages
 
 
-# Create your views here.
 # View Cart
 def view_cart(request):
-    """ A view to return the shopping cart contents page """
+    """
+    A view to return the shopping cart contents page
+    """
 
     template = 'cart/cart.html'
 
@@ -20,7 +21,9 @@ def view_cart(request):
 
 # Add to Cart
 def add_to_cart(request, item_id):
-    """ Add a product to the shopping cart """
+    """
+    Add a product to the shopping cart
+    """
 
     product = get_object_or_404(Product, pk=item_id)
     quantity = int(request.POST.get('quantity'))
@@ -31,20 +34,24 @@ def add_to_cart(request, item_id):
     if item_id in list(cart.keys()):
         cart[item_id] += quantity
         messages.success(request,
-                         f'Successfully updated quantity of {product.name} to {cart[item_id]}')
+                         f'Successfully updated quantity \
+                             of {product.name} to {cart[item_id]}')
     else:
         cart[item_id] = quantity
         messages.success(request,
                          f'Successfully added {product.name} to your cart!')
 
     request.session['cart'] = cart
-    # print(request.session['cart'])          # Check cart contents
+
     return redirect(redirect_url)
 
 
 # Adjust cart view
 def adjust_cart(request, item_id):
-    """ Adjust the quantity of a product in the shopping cart """
+    """
+    Adjust the quantity of a product in the shopping cart
+    """
+
     product = get_object_or_404(Product, pk=item_id)
     quantity = int(request.POST.get('quantity'))
 
@@ -53,11 +60,13 @@ def adjust_cart(request, item_id):
     if quantity > 0:
         cart[item_id] = quantity
         messages.success(request,
-                         f'Successfully updated quantity of {product.name} to {cart[item_id]}')
+                         f'Successfully updated quantity \
+                              of {product.name} to {cart[item_id]}')
     else:
         cart.pop(item_id)
         messages.success(request,
-                         f'Successfully removed {product.name} from your cart!')
+                         f'Successfully removed {product.name} from \
+                             your cart!')
 
     request.session['cart'] = cart
 
@@ -66,14 +75,18 @@ def adjust_cart(request, item_id):
 
 # Remove from cart
 def remove_from_cart(request, item_id):
-    """ Remove a product from the shopping cart """
+    """
+    Remove a product from the shopping cart
+    """
+
     product = get_object_or_404(Product, pk=item_id)
     try:
         cart = request.session.get('cart', {})
 
         cart.pop(item_id)
         messages.success(request,
-                         f'Successfully removed {product.name} from your cart!')
+                         f'Successfully removed {product.name} from \
+                             your cart!')
 
         request.session['cart'] = cart
         return HttpResponse(status=200)
