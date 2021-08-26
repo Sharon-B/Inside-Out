@@ -5,7 +5,9 @@ from blog.models import BlogPost
 
 # Create your views here.
 def index(request):
-    """ A view to return the index page """
+    """
+    A view to return the index page
+    """
 
     new_arrivals = Product.objects.filter(category__name='new_arrivals')[:4]
     blog_posts = BlogPost.objects.all()[:1]
