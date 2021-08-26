@@ -26,7 +26,7 @@
             </div>
         </div>
         <!-- New Arrivals -->
-        <div class="row card-container">
+        <div class="row card-container {% if new_arrivals|length < 4 %}justify-content-center{% endif %}">
             {% for new_arrival in new_arrivals %}
                 <div class="col-12 col-md-6 col-lg-4 col-xl-3 g-4">
                     <!-- Bootstrap Card -->
@@ -41,8 +41,8 @@
                             </a>
                         {% endif %}
                         <div class="card-body">
-                            <p class="product-info">{{ new_arrival.name }}</p>
-                            <p class="product-info">€{{ new_arrival.price }}</p>
+                            <p class="product-info large-text info-text">{{ new_arrival.name }}</p>
+                            <p class="product-price">€{{ new_arrival.price }}</p>
                             <!-- Product edit/delete links -->
                             {% if request.user.is_superuser %}
                                 <div class="edit-delete-links">

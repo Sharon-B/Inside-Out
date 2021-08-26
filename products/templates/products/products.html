@@ -57,7 +57,7 @@
             </div>
         </div>
         <!-- Product Cards -->
-        <div class="row card-container">
+        <div class="row card-container {% if products|length < 4 %}justify-content-center{% endif %}">
             {% for product in products %}
             <div class="col-12 col-md-6 col-lg-4 col-xl-3 g-4">
                 <!-- Bootstrap Card -->
@@ -72,8 +72,8 @@
                         </a>
                     {% endif %}
                     <div class="card-body">
-                        <p class="product-info">{{ product.name }}</p>
-                        <p class="product-info">€{{ product.price }}</p>
+                        <p class="product-info large-text info-text">{{ product.name }}</p>
+                        <p class="product-price">€{{ product.price }}</p>
                         <!-- Product edit/delete links -->
                         {% if request.user.is_superuser %}
                             <div class="edit-delete-links">
