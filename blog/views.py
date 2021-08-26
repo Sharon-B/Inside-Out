@@ -34,7 +34,7 @@ def blog_detail(request, blog_post_id):
 
     if request.method == 'POST':
         comment_form = BlogCommentForm(request.POST)
-        if comment_form.is_valid():
+        if comment_form.is_valid() and request.user.is_authenticated:
             new_comment = comment_form.save(commit=False)
             new_comment.blog_post = blog_post
             new_comment.user = request.user
