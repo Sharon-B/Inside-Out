@@ -25,11 +25,11 @@ class BlogForm(forms.ModelForm):
 
     class Meta:
         model = BlogPost
-        fields = {
+        fields = (
             'title',
             'body_text',
             'image',
-        }
+        )
 
     field_order = ['title', 'body_text', 'image']
 
