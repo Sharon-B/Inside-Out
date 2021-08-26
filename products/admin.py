@@ -2,11 +2,10 @@ from django.contrib import admin
 from .models import Product, Category
 
 
-# Register your models here.
-
 class ProductAdmin(admin.ModelAdmin):
     """
-    Tell the admin which fields to display
+    Tell the admin which fields to display, search
+    and how to order them.
     """
     list_display = (
         'name',
@@ -14,6 +13,12 @@ class ProductAdmin(admin.ModelAdmin):
         'price',
         'product_code',
         'image',
+    )
+
+    search_fields = (
+        'name',
+        'category',
+        'description',
     )
 
     ordering = ('name',)
