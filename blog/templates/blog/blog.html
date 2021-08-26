@@ -3,6 +3,10 @@
 
 {% block extra_title %}- Blog{% endblock %}
 
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'blog/css/blog.css' %}">
+{% endblock %}
+
 {% block page_header %}
     <div class="header-container container">
         <div class="row">
@@ -26,35 +30,50 @@
         </div>
         
         <!-- Blog Posts -->
-        <div class="row">
+        <div class="row justify-content-center">
             {% for blog_post in blog_posts %}
-            <div class="col-12 col-md-6 col-lg-4 col-xl-3 g-4">
-                <!-- Bootstrap Card -->
-                <div class="card blog-card h-100">
-                    {% if blog_post.image %}
-                        <a href="{% url 'blog_detail' blog_post.id %}">
-                            <img src="{{ blog_post.image.url }}" alt="{{ blog_post.title }}" class="card-img-top img-fluid">
-                        </a>
-                    {% else %}
-                        <a href="{% url 'blog_detail' blog_post.id %}">
-                            <img src="{{ MEDIA_URL }}noimage.png" alt="{{ blog_post.title }}" class="card-img-top img-fluid">
-                        </a>
-                    {% endif %}
-                    <div class="card-body">
-                        <p class="blog-info sub-heading">{{ blog_post.title }}</p>
-                        <p class="blog-info p-text">{{ blog_post.body_text|slice:":200" }}</p>
-                        <p class="blog-info text-muted">{{ blog_post.user }} | {{ blog_post.created_on}}</p>
-                        <!-- Blog edit/delete links -->
-                        {% if request.user.is_superuser %}
-                            <div class="edit-delete-links">
-                                <a href="{% url 'edit_blog' blog_post.id %}" class="edit-link info-text">Edit</a>
-                                <span> | </span>
-                                <a href="{% url 'delete_blog_post' blog_post.id %}" class="delete-link error-text">Delete</a>
+                <div class="col-12">
+                    <!-- Bootstrap Card -->
+                    <div class="card blog-card">
+                        <div class="row g-0">
+                            <!-- Blog image -->
+                            <div class="col-md-5">
+                                {% if blog_post.image %}
+                                    <a href="{% url 'blog_detail' blog_post.id %}">
+                                        <img src="{{ blog_post.image.url }}" alt="{{ blog_post.title }}" class="card-img-top img-fluid">
+                                    </a>
+                                {% else %}
+                                    <a href="{% url 'blog_detail' blog_post.id %}">
+                                        <img src="{{ MEDIA_URL }}noimage.png" alt="{{ blog_post.title }}" class="card-img-top img-fluid">
+                                    </a>
+                                {% endif %}
                             </div>
-                        {% endif %}
+                            <!-- Blog Details -->
+                            <div class="col-md-7">
+                                <div class="card-body">
+                                    <p class="blog-info sub-heading mt-0">{{ blog_post.title }}</p>
+                                    <p class="blog-info p-text ms-3">{{ blog_post.body_text|slice:":200" }}</p>
+                                    <div class="blog-detail-wrapper">
+                                        <!-- Blog edit/delete links -->
+                                        {% if request.user.is_superuser %}
+                                            <div class="edit-delete-links ms-3">
+                                                <a href="{% url 'edit_blog' blog_post.id %}" class="edit-link info-text">Edit</a>
+                                                <span> | </span>
+                                                <a href="{% url 'delete_blog_post' blog_post.id %}" class="delete-link error-text">Delete</a>
+                                            </div>
+                                        {% endif %}
+                                        <!-- Blog author and date -->
+                                        <p class="blog-info text-muted ms-3 text-end">{{ blog_post.user }} | {{ blog_post.created_on}}</p>
+                                    </div>
+                                    <!-- Read more button -->
+                                    <div class="read-more text-center">
+                                        <a href="{% url 'blog_detail' blog_post.id %}" class="button btn light-bg-btn">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
             {% endfor %}
         </div>                    
     </div>

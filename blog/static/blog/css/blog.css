@@ -1,3 +1,12 @@
 div .blog-details-container > p {
     font-size: 1.6rem;
 }
+
+.blog-detail-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.blog-card {
+    margin-top: 4rem;
+}
