@@ -16,6 +16,17 @@
         </div>
         {% if grand_total and not on_profile_page and not on_cart_page %}
             <p class="p-text text-bold">Your Cart ({{ product_count }})</p>
+            <div class="row">
+                <div class="col">
+                    <p class="text-bold large-text">Total{% if free_delivery_delta > 0 %}(Exc. Delivery){% endif %}:
+                        <span class="large-text float-end">€{{ total|floatformat:2 }}</span>
+                    </p>
+                    {% if free_delivery_delta > 0 %}
+                        <p class="p-text">Spend €{{ free_delivery_delta }} more for <strong>FREE</strong> delivery.
+                        </p>
+                    {% endif %}
+                </div>
+            </div>
             <div class="cart-preview">
                 {% for item in cart_items %}
                 <div class="row">
@@ -36,18 +47,7 @@
                 </div>
                 {% endfor %}
             </div>
-            <div class="row">
-                <div class="col">
-                    <p class="p-text text-bold">Total{% if free_delivery_delta > 0 %}(Exc. Delivery){% endif %}:
-                        <span class="p-text float-end">€{{ total|floatformat:2 }}</span>
-                    </p>
-                    {% if free_delivery_delta > 0 %}
-                        <p class="p-text">Spend €{{ free_delivery_delta }} more for <strong>FREE</strong> delivery.
-                        </p>
-                    {% endif %}
-                    <a href="{% url 'view_cart' %}" class="button btn w-100 dark-bg-btn text-bold">View Cart</a>
-                </div>
-            </div>
+            <a href="{% url 'view_cart' %}" class="button btn w-100 dark-bg-btn text-bold">View Cart</a>      
         {% endif %}
     </div>
 </div>
