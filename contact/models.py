@@ -2,6 +2,11 @@ from django.db import models
 
 
 class Contact(models.Model):
+    """
+    A model to create a contact message which includes
+    the user, their email, the message subject, the message
+    and the date it's sent
+    """
 
     class Meta:
         verbose_name_plural = 'Contact Messages'
