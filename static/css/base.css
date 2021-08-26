@@ -140,6 +140,20 @@ body {
     color: #2D3636;
 }
 
+/*------ Main Nav Hover -----*/
+
+#nav-menu .nav-link:hover,
+#nav-menu .nav-link:focus {
+    color: #0E5CA5;
+    transform: scale(1.2);
+}
+
+.dropdown-item:focus,
+.dropdown-item:hover {
+    color: #0E5CA5;
+    background-color: #e9ecef;
+}
+
 /*------ Icons -------*/
 
 .icons {
