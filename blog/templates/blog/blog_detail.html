@@ -69,12 +69,12 @@
                 <div class="row">
                     <div class="col-12 col-md-6 offset-md-3">
                         <div class="card mb-3">
-                            <div class="card-header">
+                            <div class="card-header comment-header">
                                 <p class="p-text text-bold">{{ comment.user }}'s Comment</p>
                                 <p class="text-muted text-end">{{ comment.created_on }}</p>
                             </div>
-                            <div class="card-body">
-                                <p class="p-text">{{ comment.comment }}</p>
+                            <div class="card-body comment-body">
+                                <p class="p-text">{{ comment.comment | linebreaks }}</p>
                                 {% if request.user.is_superuser %}
                                     <a href="{% url 'delete_comment' comment.id %}" class="delete-link error-text">Delete</a>
                                 {% endif %}

@@ -10,3 +10,13 @@ div .blog-details-container > p {
 .blog-card {
     margin-top: 4rem;
 }
+
+.comment-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.comment-body p {
+    font-size: 1.4rem;
+}
