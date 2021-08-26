@@ -3,7 +3,7 @@
     {% if widget.is_initial %}
         <p class="p-text">{{ widget.initial_text }}:</p>
         <a href="{{ widget.value.url }}">
-            <img width="96" height="96" src="{{ widget.value.url }}" alt="">
+            <img width="96" height="96" src="{{ widget.value.url }}" alt="{{ widget.value }}">
         </a>
         {% if not widget.required %}
             <div class="custom-control custom-checkbox">
