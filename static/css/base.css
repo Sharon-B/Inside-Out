@@ -349,9 +349,9 @@ body {
 
 /*------ Product Cards -------*/
 
-.product-card {
+/* .product-card {
     border: none;
-}
+} */
 
 .product-price {
     font-size: 2.2rem;
@@ -369,11 +369,17 @@ body {
 
 .card {
     background-color: #f6f6f6;
+    border: none;
 }
 
 .product-category {
     display: flex;
     align-items: baseline;
+    justify-content: space-between;
+}
+
+.blog-detail-index-wrapper {
+    display: flex;
     justify-content: space-between;
 }
 
@@ -774,5 +780,9 @@ legend,
 
     .quantity-form .form-group {
         max-width: 50%;
+    }
+
+    .blog-card {
+        max-width: 80%;
     }
 }
