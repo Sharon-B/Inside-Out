@@ -41,7 +41,6 @@ class StripeWH_Handler:
             [customer_email]
         )
 
-
     def handle_event(self, event):
         """
         Handle a generic or unknown webhook event
@@ -113,7 +112,8 @@ class StripeWH_Handler:
         if order_exists:
             self._send_confirmation_email(order)
             return HttpResponse(
-                content=f'Webhook received: {event["type"]} | Success: Verified order already exists in database',
+                content=f'Webhook received: {event["type"]} | Success: Verified \
+                    order already exists in database',
                 status=200)
         else:
             order = None
@@ -149,7 +149,8 @@ class StripeWH_Handler:
 
         self._send_confirmation_email(order)
         return HttpResponse(
-            content=f'Webhook received: {event["type"]} | Success: Order created in webhook',
+            content=f'Webhook received: {event["type"]} | Success: Order \
+                created in webhook',
             status=200)
 
     def handle_payment_intent_payment_failed(self, event):

@@ -15,10 +15,11 @@ import stripe
 import json
 
 
-# Create your views here.
 # Checkout view
 def checkout(request):
-
+    """
+    A view to checkout the order.
+    """
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
 
@@ -85,7 +86,6 @@ def checkout(request):
             currency=settings.STRIPE_CURRENCY,
         )
 
-        # print(intent)       # Test Payment Intent is created
         if request.user.is_authenticated:
             try:
                 profile = UserProfile.objects.get(user=request.user)
@@ -122,6 +122,9 @@ def checkout(request):
 
 # Checkout success view
 def checkout_success(request, order_number):
+    """
+    A view to handle a successful checkout.
+    """
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
 
