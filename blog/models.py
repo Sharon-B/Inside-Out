@@ -4,6 +4,10 @@ from django.contrib.auth.models import User
 
 # Blog post model
 class BlogPost(models.Model):
+    """
+    A model for blog posts which includes the user who created it,
+    the blog title, an image, the blog text and when it was created.
+    """
 
     class Meta:
         ordering = ['-created_on']
@@ -21,6 +25,11 @@ class BlogPost(models.Model):
 
 # Blog Comments model
 class BlogComment(models.Model):
+    """
+    A model for blog comments on blog posts which includes the user who is
+    commenting, the blog post they are commenting on, the comment itself
+    and the date the comment is made"
+    """
 
     class Meta:
         ordering = ['-created_on']

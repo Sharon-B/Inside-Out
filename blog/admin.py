@@ -3,6 +3,10 @@ from .models import BlogPost, BlogComment
 
 
 class BlogPostAdmin(admin.ModelAdmin):
+    """
+    Setup Blog Post section of Admin Panel
+    """
+
     list_display = (
                     'title',
                     'created_on',
@@ -16,6 +20,9 @@ class BlogPostAdmin(admin.ModelAdmin):
 
 
 class BlogCommentAdmin(admin.ModelAdmin):
+    """
+    Setup Blog Comment section of Admin Panel
+    """
     list_display = (
         'user',
         'blog_post',
