@@ -225,6 +225,8 @@ The logo uses two colours blue #0E5CA5 and green #097485, both used due to their
 
 6. Buttons 
 
+![color-palette](https://github.com/Sharon-B/Inside-Out/blob/main/readme-documentation/color-palette/button-colors.png)
+
 - No background
 - Light background
 - Dark background
