@@ -75,6 +75,8 @@ legend {
     border-radius: 2rem;
     padding: 3rem;
     margin-bottom: 3rem;
+    width: 80%;
+    margin-left: 1rem;
 }
 
 .billing-info {
@@ -83,6 +85,7 @@ legend {
 
 .cs-button-wrapper {
     margin-top: 2rem;
+    width: 80%;
 }
 
 #payment-form select {
@@ -136,5 +139,14 @@ select option[value=""] {
 
     .billing-info {
         margin-top: 0;
+    }
+
+    .cs-button-wrapper {
+        width: 90%;
+    }
+
+    .order-confirmation {
+        width: 90%;
+        margin-left: 0;
     }
 }
