@@ -214,7 +214,63 @@ Will allow for the prioritisation of information to be displayed in a clear and 
 
 # Technologies Used
 
+[Python](https://www.python.org) - Main language used for programming the app.
 
+[Django](https://www.djangoproject.com) - Framework used.
+
+[Html](https://www.w3schools.com/html/html_intro.asp) - Hyper Text Markup Language, used for creating the website.
+
+[Css](https://www.w3schools.com/css/) - Cascading Style Sheet, used for styling the website.
+
+[Javascript](https://www.javascript.com) – Used for providing javascript functionality to the site
+
+[Stripe](https://stripe.com/) - Used for adding payment functionality.
+
+[AWS](https://aws.amazon.com/) - Used for hosting static and media files.
+
+[Bootstrap 5](https://getbootstrap.com) - Bootstrap grid system, utility classes, nav-bar, toasts, cards.
+
+[Django Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/) - Used for rendering forms.
+
+[crispy-bootstrap5](https://github.com/django-crispy-forms/crispy-bootstrap5) - Used to facilitate using crispy forms with bootstrap 5.
+
+[Google Fonts](https://fonts.google.com) - The 2 fonts used throughout the website are from Google fonts.
+
+[Fontawesome](https://fontawesome.com/) - Used for icons.
+
+[Balsamiq](https://balsamiq.com) – Used for creating the wireframes.
+
+[Git](https://git-scm.com/) - Used for version control.
+
+[GitHub](https://github.com) - Used to store the project repository.
+
+[Gitpod IDE](https://www.gitpod.io/) - Development environment where the site was built.
+
+[Heroku](https://signup.heroku.com/) - Where the live site is deployed.
+
+[Gimp 2.1](https://www.gimp.org/) - Used for editing, scaling images.
+
+[favicon.io](https://favicon.io/favicon-generator/) - Used for creating a favicon.
+
+[Tiny png](https://tinypng.com) - Used for compressing images.
+
+[Webaim contrast checker](https://webaim.org/resources/contrastchecker/) - Used to check the contrast between the text font and background colours.
+
+[Chrome Dev Tools](https://developers.google.com/web/tools/chrome-devtools) - Used throughout the development of the website to quickly see changes, find problems and debug. Also used to view website in different device views.
+
+[Lighthouse](https://developers.google.com/web/tools/lighthouse) in Chrome Dev Tools - Used for site performance review.
+
+[AutoPrefixer](https://autoprefixer.github.io/) - Used to add vendor prefixes onto the CSS code to ensure compatibility with various browsers.
+
+[W3C HTML validator](https://validator.w3.org/) - Used to validate code.
+
+[W3C CSS validator](https://jigsaw.w3.org/css-validator/) - Used to validate code.
+
+[JSHint](https://jshint.com/) – Used to validate Javascript code
+
+[Coolors](https://coolors.co/) - Used for selecting complimentary colour palettes.
+
+[GitHub Wiki TOC generator](https://ecotrust-canada.github.io/markdown-toc/) - Used for creating a table of contents in README.md
 
 # Implementation 
 
