@@ -169,11 +169,15 @@ Source Sans Pro is used for all other text content. It is a sans serif typeface 
 
 ### Logo
 
+![color-palette](https://github.com/Sharon-B/Inside-Out/blob/main/readme-documentation/color-palette/logo-colors.png)
 
+![color-palette](https://github.com/Sharon-B/Inside-Out/blob/main/readme-documentation/color-palette/logo-image.png)
 
 The logo uses two colours blue #0E5CA5 and green #097485, both used due to their association with the outdoors and nature which is appropriate for the theme of this site.
 
 ### Rest Of Site
+
+![color-palette](https://github.com/Sharon-B/Inside-Out/blob/main/readme-documentation/color-palette/main-image.png)
 
 1. Primary Colour - The same blue #0E5CA5 used in the logo was then used as the base for the color of the rest of the site.
 
@@ -200,6 +204,8 @@ The logo uses two colours blue #0E5CA5 and green #097485, both used due to their
 - Icons
 
 5. Alert Colors and Alert Text
+
+![color-palette](https://github.com/Sharon-B/Inside-Out/blob/main/readme-documentation/color-palette/alert-colors.png)
 
 *   Success #097485
     -   Success Toast Messages
