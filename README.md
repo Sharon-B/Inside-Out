@@ -274,10 +274,72 @@ Will allow for the prioritisation of information to be displayed in a clear and 
 
 # Implementation 
 
+Once the initial concept for the project was decided upon I first developed the wireframes. From these wireframes I then developed the basic database structure required.
 
+I then set up the Django framework first by installing Django using:
+
+        pip3 install django
+
+Then I created the project using: 
+
+        django-admin startproject inside-out
+
+I checked the .gitignore file which is automatically created when using the Code Institute template and ensured the following files were added:
+
+*.sqlite3, *.pyc, __pycache__ and env.py
+
+The environment variables needed to run the project were saved in env.py. I ran the initial migrations using 
+
+        python3 manage.py migrate
+
+I created a superuser using the command:
+
+        python3 manage.py createsuperuser
+
+At this point it is possible to run the server for the first time and check that Django has been installed.
+
+        python3 manage.py runserver
+
+I created requirements.txt for all the dependencies used. I set up a base.html from which my html templates would be extended from. 
+The site consists of 7 apps – blog, cart, checkout, contact, home, products and user_profiles. Each app was created using the command 
+
+        python3 manage.py startapp <app_name>
+
+As I added a new app I added it to the list of installed apps and set up its models and register them in the admin.py. Then I would create the initial view which would usually be added to as more functionality was added to the site, add its url path in urls.py and include the url path in the projects main urls.py file. Add forms in forms.py (if needed), and any associated html templates. Django templating language was used to insert the data into the html templates.
 
 ## Issues/Solutions
 
+The Stripe card input field was not displaying, after researching why this could be and contacting tutor support I realised it was because I changed some of the styles in the stripe_elements.js file, which were originally from the Stripe website. Once I reverted these styles back to how they were I could then see the Stripe card input, it was as if the changes I made overlapped the original Stripe card input field. I also changed some of the Stripe styling units in checkout.css from px to rem to keep it inline with the rest of the project, this resulted in a warning in the console so I reset them back to px.
+
+Due to a Gitpod issue my Gitpod workspace got stuck in 'building' mode and could not be opened, after much back and forth with Gitpod I had to start a new workspace using the green gitpod button from the GitHub repo. Having started the new workspace I had to re-install all requirements - I could do this using the command '     ', create a new superuser, run all migrations again, and set up my env.py file again.
+
+While initially testing the save-info checkbox in the checkout page during development I noticed that even with the save-info box unchecked it was saving the user's delivery details to the user profile over-writing any details that were already saved in the users' profile. While looking into this I found a Slack post by @Philipp which helped me to resolve this issue. In stripe_elements.js where its getting the form data I changed 
+
+    let saveInfo = Boolean($('#id-save-info').attr('checked'));
+
+to
+
+    let saveInfo = $('#id-save-info').is(':checked');
+
+This seems to give a better True/False result for whether the checkbox is checked and whether the data should be saved or not. Then within the webhook_handler.py I changed 
+
+    if save-info:
+
+to 
+
+    if save-info is True:
+
+I was also having another issue where the info being saved to the users profile was being displayed as a tuple instead of a string. Once I made the above changes this issue was also resolved, so needed no further investigation.
+
+After completing the delete_comment() view to delete a comment made on a blog post I was getting a Django 404 error - page not found. No BlogPost matches the given query. This was because I originally had my delete comment url path set to 
+
+    path('delete/<int:comment_id>/', views.delete_comment, name='delete_comment'),
+
+which was very similar to the url path for delete_blog_post, so django wasn't making it past the delete blog post url path to get to the delete comment url path. By changing the delete comment url path to 
+
+    path('comment/delete/<int:comment_id>/', views.delete_comment, name='delete_comment'),
+
+the issue was resolved.
 
 ## Known Bugs
 
