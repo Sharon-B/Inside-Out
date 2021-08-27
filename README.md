@@ -286,7 +286,7 @@ Then I created the project using:
 
 I checked the .gitignore file which is automatically created when using the Code Institute template and ensured the following files were added:
 
-*.sqlite3, *.pyc, __pycache__ and env.py
+        *.sqlite3, *.pyc, __pycache__ and env.py
 
 The environment variables needed to run the project were saved in env.py. I ran the initial migrations using 
 
@@ -311,7 +311,7 @@ As I added a new app I added it to the list of installed apps and set up its mod
 
 The Stripe card input field was not displaying, after researching why this could be and contacting tutor support I realised it was because I changed some of the styles in the stripe_elements.js file, which were originally from the Stripe website. Once I reverted these styles back to how they were I could then see the Stripe card input, it was as if the changes I made overlapped the original Stripe card input field. I also changed some of the Stripe styling units in checkout.css from px to rem to keep it inline with the rest of the project, this resulted in a warning in the console so I reset them back to px.
 
-Due to a Gitpod issue my Gitpod workspace got stuck in 'building' mode and could not be opened, after much back and forth with Gitpod I had to start a new workspace using the green gitpod button from the GitHub repo. Having started the new workspace I had to re-install all requirements - I could do this using the command '     ', create a new superuser, run all migrations again, and set up my env.py file again.
+Due to a Gitpod issue my Gitpod workspace got stuck in 'building' mode and could not be opened, after much back and forth with Gitpod I had to start a new workspace using the green gitpod button from the GitHub repo. Having started the new workspace I had to re-install all requirements - I could do this using the command `pip3 install -r requirements.txt`, create a new superuser, run all migrations again, and set up my env.py file again. I also had to rebuild the database.
 
 While initially testing the save-info checkbox in the checkout page during development I noticed that even with the save-info box unchecked it was saving the user's delivery details to the user profile over-writing any details that were already saved in the users' profile. While looking into this I found a Slack post by @Philipp which helped me to resolve this issue. In stripe_elements.js where its getting the form data I changed 
 
