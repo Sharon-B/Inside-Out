@@ -161,16 +161,67 @@ Will allow for the prioritisation of information to be displayed in a clear and 
 
 ## Typography
 
+PlayFair Display is used for the logo and headings throughout the site as it is well suited for titling and suits the style of the site.
+
+Source Sans Pro is used for all other text content. It is a sans serif typeface that works well in this context and is easily readable.
+
+## Colour scheme
+
+### Logo
 
 
 
-## Colour scheme 
+The logo uses two colours blue #0E5CA5 and green #097485, both used due to their association with the outdoors and nature which is appropriate for the theme of this site.
 
+### Rest Of Site
 
+1. Primary Colour - The same blue #0E5CA5 used in the logo was then used as the base for the color of the rest of the site.
 
+- Headings 
+- Borders 
+- Dark background button
 
+2. Secondary Colour - An accent light blue #B2CAD8 was also derived from the same blue by reducing the lightness of the original blue.
 
+- Banner background
+- Form fieldset background
+- Light background button
+- Footer background
 
+3. Background Colour - A light background colour #F6F6F6 was chosen as it worked well with the blue theme providing contrast and it emphasised the products by not making the site too busy.
+
+- Main background
+- Text on dark button
+- Background on no background button
+
+4. Text Color #2D3636
+
+- Text
+- Icons
+
+5. Alert Colors and Alert Text
+
+*   Success #097485
+    -   Success Toast Messages
+
+*   Info #0E5CA5
+    -   Info Toast Messages
+    -   Info Text
+    -   Edit and Update links
+
+*   Error #AE093E
+    -   Error Toast Messages
+    -   Delete and Remove links
+    -   Error text
+
+*   Warning #875531
+    -   Warning Toast Messages
+
+6. Buttons 
+
+- No background
+- Light background
+- Dark background
 
 # Features 
 
