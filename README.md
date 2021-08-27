@@ -177,7 +177,7 @@ The logo uses two colours blue #0E5CA5 and green #097485, both used due to their
 
 ### Rest Of Site
 
-![color-palette](https://github.com/Sharon-B/Inside-Out/blob/main/readme-documentation/color-palette/main-image.png)
+![color-palette](https://github.com/Sharon-B/Inside-Out/blob/main/readme-documentation/color-palette/main-colors.png)
 
 1. Primary Colour - The same blue #0E5CA5 used in the logo was then used as the base for the color of the rest of the site.
 
