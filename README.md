@@ -137,10 +137,13 @@ This will be a Minimal Viable Product containing the most essential core content
 
 ## Interaction Design 
 
+User interactions will be intuitive and consistent throughout the site to ensure it is easy to use and quick to learn for the user. Clickable links and buttons are used throughout the site to offer the user easy access to pages. They will have a hover effect applied so they are easily identifiable when a user hovers over them. A cursor pointer will appear when hovering over clickable images.
+
+Toast notifications have been used throughout the site to offer the user feedback on their actions for example when adding an item to the cart a success notification will be displayed advising the user that the item has been added to the cart.
 
 ## Information Design 
 
-
+Will allow for the prioritisation of information to be displayed in a clear and concise manner to make it as easy as possible for the user to read and quickly find the information that is most relevant to their needs.
 
 # Skeleton
 
@@ -171,11 +174,43 @@ This will be a Minimal Viable Product containing the most essential core content
 
 # Features 
 
-
+*   Responsive
+*   Logo
+*   Navigation in header which collapses for mobile use
+*   Search
+*   All products displayed with product image, name and price to display each product for browsing
+*   Product image on card is a clickable link to the product detail view
+*   Home page features new arrivals section
+*   Home Page features latest blog post section
+*   Hero image on home page
+*   Back to top button
+*   Shopping cart
+*   Checkout functionality with checkout success page when complete
+*   Payments method using Stripe
+*   Forms for adding and editing a product, blog post
+*   Single product detail view page
+*   Single blog post detail view page with comments section
+*   Contact page
+*   Registration page
+*   Log in page
+*   Log out functionality
+*   User profile
+*   User order history
+*   User can save delivery details in their profile
+*   Form validation
+*   Highlight buttons on hover
+*   Highlight links on hover
+*   Footer with social media links
+*   No Delivery charge for orders over €150
+*   Notification alerts
 
 ## Future Features
 
-
+*   Confirm delete
+*   Add reviews app to enable users to leave reviews for products.
+*   Allow users to login via their social media accounts
+*   Save shopping cart items for later
+*   Discount code
 
 # Technologies Used
 
