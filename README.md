@@ -62,14 +62,76 @@ To grow my skills as a developer and create a simple easy to use site. Develop t
 
 # Scope
 
+This will be a Minimal Viable Product containing the most essential core content required.
 
 ## Functional Specifications 
 
-
+*   Home
+*   Search functionality
+*   All Products
+    * Products by category
+*   Product Detail
+*   Shopping cart functionality
+    *   Add to cart
+    *   Remove from cart
+    *   Update cart
+*   Checkout functionality
+    *   Checkout success
+*   Stripe payments
+*   Contact
+*   Registration
+*   Log In
+*   User Profile functionality:
+    *   Create a profile
+    *   Save delivery info
+    *   View order history
+*   Log out functionality
+*   Blog
+*   Admin functionality:
+    *   Manage Products – Add, edit & delete products
+    *   Manage Blog – Add, edit & delete blog posts
+    *   Manage blog comments – delete
+*   Notifications
 
 ## Content Requirements
 
-
+*   Logo
+*   Main Navigation
+*   Search bar in header
+*   User account dropdown in header
+    *   Register/Login/out/profile access
+*   Cart icon in header
+*   Home page
+    *   Hero image
+    *   New arrivals section
+    *   Latest blog post section
+*   All Products page with image and price
+    *   View by category options
+*   Product detail page
+*   Shopping cart page
+    *   Users can add items to the shopping cart
+    *   Users can select the quantity of items to add
+    *   Users can remove items from the shopping cart
+*   Checkout Page for processing payments
+    *   Checkout success page
+*   Register page with registration form & link to Log In page
+*   Log In page with login form & link to Registration page
+*   Contact Us page
+*   User profile page
+    *   Users delivery details
+    *   Users order history
+*   Blog page
+*   Blog detail page, with comments section
+*   Admin pages navigation – in user account dropdown
+*   Admin manage products page – add/edit/delete any product
+    *   Add product page with form for adding new product details
+    *   Edit product page with form for editing product details
+    *   Delete product functionality
+*   Admin manage blog page - add/edit/delete blog posts
+    *   Add blog page with form for adding a new blog post
+    *   Edit blog page with form for editing blog posts
+    *   Delete blog post functionality
+*   Footer with Social media links
 
 # Structure
 
