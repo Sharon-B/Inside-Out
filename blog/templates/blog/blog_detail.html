@@ -45,7 +45,7 @@
             
             <div class="col-12 col-md-8 offset-md-2">
                 <div class="blog-details-container">
-                    <p class="blog-info mt-5">{{ blog_post.body_text | linebreaks }}</p>
+                    <div class="blog-body-text mt-5">{{ blog_post.body_text | linebreaks }}</div>
                     <p class="blog-info text-muted mt-4 text-end">{{ blog_post.user }} | {{ blog_post.created_on}}</p>
                     <!-- Blog edit/delete links -->
                     {% if request.user.is_superuser %}
