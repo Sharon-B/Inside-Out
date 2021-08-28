@@ -21,12 +21,12 @@
 </li>
 <!-- Account Dropdown -->
 <li class="nav-item dropdown col-3">
-    <span class="nav-link" id="account" role="button"
+    <span class="nav-link" id="mobile-account" role="button"
         data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <i class="far fa-user icons"></i>
     </span>
     <!-- Account Dropdown links-->
-    <div class="dropdown-menu mobile-account-dd-menu dd-menu" aria-labelledby="account">
+    <div class="dropdown-menu mobile-account-dd-menu dd-menu" aria-labelledby="mobile-account">
         {% if request.user.is_authenticated %}
             {% if request.user.is_superuser %}
                 <a class="dropdown-item dd-item" href="{% url 'add_product' %}">Product Management</a>
