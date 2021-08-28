@@ -520,7 +520,7 @@ body {
 }
 
 .cart-preview {
-    height: 15rem;
+    max-height: 12rem;
     overflow-x: hidden;
     overflow-y: auto;
 }
@@ -730,7 +730,7 @@ legend,
     }
 
     .cart-preview {
-        height: 30rem;
+        max-height: 30rem;
     }
 
     .button {               
