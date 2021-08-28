@@ -123,12 +123,16 @@
             <div class="row navigation">
                 <!-- Bootstrap Navbar with modifications-->
                 <nav class="navbar navbar-expand-md navbar-light">
-                    <!-- Navbar Collapse Button -->
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav-toggle" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                    </button>
-                    {% include 'includes/mobile-header.html' %}
-                    {% include 'includes/main-nav.html' %}
+                    <div class="container-fluid">
+                        <!-- Navbar Collapse Button -->
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav-toggle" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <ul class="mobile-nav navbar-nav d-flex d-md-none w-75 ms-auto">
+                            {% include 'includes/mobile-header.html' %}
+                        </ul>
+                        {% include 'includes/main-nav.html' %}
+                    </div>
                 </nav>
             </div>
 
