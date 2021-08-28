@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_title %}- Error 500{% endblock %}
+
+{% block page_header %}
+    <div class="header-container container">
+        <div class="row">
+            <div class="col">
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+
+<div class="container vertical-center">
+    <div class="row">
+        <div class="col-12">
+            <!-- Error 500 -->
+            <p id="500" class="heading text-center">ERROR 500 - Internal Server Error</p>
+            <p class="large-text text-center"> Oopps!..... looks like we are experiencing some issues!</p>
+            <p class="large-text text-center">To return home please click the button below</p>
+            <div class="text-center">
+                <a href="{% url 'home' %}" class="btn button dark-bg-btn text-bold large-text px-5 py-3">Return Home</a>
+            </div>
+        </div>      
+    </div>
+</div>
+
+{% endblock %}

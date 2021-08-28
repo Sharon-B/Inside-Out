@@ -264,6 +264,12 @@ body {
     color: #875531;
 }
 
+.vertical-center {
+    min-height: 50vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 /*------ Buttons -------*/
 

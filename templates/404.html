@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_title %}- Error 404{% endblock %}
+
+{% block page_header %}
+    <div class="header-container container">
+        <div class="row">
+            <div class="col">
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+
+    <div class="container vertical-center">
+        <div class="row">
+            <div class="col-12">
+                <!-- Error 404 -->
+                <p id="404" class="heading text-center">ERROR 404 - Page Not Found</p>
+                <p class="large-text text-center"> Oh dear.....we cannot find the page you were looking for</p>
+                <p class="large-text text-center">To return home please click the button below</p>
+                <div class="text-center">
+                    <a href="{% url 'home' %}" class="btn button dark-bg-btn text-bold large-text px-5 py-3">Return Home</a>
+                </div>
+            </div>      
+        </div>
+    </div>
+
+{% endblock %}
