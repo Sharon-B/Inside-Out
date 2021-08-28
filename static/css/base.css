@@ -405,6 +405,17 @@ body {
     justify-content: space-between;
 }
 
+.new-badge {
+    background-color: #097485;
+    color: #F6F6F6;
+    width: 5rem;
+    text-align: center;
+    font-size: 1.4rem;
+    border-radius: 1rem;
+    height: 50%;
+    box-shadow: 0.5rem 0.5rem 1rem #86898a;
+}
+
 /*------ Category Badges ------*/
 
 .category-badge {

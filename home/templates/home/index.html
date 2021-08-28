@@ -43,7 +43,10 @@
                             </a>
                         {% endif %}
                         <div class="card-body">
-                            <p class="product-info large-text info-text">{{ new_arrival.name }}</p>
+                            <div class="product-new d-flex">
+                                <p class="product-info large-text info-text">{{ new_arrival.name }}</p>
+                                <p class="new-badge ms-auto ">NEW</p>
+                            </div>
                             <p class="product-price">€{{ new_arrival.price }}</p>
                             <!-- Product edit/delete links -->
                             {% if request.user.is_superuser %}
