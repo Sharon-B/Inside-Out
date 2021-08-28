@@ -26,7 +26,7 @@
         <i class="far fa-user icons"></i>
     </span>
     <!-- Account Dropdown links-->
-    <div class="dropdown-menu dd-menu" aria-labelledby="account">
+    <div class="dropdown-menu mobile-account-dd-menu dd-menu" aria-labelledby="account">
         {% if request.user.is_authenticated %}
             {% if request.user.is_superuser %}
                 <a class="dropdown-item dd-item" href="{% url 'add_product' %}">Product Management</a>
