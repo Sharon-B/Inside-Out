@@ -93,6 +93,10 @@ body {
     border-bottom-left-radius: 0rem !important;
 }
 
+.search-button:hover {
+    color: #875531;
+}
+
 .fa-search {
     font-size: 1.4rem;
 }
