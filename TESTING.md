@@ -205,7 +205,7 @@ Each blog post also allows users to post comments about the content they are rea
 
 Each page was tested and passed under the criteria set out below.
 
-## Base.html
+## base.html
 
 ### Header
 
@@ -244,7 +244,8 @@ Each page was tested and passed under the criteria set out below.
 * Displays on all pages.
 * If there is an item in the cart it changes color to blue.
 * If there is an item in the cart it displays the current cart total under the icon.
-* Each time an item is added to the cart the cart total is updated
+* Each time an item is added to the cart the cart total is updated.
+* Is a clickable link to the cart page.
 
 #### Main Navigation:
 
@@ -252,9 +253,9 @@ Each page was tested and passed under the criteria set out below.
 * On mobile devices a collapsed menu is provided, on clicking the burger icon the navigation menu is revealed.
 * On larger tablet devices and larger screen sizes the navigation menu items appear in the header.
 * Each navigation menu item:
-* Highlights on hover
-* Is clickable
-* Links to the associated page
+    * Highlights on hover
+    * Is clickable
+    * Links to the associated page
 * For all users the navigation menu items are:
 
         Home, Shop, Blog, Contact
