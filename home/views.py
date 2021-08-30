@@ -9,7 +9,7 @@ def index(request):
     A view to return the index page
     """
 
-    new_arrivals = Product.objects.filter(category__name='new_arrivals')[:4]
+    new_arrivals = Product.objects.filter(category__name='new_arrivals')[:3]
     blog_posts = BlogPost.objects.all()[:1]
 
     template = 'home/index.html'
