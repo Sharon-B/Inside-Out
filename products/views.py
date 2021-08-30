@@ -87,7 +87,7 @@ def add_product(request):
             form = ProductForm(request.POST, request.FILES)
             if form.is_valid():
                 product = form.save()
-                messages.success(request, 'Product added successfully!')
+                messages.info(request, 'Product added successfully!')
                 return redirect(reverse('product_detail', args=[product.id]))
             else:
                 messages.error(request, 'Please check the form for errors. Product failed to add.')
@@ -121,7 +121,7 @@ def edit_product(request, product_id):
             form = ProductForm(request.POST, request.FILES, instance=product)
             if form.is_valid():
                 form.save()
-                messages.success(request, 'Product updated successfully!')
+                messages.info(request, 'Product updated successfully!')
                 return redirect(reverse('product_detail', args=[product.id]))
             else:
                 messages.error(request, 'Please check the form for errors. Product failed to update.')
@@ -151,7 +151,7 @@ def delete_product(request, product_id):
     if request.user.is_superuser:
         product = get_object_or_404(Product, pk=product_id)
         product.delete()
-        messages.success(request, 'Product deleted!')
+        messages.info(request, 'Product deleted!')
     else:
         messages.error(request, 'Sorry, you do not have permission for that.')
         return redirect(reverse('home'))
