@@ -192,7 +192,7 @@ Each blog post also allows users to post comments about the content they are rea
 
 * Superusers have access to a delete link for each comment left on a blog post and can delete any comment via this link.
 
-## Site Owner Stories
+## Testing Site Owner Stories
 
 26.	As a site owner I want to provide a good user experience for my users, so that they want to come back.
 
