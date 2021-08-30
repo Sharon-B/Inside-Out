@@ -23,12 +23,15 @@
 
 # Responsiveness Testing
 
+The responsiveness of the website was tested using Chrome Dev Tools and setting it to display on various mobile/tablet devices that are included. Responsiveness is optimised for screen sizes from 320px up.
 
 # Device Testing
 
+All aspects of the website mentioned below were manually tested on the following devices: iPad Pro, iPhone 8, MacBook Pro.
 
 # Browser Testing
 
+All aspects of the website mentioned above were manually tested on the following browsers: Chrome, Safari, Mozilla Firefox
 
 # Friends And Family User Testing 
 
