@@ -201,9 +201,382 @@ Each blog post also allows users to post comments about the content they are rea
 * Intuitive and easy to navigate around the site.
 * Future releases to add more features to keep users interested and offer something new to returning users.
 
-
-
 # Manual Testing
 
+Each page was tested and passed under the criteria set out below.
+
+## Base.html
+
+### Header
+
+#### Logo:
+
+* The logo is displayed in the header.
+* Logo displays on all pages.
+* The logo is a clickable link which returns the user to the home page.
+
+#### Search bar:
+
+* Displays on all pages.
+* Search button highlights on hover.
+* If a search term is entered the search results are displayed.
+* If no search term is entered and the search button is clicked an error message appears saying no search term entered.
+* Returns searches for terms found in the product name or description.
+* If no search results are found for a search term ‘no results found’ is displayed.
+
+#### My Account Icon Dropdown Menu:
+
+* Displays on all pages
+* For users who are not logged in the menu items are:
+
+        Register, Log In
+
+* For logged in users the menu items are:
+
+        Profile, Log Out
+
+* For superusers the menu items are:
+
+        Product Management, Blog Management, Profile, Log Out
+
+#### Shopping Cart Icon:
+
+* Displays on all pages.
+* If there is an item in the cart it changes color to blue.
+* If there is an item in the cart it displays the current cart total under the icon.
+* Each time an item is added to the cart the cart total is updated
+
+#### Main Navigation:
+
+* Displays on all pages.
+* On mobile devices a collapsed menu is provided, on clicking the burger icon the navigation menu is revealed.
+* On larger tablet devices and larger screen sizes the navigation menu items appear in the header.
+* Each navigation menu item:
+* Highlights on hover
+* Is clickable
+* Links to the associated page
+* For all users the navigation menu items are:
+
+        Home, Shop, Blog, Contact
+
+### Footer:
+
+* Displays on all pages.
+* Contains icons with links to social media pages.
+* Each link brings users to the appropriate social media page.
+* Icons highlight on hover.
+* Social Media icons display on all pages.
+
+## Home Page
+
+### Hero Image:
+
+* Displays a responsive hero image.
+
+### New Arrivals Section:
+
+* Displays a new arrivals section with product cards for the latest 3 new arrivals added to the database.
+* Each product card contains a product image, Product name and product price. New arrivals also display a NEW badge on the product card.
+* The product image on each product card is a clickable link.
+* Clicking on the product Image brings the user to the full product detail page of the product clicked.
+
+### Delete/ Edit Links:
+
+* Only display on each product card if the current user is logged in as a superuser.
+* Links highlight on hover.
+* Edit link redirects the superuser to the Edit Product page.
+* Delete link immediately deletes the product from the database and displays a Product deleted message to the user.
+
+### View All New Arrivals Button:
+
+* Brings users to view all products from the new arrivals category.
+
+### Latest Blog Section:
+
+* Displays the latest blog post added to the database.
+* The blog post is displayed as a horizontal card with an image on the left and a blog title and some text, the author of the post and the date it was posted on the right.
+* A read more button is provided, which brings the user to the full blog post page.
+* The blog post image is also a clickable link which brings the user to the full blog post page.
+
+### Delete/ Edit Links:
+
+* Only display on each blog post card if the current user is logged in as a superuser.
+* Links highlight on hover.
+* Edit link redirects the superuser to the Edit Blog page.
+* Delete link immediately deletes the blog from the database and displays a Blog deleted message to the user.
+
+### Check Out All Our Blog Posts Button:
+
+* Brings users to view the blog page.
+
+## Products Page
+
+* Displays product cards for all products from the database.
+
+### Product Cards:
+
+* Each product card contains a product image, Product name and product price. New arrivals also display a NEW badge on the product card.
+* The product image is a clickable link which brings the user to the full product detail page of the product clicked.
+
+### Category Badges:
+
+* Category badges are displayed for each category.
+* Clicking on a category badge lets the user view products from that category.
+
+### Product Sorting:
+
+* Product sorting is available via a Sort dropdown. Products can be sorted by:
+
+    * Category a-z
+    * Category z-a
+    * Price high - low
+    * Price low – high
+    * Product Name a-z
+    * Product Name z-a
+
+### Product Count:
+
+* Product count is provided at the top of the page, product count adjusts accordingly depending on whether viewing all products or a product category.
+
+### All Products Link:
+
+* Links to the all products page.
+
+### Delete/ Edit Links:
+
+* Display on each product card if the current user is logged in as a superuser.
+* Links highlight on hover.
+* Edit link redirects the superuser to the Edit Product page.
+* Delete link immediately deletes the product from the database and displays a Product deleted message to the user.
+
+### Back To Top Button:
+
+* Displays at the bottom right corner of the page.
+
+* Highlights on hover.
+
+
+* Clicking on it brings the user to the top of the page
+
+## Full Product Detail Page
+
+*   Displays for all users.
+*   Displays the full product detail on the page.
+*   Displays the product name, product image, product category, product description, if it is a product from the new arrivals category a NEW badge is also displayed.
+
+### Quantity Select Box:
+
+*   Allows the user select the quantity of the product that they would like to purchase.
+
+*   The quantity can either be typed in or adjusted using the +/- buttons.
+
+
+*   The quantity is limited to a number between 1 and 99.
+
+### Continue Shopping Button:
+
+*   Continue shopping button brings users back to the all products page.
+
+### Add To Cart Button:
+
+*   Add to cart button adds the selected quantity of the item to the cart.
+* Displays a success toast message to alert the user that the product has been added to the cart, the success toast message also contains an overview of the current cart contents, a view cart button and a check out button.
+* The message disappears after 5 seconds.
+
+### Delete/ Edit Links:
+
+* Display on each product card if the current user is logged in as a superuser.
+* Links highlight on hover.
+* Edit link redirects the superuser to the Edit Product page.
+* Delete link immediately deletes the product from the database and displays a Product deleted message to the user.
+
+## Add Product Page
+
+* Only available to superusers
+* Allows a superuser to add a new product to the site, by filling out a form with the fields:
+    * Category
+    * Product name
+    * Product description
+    * Product number
+    * Product price
+    * Product Image
+
+### Add Product Button:
+
+* Highlights on hover.
+* Adds the product to the database
+* Displays a message letting the user know that the item was added to the database.
+
+### Cancel Button:
+
+* Highlights on hover.
+* Returns the user to the products page.
+
+## Edit Product Page
+
+* Similar to the add product page but the fields are pre-populated with the existing product info.
+
+## Cart Page
+
+* Displays a list of the products in the cart in a table/grid format.
+* Displays the subtotal of each item in the cart depending on the quantity of that item.
+* Allows the user to adjust the quantity of an item in the cart using the quantity select box for each item.
+* Cart total, delivery charges and grand total are displayed at the bottom of the page
+* If the cart total is less than the €150 free delivery threshold a reminder to the user is displayed telling them how much more they need to spend to get free delivery.
+
+### Quantity Select Box:
+* Displays for each item in the cart.
+* Allows the user to adjust the quantity of the product that they would like to purchase.
+* The quantity is limited to a number between 1 and 99.
+* Once the quantity is set the update link will update the quantity in the cart for that item and its subtotal. A quantity updated notification message will also appear.
+* The remove link will remove the item entirely from the cart. A Item removed notification message will also appear.
+
+### Continue Shopping/ Checkout Buttons:
+
+* Highlight on hover.
+* Continue shopping button returns the user to the products page.
+* Checkout button brings the user to the checkout page.
+
+## Checkout Page
+
+* Displays an order summary, with the items to be purchased, their quantity and subtotal for each item.
+* Displays the order total, delivery and grand total.
+* Displays a form for the user to enter their details, delivery info and payment details.
+
+### Update Cart/ Checkout Buttons:
+
+* Highlight on hover.
+* Update cart button returns the user to the shopping cart page.
+* Checkout button submits the checkout form.
+* Once the form is valid the order is processed.
+* If the form is not valid users are advised to check the form for errors.
+* Once the payment is processed successfully a checkout success page is displayed with an overview of the order.
+* Once the payment is confirmed a confirmation email is sent.
+* For registered, logged in users the order is saved to their order history which can be viewed from their profile page.
+* Logged in users have the option to save their payment details to their profile, once this box is checked their payment details are saved to their profile and the form will be prepopulated the next time they make a purchase.
+* Users who are not logged in are advised to register and or login in order to save their details.
+* The amount to be charged to the card is displayed under the checkout button.
+
+
+## Checkout Success Page:
+
+* Displays an overview of the order.
+* Initially displays a message notification confirming the order.
+* Lets the user know that a confirmation email will be sent to the email address they used.
+
+### Checkout New Arrivals Button:
+
+* Displays after the order summary.
+* Highlights on hover.
+* Brings users to view the new arrivals category of products.
+
+## User Profile Page
+
+* Displays for a logged in user.
+* Provides a form where the user can update their details.
+* If a user has already saved their details the form will be pre-populated.
+* Displays  the order history for that user.
+* The order number for each order in the order can be clicked to view the full order.
+
+### Update Details Button:
+* Displays at the bottom of the users details form.
+* Highlights on hover.
+* Updates the users’ details.
+
+## Blog Page
+* Displays all blog posts.
+* Each blog post is displayed as a horizontal card with an image on the left and a blog title, some text, the author of the post and the date it was posted on the right.
+* A read more button is provided, which brings the user to the full blog post page.
+* The blog post image is also a clickable link which brings the user to the full blog post page.
+
+### Delete/ Edit Links:
+
+* Only display on each blog post card if the current user is logged in as a superuser.
+* Links highlight on hover.
+* Edit link redirects the superuser to the Edit Blog page.
+* Delete link immediately deletes the blog from the database and displays a Blog deleted message to the user.
+
+### Back To Top Button:
+
+* Displays at the bottom right corner of the page.
+* Highlights on hover.
+* Clicking on it brings the user to the top of the page.
+
+## Blog Detail Page 
+
+* Displays the full blog post article.
+* Displays the Blog post title, image, article and the author and date it was posted.
+
+### Comments
+
+* Comments can be read by all users.
+* Logged in users can leave a comment by filling in the comment form and clicking Add Comment
+* Users who are not logged in are advised to register or login to leave a comment.
+* A superuser can delete a comment via a delete link that displays for them.
+
+### Add Comment Button:
+
+* Submits the comment form.
+* Displays a notification message saying the comment was successfully added.
+
+### Back To Top Button:
+
+* Displays at the bottom right corner of the page.
+* Highlights on hover.
+* Clicking on it brings the user to the top of the page.
+
+## Add Blog Page
+
+* Only available to superusers
+* Allows a superuser to add a new blog post to the site, by filling out a form with the fields:
+    * Blog Title
+    * Blog body text
+    * Blog Image
+
+### Add Blog Button:
+
+* Adds the blog post to the database
+* Displays a message letting the user know that the blog post was added to the database.
+
+### Cancel Button:
+
+* Returns the user to the blog page.
+
+## Edit Blog Page
+
+* Similar to the add blog page but the fields are pre-populated with the existing blog post info.
+
+## Contact Page
+
+* Displays for all users.
+* Displays a contact form.
+* Users must fill out all fields in the form.
+
+### Send Message Button:
+
+* Highlights on hover.
+* Form does not submit if fields are left empty.
+* Submits the form and displays a notification message ‘Message sent”
+
+## 404 Page
+
+* Displays when a 404 - page not found error is encountered.
+* Tells the user that the page could not be found.
+* Provides a return home button.
+
+### Return Home Button:
+
+* Highlights on hover.
+* Returns the user to the home page.
+
+## 500 Page
+* Displays when a 500 – internal server error is encountered.
+* Tells the user that there’s an internal server error.
+* Provides a return home button.
+
+### Return Home Button:
+
+* Highlights on hover.
+* Returns the user to the home page.
 
 
