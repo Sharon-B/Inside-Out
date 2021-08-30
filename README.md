@@ -42,23 +42,27 @@ To grow my skills as a developer and create a simple easy to use site. Develop t
 12.	As a user I want to be able to remove items from my shopping cart so I can change my mind about potential purchases.
 13.	As a user I want to receive an order confirmation after checkout so I can be sure that my order was received.
 14.	As a user I want to know that my actions have been acknowledged so I can be sure I am doing the right thing eg add an item to the cart.
+15. As a user I want to be able to learn more about outdoor furniture and it’s use so that I can properly care for, maintain and design my outdoor space.
+16.	As a user I want to be able to easily view any new items that have been recently added to the store.
+17.	As a user I want to have access to my order history and delivery info.
 
 ### Registered User Stories
 
-15.	As a registered user I want to be able to login easily to access my account information.
-16.	As a registered user I want to have my own profile where I can keep track of my orders and delivery info.
-17.	As a registered user I want to be able to see my order history so I know exactly what I have ordered
-18.	As a registered user I want to have my details saved so I don’t have to enter them every time i make a purchase.
+18.	As a registered user I want to be able to login easily to access my account information.
+19.	As a registered user I want to have my own profile where I can keep track of my orders and delivery info.
+20.	As a registered user I want to be able to see my order history so I know exactly what I have ordered
+21.	As a registered user I want to have my details saved so I don’t have to enter them every time i make a purchase.
+22.	 As a registered user I want to be able to comment on a blog post so I can engage with other users and the site owner.
 
-### Admin User Stories
+### Admin Superuser Stories
 
-19.	As a superuser I want to be able to add/edit/delete any product so that I can maintain a well curated site.
-20.	As a superuser I want to be able to add/edit/delete blog posts so that I can keep the site up to date on current trends.
-21.	As a superuser I want to be able to delete blog post comments so that I can keep the comments section well maintained.
+23.	As a superuser I want to be able to add/edit/delete any product so that I can maintain a well curated site.
+24.	As a superuser I want to be able to add/edit/delete blog posts so that I can keep the site up to date on current trends.
+25.	As a superuser I want to be able to delete blog post comments so that I can keep the comments section well maintained.
 
 ### Site Owner Stories
 
-22.	As a site owner I want to provide a good user experience for my users, so that they want to come back.
+26.	As a site owner I want to provide a good user experience for my users, so that they want to come back.
 
 # Scope
 
