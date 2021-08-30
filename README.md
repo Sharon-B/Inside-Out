@@ -414,7 +414,7 @@ the issue was resolved.
 
 # Testing
 
-Testing documentation can be found [here]()
+Testing documentation can be found [here](https://github.com/Sharon-B/Inside-Out/blob/main/TESTING.md)
 
 
 
