@@ -40,7 +40,7 @@ class BlogForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
-        for field_name, field in self.fields.items():
+        for field in self.fields.values():
             field.widget.attrs['class'] = 'admin-form'
         self.fields['title'].widget.attrs['placeholder'] = 'Blog Title'
         self.fields['body_text'].widget.attrs['placeholder'] = 'Blog Content'
