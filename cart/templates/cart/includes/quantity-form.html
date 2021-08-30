@@ -4,20 +4,19 @@
     <div class="form-group">
         <div class="input-group cart-quantity">
             <div class="input-group-prepend">
-                <button class="decrement-qty btn btn-sm btn-secondary" 
-                    data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
+                <button class="decrement-qty btn btn-sm btn-secondary decrement-qty_{{ item.item_id }}" 
+                    data-item_id="{{ item.item_id }}">
                     <span>
                         <i class="fas fa-minus fa-sm"></i>
                     </span>
                 </button>
             </div>
-            <input class="form-control form-control-sm qty_input" type="number"
+            <input class="form-control form-control-sm qty_input id_qty_{{ item.item_id }}" type="number"
                 name="quantity" value="{{ item.quantity }}" min="1" max="99"
-                data-item_id="{{ item.item_id }}"
-                id="id_qty_{{ item.item_id }}">
+                data-item_id="{{ item.item_id }}">
             <div class="input-group-append">
-                <button class="increment-qty btn btn-sm btn-secondary"
-                    data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
+                <button class="increment-qty btn btn-sm btn-secondary increment-qty_{{ item.item_id }}"
+                    data-item_id="{{ item.item_id }}">
                     <span>
                         <i class="fas fa-plus fa-sm"></i>
                     </span>
@@ -28,5 +27,5 @@
 </form>
 <div class="update-remove">
     <a class="update-link info-text"><small>Update</small></a>
-    <a class="remove-item error-text float-end" id="remove_{{ item.item_id }}"><small>Remove</small></a>
+    <a class="remove-item error-text float-end remove_{{ item.item_id }}"><small>Remove</small></a>
 </div>
