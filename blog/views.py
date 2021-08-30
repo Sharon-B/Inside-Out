@@ -74,7 +74,7 @@ def add_blog_post(request):
                 blog_post = form.save(commit=False)
                 blog_post.user = request.user
                 blog_post.save()
-                messages.success(request, 'Blog added successfully!')
+                messages.info(request, 'Blog added successfully!')
                 return redirect(reverse('blog_detail', args=[blog_post.id]))
             else:
                 messages.error(request, 'Please check the form for errors. \
@@ -108,7 +108,7 @@ def edit_blog(request, blog_post_id):
             form = BlogForm(request.POST, request.FILES, instance=blog_post)
             if form.is_valid():
                 form.save()
-                messages.success(request, 'Blog post updated successfully!')
+                messages.info(request, 'Blog post updated successfully!')
                 return redirect(reverse('blog_detail', args=[blog_post.id]))
             else:
                 messages.error(request, 'Please check the form for errors. \
@@ -139,7 +139,7 @@ def delete_blog_post(request, blog_post_id):
     if request.user.is_superuser:
         blog_post = get_object_or_404(BlogPost, pk=blog_post_id)
         blog_post.delete()
-        messages.success(request, 'Blog post deleted!')
+        messages.info(request, 'Blog post deleted!')
     else:
         messages.error(request, 'Sorry, you do not have permission for that.')
         return redirect(reverse('home'))
@@ -156,7 +156,7 @@ def delete_comment(request, comment_id):
     if request.user.is_superuser:
         comment = BlogComment.objects.get(pk=comment_id)
         comment.delete()
-        messages.success(request, 'Comment deleted!')
+        messages.info(request, 'Comment deleted!')
     else:
         messages.error(request, 'Sorry, you do not have permission for that.')
         return redirect(reverse('home'))
