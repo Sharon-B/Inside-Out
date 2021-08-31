@@ -85,12 +85,7 @@
 
 {% block postloadjs %}
     {{ block.super }}
-
     <!-- Javascript for back to top button -->
-    <script>
-        $('.btt-link').click(function(e) {
-            window.scrollTo(0,0)
-        })
-    </script>
+    <script src="{% static 'blog/js/btt_button.js' %}"></script>
 
 {% endblock %}
