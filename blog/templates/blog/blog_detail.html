@@ -33,11 +33,11 @@
                 <div class="blog-image-container">
                     {% if blog_post.image %}
                         <a href="{{ blog_post.image.url }}" target="_blank">
-                            <img src="{{ blog_post.image.url }}" alt="{{ blog_post.title }}" class="img-fluid">
+                            <img src="{{ blog_post.image.url }}" alt="{{ blog_post.title }}" class="img-fluid" rel="noopener">
                         </a>
                     {% else %}
                         <a href="{{ MEDIA_URL }}noimage.png" target="_blank">
-                            <img src="{{ MEDIA_URL }}noimage.png" alt="{{ blog_post.title }}" class="img-fluid">
+                            <img src="{{ MEDIA_URL }}noimage.png" alt="{{ blog_post.title }}" class="img-fluid" rel="noopener">
                         </a>
                     {% endif %}
                 </div>
