@@ -1,25 +1,26 @@
 /* Stripe form styles */
+
 .stripe-style-input,
 .StripeElement {
-  box-sizing: border-box;
-  height: 43px;
-  padding: 10px 12px;
-  border: 1px solid transparent;
-  border-radius: 15px;
-  background-color: white;
-  box-shadow: 0 1px 3px 0 #e6ebf1;
-  -webkit-transition: box-shadow 150ms ease;
-  transition: box-shadow 150ms ease;
+    box-sizing: border-box;
+    height: 43px;
+    padding: 10px 12px;
+    border: 1px solid transparent;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 0 1px 3px 0 #e6ebf1;
+    -webkit-transition: box-shadow 150ms ease;
+    transition: box-shadow 150ms ease;
 }
 
 .StripeElement--focus,
 .stripe-style-input:focus,
 .stripe-style-input:active {
-  box-shadow: 0 1px 3px 0 #cfd7df;
+    box-shadow: 0 1px 3px 0 #cfd7df;
 }
 
 .StripeElement--webkit-autofill {
-  background-color: #fefde5 !important;
+    background-color: #fefde5 !important;
 }
 
 .stripe-style-input::placeholder {
@@ -27,25 +28,13 @@
     font-size:  1.4rem;
 }
 
-/* Checkout form styles */
+/*----- Checkout form styles -----*/
+
 #payment-form .form-control,
 #card-element {
     color: #2D3636;
     border: .1rem solid #0E5CA5;
     font-size: 1.6rem;
-}
-
-fieldset {
-    margin-bottom: 1.8rem;
-    border-radius: 1.5rem 4rem;
-    padding: 2rem 2rem 2rem 2rem;
-    background-color: #B2CAD8;
-}
-
-legend {
-    font-weight: 600;
-    font-size: 2rem;
-    padding-bottom: 1rem;
 }
 
 #payment-form label,
@@ -101,8 +90,6 @@ select:invalid,
 select option[value=""] {
     color: #aab7c4 !important;
 }
-
-
 
 /*----- Processing Overlay ------*/
 
