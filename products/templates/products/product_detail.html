@@ -51,11 +51,11 @@
                 <div class="product-image-container">
                     {% if product.image %}
                         <a href="{{ product.image.url }}" target="_blank">
-                            <img src="{{ product.image.url }}" alt="{{ product.name }}" class="img-fluid">
+                            <img src="{{ product.image.url }}" alt="{{ product.name }}" class="img-fluid" rel="noopener">
                         </a>
                     {% else %}
                         <a href="{{ MEDIA_URL }}noimage.png" target="_blank">
-                            <img src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}" class="img-fluid">
+                            <img src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}" class="img-fluid" rel="noopener">
                         </a>
                     {% endif %}
                 </div>
