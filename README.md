@@ -486,7 +486,11 @@ Once all is ok we can show the migrations again and then apply the migrations us
 
         python3 manage.py migrate
 
-7.	To get the data from the original sqlite database used in Gitpod:
+7.  Create a superuser:
+
+        python3 manage.py createsuperuser
+
+8.	To get the data from the original sqlite database used in Gitpod:
 
 *   Reconnect to the original sqlite database in settings.py
 *   Backup the sqlite database and load it into a db.json file using the command:
@@ -498,7 +502,7 @@ Once all is ok we can show the migrations again and then apply the migrations us
 
         ./manage.py loaddata db.json
 
-8.	Then we can run the site using the postgres database however I encountered an error here and had to do the following:
+9.	Then we can run the site using the postgres database however I encountered an error here and had to do the following:
 
 * In terminal I entered: `echo $DATABASE_URL`
 * The response in the terminal was: postgresql://gitpod@localhost
@@ -506,7 +510,7 @@ Once all is ok we can show the migrations again and then apply the migrations us
 
 This is another gitpod issue with the code institute template and was because Gitpod sets postgresql://gitpod@localhost and it is not a valid Postgres URL (no name), so it throws an error.
 
-9.	Setup settings.py file to use either the sqlite database when running on gitpod or the postgres database when running on Heroku by using the following code:
+10.	Setup settings.py file to use either the sqlite database when running on gitpod or the postgres database when running on Heroku by using the following code:
 
         If 'DATABASE_URL' in os.environ:
 	
@@ -525,7 +529,7 @@ This is another gitpod issue with the code institute template and was because Gi
 
 Ensuring the DATABASE_URL environment variable is set in the Heroku config vars.
 
-10.	 Install gunicorn which acts as our webserver:
+11.	 Install gunicorn which acts as our webserver:
 
     pip3 install gunicorn
 
@@ -535,11 +539,11 @@ And then:
 
 To save it in the requirements.txt file.
 
-11.	Create a Procfile and add the following code to it which tells Heroku to create a web dyno which will run gunicorn and serve our app.
+12.	Create a Procfile and add the following code to it which tells Heroku to create a web dyno which will run gunicorn and serve our app.
 
         Web: gunicorn <app_name>.wsgi:application
 
-12.	 We will initially disable collectstatic in Heroku, this can be done in the cli:
+13.	 We will initially disable collectstatic in Heroku, this can be done in the cli:
 
 * Heroku login -i
 * Enter Heroku login details
@@ -547,31 +551,31 @@ To save it in the requirements.txt file.
 
         Heroku config:set DISABLE_COLLECTSTATIC = 1
 
-13.	 Update allowed hosts in settings.py to 
+14.	 Update allowed hosts in settings.py to 
 
         ALLOWED_HOSTS = [‘<heroku_app_name>.herokuapp.com’, ‘localhost’]
 
 
-14.	Git add, git commit and git push files to GitHub so they are available to Heroku which will use them to build the app.
+15.	Git add, git commit and git push files to GitHub so they are available to Heroku which will use them to build the app.
 
 
-15.	 Initialise the Heroku git remote in the CLI:
+16.	 Initialise the Heroku git remote in the CLI:
 
     Heroku git:remote -a <heroku_app_name>
 
-16.	 Push to Heroku:
+17.	 Push to Heroku:
 
     git push Heroku main
 
 The app is now deployed via Heroku.
 
-17.	In Heroku we can now set up automatic deployments so that each time the code is pushed to github it also deploys to Heroku. In the deploy tab:
+18.	In Heroku we can now set up automatic deployments so that each time the code is pushed to github it also deploys to Heroku. In the deploy tab:
 
 * Select Connect to GitHub, when the Github profile is displayed add the name of your repo and click search, once it finds & displays the correct repo click connect.
 * Select the branch the repo is using
 * Click Enable Automatic Deploys
 
-18.	In Heroku Config Vars set up a SECRET_KEY.
+19.	In Heroku Config Vars set up a SECRET_KEY.
 
 ### Manual deployment:
 
@@ -592,6 +596,132 @@ Open terminal:
 * Change the current working directory to where you want the cloned directory to be
 * Type git clone and paste the copied url after it
 * Press enter and the clone will be created
+
+## Amazon Web Services (AWS) 
+
+### Initial Setup
+
+1.	Create an account on aws.amazon.com
+
+* Click create account
+* Enter details
+* Enter billing details
+* Verify account via SMS
+* Select a plan
+* Sign up
+
+2.	In the AWS  Management Console
+
+* Open the S3 Service
+* Select Create bucket
+* Add a name for the bucket
+* Enable All Public Access and acknowledge
+* Click Create Bucket
+
+3.	Set up the bucket:
+
+    #### Properties Tab:
+
+    * Static website hosting -> Edit -> Enable
+    * Set index.html as Index Document
+    * Save Changes 
+
+    #### Permissions Tab:
+
+    * CORS -> Edit
+    * And set:
+
+    ```
+    [
+    {
+        "AllowedHeaders": [
+            "Authorization"
+        ],
+        "AllowedMethods": [
+            "GET"
+        ],
+        "AllowedOrigins": [
+            "*"
+        ],
+        "ExposeHeaders": []
+    }
+    ]
+    ```
+
+    #### Permissions Tab:
+
+    * Bucket Policy -> Edit -> Policy Generator – note the ARN
+    * Policy type: S3 bucket
+    * Allow all principles by setting it to *
+    * Action: Get object
+    * Enter ARN from above
+    * Add Statement
+    * Generate Policy
+    * Copy the policy and paste it into the bucket policy editor
+    * Add /* at the end of the resource key to allow access to all resources.
+    * Save changes
+
+    #### Permissions Tab:
+
+    * Access Control List (ACL) -> Edit
+    * In the public access section select list.
+    * Save changes.
+	
+### Setup AWS Identity Access Management (IAM)
+
+1.	Create a user group:
+
+* Click user groups -> Create group
+* Name the group
+* Create group
+
+2.	Create a policy:
+
+* Click Policies -> Create Policy
+* Select JSON tab -> Import managed policy
+* Import the S3 Full Access Policy
+* Get the bucket ARN from the bucket policy and add it to the resource key as a list where the first item in the list is the ‘ARN’
+And the second item is the ‘ARN/*’
+* Click next
+* Review Policy
+* Name the policy -> Create Policy
+
+3.	Attach the policy to the group we created:
+
+* User Groups -> Click on the group -> Permissions
+* Add permissions -> Attach Policy -> Select the one just created
+* Add permissions
+
+4.	Create a User to add to the Group:
+
+* On the Users tab -> Add User -> Create a name for the user
+* Allow Programmatic Access
+* Click Next
+* Add the user to the group just created
+* Click next -> Create User
+* Download the .csv file containing the access key and secret access key. This file can only be downloaded now.
+
+### Connecting Django to S3
+
+1.	Install boto3 and django-storages packages
+
+        pip3 install boto3
+        pip3 install django-storages
+        pip3 freeze > requirements.txt
+
+* Add storages to the list of installed apps in settings.py
+
+2.	In Heroku Config Vars add the variables
+
+        AWS_ACCESS_KEY_ID
+        AWS_SECRET_ACCESS_KEY
+
+* Using the values from the .csv file downloaded from AWS.
+
+3.	Delete the DISABLE_COLLECTSTATIC variable from the config vars and deploy the Heroku app.
+
+4.	In the S3 bucket create a folder called `media` and upload any required media files to it. Under Manage Public Permissions -> Select grant public read access to these objects -> Upload.
+
 
 # Credits
 
