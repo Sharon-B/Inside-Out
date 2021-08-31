@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
 #update-profile-form label {
     font-size: 1.6rem;
 }
@@ -12,6 +19,26 @@
     font-size: 1.6rem;
     border-radius: 1.5rem;
     width: 90%;
+}
+
+.profile-form-input::-webkit-input-placeholder {
+    color: #aab7c4;
+    font-size:  1.4rem;
+}
+
+.profile-form-input::-moz-placeholder {
+    color: #aab7c4;
+    font-size:  1.4rem;
+}
+
+.profile-form-input:-ms-input-placeholder {
+    color: #aab7c4;
+    font-size:  1.4rem;
+}
+
+.profile-form-input::-ms-input-placeholder {
+    color: #aab7c4;
+    font-size:  1.4rem;
 }
 
 .profile-form-input::placeholder {
