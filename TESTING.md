@@ -19,7 +19,9 @@
 ## Python code was passed through PEP8 online. 
 
 
-# Lighthouse from Chrome Dev Tools Testing
+# Lighthouse from Chrome Dev Tools Report
+
+
 
 # Responsiveness Testing
 
@@ -35,6 +37,7 @@ All aspects of the website mentioned above were manually tested on the following
 
 # Friends And Family User Testing 
 
+The general feedback was that the site looks well and is easy to navigate. They found the checkout process quick and easy to use. Devices used: iPad Pro, iPhone 8 Plus, Laptop (windows running the Chrome browser).
 
 # Testing User Stories
 
