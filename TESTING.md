@@ -6,18 +6,34 @@
 
 ## CSS code was passed through Auto Prefixer to add vendor prefixes
 
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
 
 ## CSS code was passed through the W3C CSS Validator 
 
+base.css: No errors, 64 warnings relating to vendor prefixes.
+
+profile.css: No errors, 4 warnings relating to vendor prefixes.
+
+checkout.css: No errors, 18 warnings relating to vendor prefixes.
+
+blog.css: No errors, 10 warnings relating to vendor prefixes.
 
 ## HTML code was passed through the W3C Markup Validator. 
 
+No errors.
 
 ## Javascript code was passed through jshint. 
 
+$ - undefined variable, this relates to jquery.
+
+Stripe – undefined variable, this relates to using Stripe for payments.
 
 ## Python code was passed through PEP8 online. 
 
+.py files passed through PEP8 online and returned All Right
 
 # Lighthouse from Chrome Dev Tools Report
 
