@@ -1,6 +1,6 @@
 // Set up Stripe card element
-let stripePublicKey = $('#id_stripe_public_key').text().slice(1, -1)
-let clientSecret = $('#id_client_secret').text().slice(1, -1)
+let stripePublicKey = $('#id_stripe_public_key').text().slice(1, -1);
+let clientSecret = $('#id_client_secret').text().slice(1, -1);
 
 let stripe = Stripe(stripePublicKey);
 let elements = stripe.elements();
@@ -55,7 +55,7 @@ form.addEventListener('submit', function(ev) {
         'csrfmiddlewaretoken': csrfToken,
         'client_secret': clientSecret,
         'save_info': saveInfo,
-    }
+    };
     let url = '/checkout/cache_checkout_data/';
     
     /* Post the form data to cache_checkout_data view which updates the payment intent & returns a 200 response so we can call
@@ -114,5 +114,5 @@ form.addEventListener('submit', function(ev) {
     }).fail(function() {
         // if fails reload the page, the error message will be in the view
         location.reload();
-    })
+    });
 });
