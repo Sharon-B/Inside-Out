@@ -420,9 +420,178 @@ Testing documentation can be found [here](https://github.com/Sharon-B/Inside-Out
 
 # Deployment
 
+This website was created in the Gitpod development environment. After creating a new repository in GitHub using the Code Institute template, the green Gitpod button was used to initialise the repository in Gitpod. 
+
+Throughout the process the git commands `git add` and `git commit` were used to store the work in the local Gitpod environment, `git push` would then be used to push the commits to the GitHub repository. Branches were used for some of the main features and the following git commands were used:
+	
+    git branch <new_branch_name>
+    git checkout <branch_name>	
+    git add
+    git commit
+    git push origin <branch_name>
+    git checkout <main>
+    git merge –no-ff <branch_name>
+    git push
 
 
+## Heroku Deployment
 
+1.	Login to Heroku.com and click New -> Create New App
+
+* Add a name
+* Select region
+* Click Create App
+
+2.	To add the postgres database in Heroku:
+
+In the Resources tab -> Add ons:
+*   Search for postgres
+*   Select Heroku Postgres
+*   Select the free option
+*   Click submit
+
+3.	In the gitpod environment install dj_database_url and psycopy2 packages using the commands:
+
+        pip3 install psycopy2-binary
+
+        pip3 install dj_database_url
+
+4.	Freeze these requirements into the requirements.txt file by running the following command:
+
+    pip3 freeze —local > requirements.txt
+
+This will ensure all the dependencies currently used by the app are in the requirements.txt file.
+
+5.	Update the settings.py file by adding:
+
+        import dj_database_url
+
+And setting up the new database settings:
+
+        DATABASES = {
+            ‘default’ = dj_databse_url.parse(‘<postgres_url>’)
+        }
+
+Comment out the original database setting for now so that we are connected to the postgres database.
+
+6.	Now we need to run migrations for the new postgres database. We can first showmigrations to see that the migrations still need to be applied using
+
+        python3 manage.py showmigrations
+
+When I did this I had an error due to a gitpod issue when connecting to Heroku Postgres, to resolve this I had to run the following command in the CLI:
+
+        Unset PGHOSTADDR
+
+Once all is ok we can show the migrations again and then apply the migrations using:
+
+        python3 manage.py migrate
+
+7.	To get the data from the original sqlite database used in Gitpod:
+
+*   Reconnect to the original sqlite database in settings.py
+*   Backup the sqlite database and load it into a db.json file using the command:
+
+        ./manage.py dumpdata --exclude auth.permission --exclude contenttypes --indent 2 > db.json
+
+* Then connect back to the postgres database in settings.py 
+* Load the data from the db.json file into the postgres database using the command:
+
+        ./manage.py loaddata db.json
+
+8.	Then we can run the site using the postgres database however I encountered an error here and had to do the following:
+
+* In terminal I entered: `echo $DATABASE_URL`
+* The response in the terminal was: postgresql://gitpod@localhost
+* Then in the terminal I entered: `unset DATABASE_URL`
+
+This is another gitpod issue with the code institute template and was because Gitpod sets postgresql://gitpod@localhost and it is not a valid Postgres URL (no name), so it throws an error.
+
+9.	Setup settings.py file to use either the sqlite database when running on gitpod or the postgres database when running on Heroku by using the following code:
+
+        If 'DATABASE_URL' in os.environ:
+	
+            DATABASES = {
+                'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+            }
+	
+	    else:
+	
+            DATABASES = {
+                'default': {
+                    'ENGINE': 'django.db.backends.sqlite3',
+                    'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+                }
+            }
+
+Ensuring the DATABASE_URL environment variable is set in the Heroku config vars.
+
+10.	 Install gunicorn which acts as our webserver:
+
+    pip3 install gunicorn
+
+And then:
+
+    pip3 freeze —local > requirements.txt
+
+To save it in the requirements.txt file.
+
+11.	Create a Procfile and add the following code to it which tells Heroku to create a web dyno which will run gunicorn and serve our app.
+
+        Web: gunicorn <app_name>.wsgi:application
+
+12.	 We will initially disable collectstatic in Heroku, this can be done in the cli:
+
+* Heroku login -i
+* Enter Heroku login details
+* And run:
+
+        Heroku config:set DISABLE_COLLECTSTATIC = 1
+
+13.	 Update allowed hosts in settings.py to 
+
+        ALLOWED_HOSTS = [‘<heroku_app_name>.herokuapp.com’, ‘localhost’]
+
+
+14.	Git add, git commit and git push files to GitHub so they are available to Heroku which will use them to build the app.
+
+
+15.	 Initialise the Heroku git remote in the CLI:
+
+    Heroku git:remote -a <heroku_app_name>
+
+16.	 Push to Heroku:
+
+    git push Heroku main
+
+The app is now deployed via Heroku.
+
+17.	In Heroku we can now set up automatic deployments so that each time the code is pushed to github it also deploys to Heroku. In the deploy tab:
+
+* Select Connect to GitHub, when the Github profile is displayed add the name of your repo and click search, once it finds & displays the correct repo click connect.
+* Select the branch the repo is using
+* Click Enable Automatic Deploys
+
+18.	In Heroku Config Vars set up a SECRET_KEY.
+
+### Manual deployment:
+
+In the manual deployment section:
+
+* Click Deploy Branch => Your app was successfully deployed will be displayed with the option to view the app.
+
+### Creating A Local Clone
+
+You can clone the repository to create a local copy on your computer.
+From the Git Hub repository:
+
+* Click Code at the top of the file list
+* Click the clipboard icon to copy the url provided
+
+Open terminal:
+
+* Change the current working directory to where you want the cloned directory to be
+* Type git clone and paste the copied url after it
+* Press enter and the clone will be created
 
 # Credits
 
