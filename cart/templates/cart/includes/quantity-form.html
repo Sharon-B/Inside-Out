@@ -5,7 +5,7 @@
         <div class="input-group cart-quantity">
             <div class="input-group-prepend">
                 <button class="decrement-qty btn btn-sm btn-secondary decrement-qty_{{ item.item_id }}" 
-                    data-item_id="{{ item.item_id }}">
+                    data-item_id="{{ item.item_id }}" aria-label="minus button">
                     <span>
                         <i class="fas fa-minus fa-sm"></i>
                     </span>
@@ -16,7 +16,7 @@
                 data-item_id="{{ item.item_id }}">
             <div class="input-group-append">
                 <button class="increment-qty btn btn-sm btn-secondary increment-qty_{{ item.item_id }}"
-                    data-item_id="{{ item.item_id }}">
+                    data-item_id="{{ item.item_id }}" aria-label="plus button">
                     <span>
                         <i class="fas fa-plus fa-sm"></i>
                     </span>
