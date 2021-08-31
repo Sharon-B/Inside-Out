@@ -9,7 +9,7 @@
             <div class="input-group search-input">
                 <input type="text" name="q" class="form-control search-bar" placeholder="Search..." aria-label="Search..." aria-describedby="mobile-button-addon2">
                 <div class="input-group-append">
-                <button type="submit" id="mobile-button-addon2" class="form-control search-button">
+                <button type="submit" id="mobile-button-addon2" class="form-control search-button" aria-label="search button">
                     <span>
                     <i class="fas fa-search"></i>
                     </span>
@@ -21,8 +21,8 @@
 </li>
 <!-- Account Dropdown -->
 <li class="nav-item dropdown col-3">
-    <span class="nav-link" id="mobile-account" role="button"
-        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span class="nav-link" id="mobile-account" role="button" data-bs-toggle="dropdown" aria-haspopup="true"
+        aria-expanded="false" aria-label="user account dropdown menu">
         <i class="far fa-user icons"></i>
     </span>
     <!-- Account Dropdown links-->
@@ -42,7 +42,8 @@
 </li>
 <!-- Shopping Cart -->
 <li class="shopping-cart col-3">
-    <a class="{% if grand_total %}info-text font-weight-bold{% else %}text-color{% endif %} nav-link" href="{% url 'view_cart' %}">
+    <a class="{% if grand_total %}info-text font-weight-bold{% else %}text-color{% endif %} nav-link"
+        href="{% url 'view_cart' %}" aria-label="shopping cart">
         <div>
             <div class="cart"><i class="fas fa-shopping-cart"></i></div>
             <p class="grand-total">
