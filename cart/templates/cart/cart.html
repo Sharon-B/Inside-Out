@@ -113,8 +113,10 @@
                     </div>
                 {% else %}
                     <!-- Empty Cart -->
-                    <p class="p-text">There are no items in your shopping cart.</p>
-                    <a class="btn button" href="{% url 'products' %}?category=dining_sets,bistro_set,lounge_sets,chairs,sofas,benches,new_arrivals">Continue Shopping</a>
+                    <div class="text-center">
+                        <p class="p-text">There are no items in your shopping cart.</p>
+                        <a class="btn button" href="{% url 'products' %}?category=dining_sets,bistro_set,lounge_sets,chairs,sofas,benches,new_arrivals">Continue Shopping</a>
+                    </div>
                 {% endif %}
             </div>
         </div>
