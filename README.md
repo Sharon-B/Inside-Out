@@ -2,7 +2,7 @@
 
 ![Responsive Image](https://github.com/Sharon-B/Inside-Out/blob/main/readme-documentation/am-i-responsive-inside-out.png "Am I Responsive")
 
-[Link to Live Project]()
+[Link to Live Project](https://inside-out-sb.herokuapp.com/)
 
 # Project Summary
 
