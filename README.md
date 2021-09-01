@@ -430,7 +430,9 @@ the issue was resolved.
 
 ## Known Bugs
 
+On the shopping cart page the quantity select +/- buttons enable/disable appropriately only when the update link is clicked, not when the buttons themselves are clicked. This only happens on larger screen sizes and needs to be further investigated. Due to time restraints this issue is unresolved.
 
+Deleting a product from the database also removes it from previous orders. This is due to the product foreign key in the OrderLineItem Model being set to on_delete=models.CASCADE. While this needs further investigation I think setting this to on_delete=models.PROTECT instead could help resolve the issue. However due to time constraints I have not had time to test this out and so this issue is currently unresolved.
 
 # Defensive Design
 
