@@ -8,14 +8,14 @@ class BlogPostAdmin(admin.ModelAdmin):
     """
 
     list_display = (
-                    'title',
-                    'created_on',
-                    'image',
+        'title',
+        'created_on',
+        'image',
     )
 
     search_fields = (
-                     'title',
-                     'body_text',
+        'title',
+        'body_text',
     )
 
 

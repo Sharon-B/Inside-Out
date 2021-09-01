@@ -14,6 +14,7 @@
 
 {% block content %}
     <div class="container">
+        <!-- Page Heading -->
         <div class="row">
             <div class="col page-heading">
                 <h1 class="heading">Blog Management</h1>
@@ -25,6 +26,7 @@
             <div class="col-12 col-md-8 offset-md-2">
                 <h3 class='sub-heading'>Add A Blog</h3>
                 <div>
+                    <!-- Add Blog Form -->
                     <form action="{% url 'add_blog' %}" method="POST" class="form" enctype="multipart/form-data">
                         {% csrf_token %}
                         {% for field in form %}
@@ -35,9 +37,11 @@
                             {% endif %}
                         {% endfor %}
                         <div class="text-end blog-submit">
+                            <!-- Cancel Button -->
                             <a href="{% url 'blog' %}" class="btn button no-bg-btn">
                                 <span class="p-text">Cancel</span>
                             </a>
+                            <!-- Submit Button -->
                             <button id="submit-button" class="btn button dark-bg-btn">
                                 <span class="p-text text-bold">Add Blog</span>
                             </button>
@@ -52,7 +56,7 @@
 
 {% block postloadjs %}
     {{ block.super }}
-    
+    <!-- JS for changing the image -->
     <script src="{% static 'blog/js/image_change.js' %}"></script>
 
 {% endblock %}
