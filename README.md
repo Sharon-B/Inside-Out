@@ -153,7 +153,29 @@ Will allow for the prioritisation of information to be displayed in a clear and 
 
 ## Wireframes
 
+[Home Page](https://github.com/Sharon-B/Inside-Out/blob/main/readme-documentation/wireframes/home.pdf)
 
+[Products](https://github.com/Sharon-B/Inside-Out/blob/main/readme-documentation/wireframes/products.pdf)
+
+[Product Detail](https://github.com/Sharon-B/Inside-Out/blob/main/readme-documentation/wireframes/product-detail.pdf)
+
+[Add/Edit Product](https://github.com/Sharon-B/Inside-Out/blob/main/readme-documentation/wireframes/add-edit-product.pdf)
+
+[Blog](https://github.com/Sharon-B/Inside-Out/blob/main/readme-documentation/wireframes/blog.pdf)
+
+[Blog Detail](https://github.com/Sharon-B/Inside-Out/blob/main/readme-documentation/wireframes/blog-detail.pdf)
+
+[Add/Edit Blog](https://github.com/Sharon-B/Inside-Out/blob/main/readme-documentation/wireframes/add-edit-blog.pdf)
+
+[Profile](https://github.com/Sharon-B/Inside-Out/blob/main/readme-documentation/wireframes/profile.pdf)
+
+[Cart](https://github.com/Sharon-B/Inside-Out/blob/main/readme-documentation/wireframes/cart.pdf)
+
+[Checkout](https://github.com/Sharon-B/Inside-Out/blob/main/readme-documentation/wireframes/checkout.pdf)
+
+[Checkout Success](https://github.com/Sharon-B/Inside-Out/blob/main/readme-documentation/wireframes/checkout-success.pdf)
+
+[Contact](https://github.com/Sharon-B/Inside-Out/blob/main/readme-documentation/wireframes/contact.pdf)
 
 ## Difference between final design and original wireframes
 
