@@ -766,8 +766,55 @@ And the second item is the ‘ARN/*’
 
 ## Media
 
+### Images:
 
+[Hero image](https://unsplash.com/photos/Tk1pmgowG0w) - Photo by [Collov Home Design](https://unsplash.com/@collovhome) on [Unsplash](https://unsplash.com/)
+
+[Blog image 1](https://unsplash.com/photos/qMfjjGHEtSs) - Photo by [Collov Home Design](https://unsplash.com/@collovhome) on [Unsplash](https://unsplash.com/)
+
+[Table and 6 Rattan Chairs](https://www.pexels.com/photo/armchair-chairs-concrete-floor-contemporary-238389/) - Photo by [Marianne](https://www.pexels.com/@marianne-67058) from [Pexels](https://www.pexels.com/)
+
+[Rattan Two Seater Sofa](https://www.pexels.com/photo/cozy-rattan-sofa-with-cushions-in-tropical-garden-6430742/) - Photo by [Skylar-Kang](https://www.pexels.com/@skylar-kang) from [Pexels](https://www.pexels.com/)
   
+[Kent Cast Iron Bistro Set](https://www.pexels.com/photo/black-steel-table-with-chairs-139109/) - Photo by [Mike Birdy](https://www.pexels.com/@mikebirdy) from [Pexels](https://www.pexels.com/)
+
+[Arctic Dining Set](https://unsplash.com/photos/Cko-B-3jPjM) - Photo by [Randy Fath](https://unsplash.com/@randyfath) on [Unsplash](https://unsplash.com/)
+
+[Oslo Dining Set](https://unsplash.com/photos/SiOhyoER3kE) - Photo by [Natural Goods Berlin](https://unsplash.com/@naturalgoodsberlin) on [Unsplash](https://unsplash.com/)
+
+[Berlin Dining Set](https://unsplash.com/photos/Ja9KHBwMWWg) - Photo by [Tile Merchant Dublin](https://unsplash.com/photos/Ja9KHBwMWWg) on [Unsplash](https://unsplash.com/)
+
+[Stockholm Lounge Set](https://unsplash.com/photos/CrMr84Mb9Y4)  - Photo by [ÇAĞIN KARGI](https://unsplash.com/@caginkargi) on [Unsplash](https://unsplash.com/)
+
+[String Two Seater Sofa](https://unsplash.com/photos/AHcqvyjX0KE) - Photo by [Sven Brandsma](https://unsplash.com/@seffen99) on [Unsplash](https://unsplash.com/)
+  
+[Black Hanging Chair](https://unsplash.com/photos/8gyq-BqM7Go) - Photo by [Amjad rana](https://unsplash.com/@amjadrana) on [Unsplash](https://unsplash.com/)
+
+[Newport Black Dining Set](https://unsplash.com/photos/Pav8_i4Rylc) - Photo by [Randy Fath](https://unsplash.com/@randyfath) on [Unsplash](https://unsplash.com/)
+
+[Denver Lounge Set](https://pixabay.com/photos/teak-teak-patio-furniture-172642/) - Photo by [Rhyslud](https://pixabay.com/users/rhyslud-48212/) from [Pixabay](https://pixabay.com/)
+
+[Amazon Curved Bench](https://www.freeimages.com/photo/park-bench-1214215) - Photo by [Sara Lambie](https://www.freeimages.com/photographer/SaraL18-54624) from [Freeimages](https://www.freeimages.com/)
+
+[Anaheim Round Dining Set](https://www.freeimages.com/photo/chairs-1223288) - Photo by [Marcelo Gerpe](https://www.freeimages.com/photographer/gmarcelo-47735) from [Freeimages](https://www.freeimages.com/)
+
+[Swing Sofa](https://www.pexels.com/photo/brown-wooden-framed-with-white-mattress-hanging-bed-surrounded-by-green-grass-879010/) - Photo by [Maria Salazar](https://www.pexels.com/@maria-salazar-303506) from [Pexels](https://www.pexels.com/)
+
+[Folding Bistro Set](https://www.pexels.com/photo/brown-and-orange-3-piece-patio-set-outside-a-coffee-shop-2307221/) - Photo by [Ekrulila](https://www.pexels.com/@ekrulila) from [Pexels](https://www.pexels.com/)
+
+[Oriental Lounge Set](https://www.pexels.com/photo/terrace-of-villa-with-chairs-around-table-4946903/) - Photo by [Maria Orlova](https://www.pexels.com/@orlovamaria) from [Pexels](https://www.pexels.com/)
+
+[Newport White Dining Set](https://unsplash.com/photos/OwWsKiVGtQY) - Photo by [Randy Fath](https://unsplash.com/@randyfath) on [Unsplash](https://unsplash.com/)
+
+[Rio Armchair](https://www.freepik.com/free-photo/blank-frame-wall-with-concrete-patio-outdoor-living-area-3d-rendering_13237515.htm#page=1&query=Garden%20furniture&position=9) - Photo by [Vanitjan1](https://www.freepik.com/vanitjan1) on [Freepik](https://www.freepik.com/)
+
+[Manhattan Low Chair](https://www.freepik.com/free-photo/chair-outside_1610855.htm#page=1&query=outdoor%20furniture&position=12) - Photo by [Kireyonok-yuliya](https://www.freepik.com/kireyonok-yuliya) on [Freepik](https://www.freepik.com/)
+
+[York Cast Iron Bench](https://www.freeimages.com/photo/banco-1418026) - Photo by [Antonio Jiménez Alonso](https://www.freeimages.com/photographer/Capgros-58778) from [Freeimages](https://www.freeimages.com/)
+
+[Ibiza String Chair](https://unsplash.com/photos/ZNzwkm9z9Yc) - Photo by [Ron McClenny](https://unsplash.com/@ronmcclenny) on [Unsplash](https://unsplash.com/)
+
+[Ornate Wicker Chair](https://unsplash.com/photos/1jOHz3g25H8) - Photo by [Nicholas Ng](https://unsplash.com/@nicholasng210) on [Unsplash](https://unsplash.com/)
 
 ## Acknowledgements
 
