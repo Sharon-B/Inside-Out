@@ -179,9 +179,11 @@ Will allow for the prioritisation of information to be displayed in a clear and 
 
 ## Difference between final design and original wireframes
 
+### Home Page
 
+Added a shop all new arrivals call to action button at the end of the new arrivals section.
 
-
+Added a check out all blog posts call to action button at the end of the latest blog post section.
 
 # Surface
 
