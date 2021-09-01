@@ -1,10 +1,12 @@
 {% extends "base.html" %}
 {% load static %}
+{% load humanize %}
+
 
 {% block extra_title %}- Profile{% endblock %}
 
 {% block extra_css %}
-<link rel="stylesheet" href="{% static 'user_profiles/css/profile.css' %}">
+    <link rel="stylesheet" href="{% static 'user_profiles/css/profile.css' %}">
 {% endblock %}
 
 {% block page_header %}
@@ -18,6 +20,7 @@
 
 {% block content %}
     <div class="container">
+        <!-- Page Heading -->
         <div class="row">
             <div class="col page-heading">
                 <h1 class="heading">My Profile</h1>
@@ -50,6 +53,7 @@
                     </div>
                 </form>
             </div>
+            <!-- Order History -->
             <div class="col-12 col-md-6">
                 <p class="large-text">Your Order History</p>
                 <div class="order-history table-responsive-lg">
@@ -78,7 +82,7 @@
                                             {% endfor %}
                                         </ul>
                                     </td>
-                                    <td>€{{ order.grand_total }}</td>
+                                    <td>€{{ order.grand_total | intcomma }}</td>
                                 </tr>
                             {% endfor %}
                         </tbody>
@@ -92,5 +96,6 @@
 
 {% block postloadjs %}
     {{ block.super }}
+    <!-- JS to set country field color -->
     <script src="{% static 'user_profiles/js/countryfield.js' %}"></script>
 {% endblock %}
