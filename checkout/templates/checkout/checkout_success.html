@@ -84,7 +84,7 @@
                                 <p class="p-text">Order Total:</p>
                             </div>
                             <div class="col-12 col-md-6">
-                                <p class="p-text">{{ order.order_total | intcomma }}</p>
+                                <p class="p-text">€{{ order.order_total | intcomma }}</p>
                             </div>
                         </div>
                         <div class="row">
@@ -92,7 +92,7 @@
                                 <p class="p-text">Delivery:</p>
                             </div>
                             <div class="col-12 col-md-6">
-                                <p class="p-text">{{ order.delivery_cost | intcomma }}</p>
+                                <p class="p-text">€{{ order.delivery_cost | intcomma }}</p>
                             </div>
                         </div>
                         <div class="row">
@@ -100,7 +100,7 @@
                                 <p class="p-text text-bold">Grand Total:</p>
                             </div>
                             <div class="col-12 col-md-6">
-                                <p class="p-text text-bold">{{ order.grand_total | intcomma }}</p>
+                                <p class="p-text text-bold">€{{ order.grand_total | intcomma }}</p>
                             </div>
                         </div>
                     </div>
