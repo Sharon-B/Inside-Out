@@ -436,13 +436,14 @@ Deleting a product from the database also removes it from previous orders. This 
 
 # Defensive Design
 
-
+* 404.html and 500.html error pages included.
+* Only logged in users can access the profile page. If `/profile/` is typed onto the end of the url it redirects to the login page. If users are logged in it redirects to their profile page.
+* Only admin superusers have acces to the add product and add blog pages. If `/products/add/` is typed onto the end of the url, non logged in users are redirected to the login page. Logged in users are redirected to the home page with an error message. This is the same for the edit and delete products and blog pages.
+* Only the user who made the purchase can access the order history. If the order history url is typed onto the end of the url and it is not their order they are redirected to their profile page with an error message.
 
 # Testing
 
 Testing documentation can be found [here](https://github.com/Sharon-B/Inside-Out/blob/main/TESTING.md)
-
-
 
 # Deployment
 
