@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 {% load cart_tools %}
+{% load humanize %}
 
 {% block extra_title %}- Cart{% endblock %}
 
@@ -34,13 +35,13 @@
                                     {% include "cart/includes/product-image.html" %}
                                 </div>
                                 <div class="col-12 col-sm-6 mb-3">
-                                    <p class="p-text">Price: €{{ item.product.price }}</p>
+                                    <p class="p-text">Price: €{{ item.product.price | intcomma }}</p>
                                     <div class="w-75">
                                         {% include "cart/includes/quantity-form.html" %}
                                     </div>
                                 </div>
                                 <div class="col-12 col-sm-6 mb-3 text-end">
-                                    <p class="p-text text-bold">Subtotal: €{{ item.product.price | calc_subtotal:item.quantity }}</p>
+                                    <p class="p-text text-bold">Subtotal: €{{ item.product.price | calc_subtotal:item.quantity | intcomma }}</p>
                                 </div>
                             </div>
                         {% endfor %}
@@ -83,14 +84,14 @@
                                         </td>
                                         <!-- Product Price -->
                                         <td>
-                                            <p class="p-text">€{{ item.product.price }}</p>
+                                            <p class="p-text">€{{ item.product.price | intcomma }}</p>
                                         </td>
                                         <!-- Product Quantity -->
                                         <td>
                                             {% include "cart/includes/quantity-form.html" %}
                                         </td>
                                         <td>
-                                            <p class="p-text">€{{ item.product.price | calc_subtotal:item.quantity }}</p>
+                                            <p class="p-text">€{{ item.product.price | calc_subtotal:item.quantity | intcomma }}</p>
                                         </td>
                                     </tr>
                                 {% endfor %}

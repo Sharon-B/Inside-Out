@@ -1,3 +1,4 @@
+{% load humanize %}
 <!-- Bootstrap Toast -->
 <div class="toast bg-toast-color custom-toast" role="alert" data-bs-autohide="true" data-delay="500" aria-live="assertive" aria-atomic="true">
     <div class="toast-capper success-bg"></div>
@@ -19,7 +20,7 @@
             <div class="row">
                 <div class="col">
                     <p class="text-bold large-text">Total{% if free_delivery_delta > 0 %}(Exc. Delivery){% endif %}:
-                        <span class="large-text float-end">€{{ total|floatformat:2 }}</span>
+                        <span class="large-text float-end">€{{ total|floatformat:2 | intcomma }}</span>
                     </p>
                     {% if free_delivery_delta > 0 %}
                         <p class="p-text">Spend €{{ free_delivery_delta }} more for <strong>FREE</strong> delivery.
@@ -41,7 +42,7 @@
                         <p class="p-text text-bold">{{ item.product.name }}</p>
                         <div class="toast-product-info">
                             <span class="p-text">Qty: {{ item.quantity }}</span>
-                            <span class="p-text text-end">€{{ item.product.price }}</span>
+                            <span class="p-text text-end">€{{ item.product.price | intcomma }}</span>
                         </div>
                     </div>
                 </div>

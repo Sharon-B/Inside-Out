@@ -1,4 +1,5 @@
 {% load static %}
+{% load humanize %}
 
 <!doctype html>
 <html lang="en">
@@ -109,7 +110,7 @@
                                     <div class="cart text-center"><i class="fas fa-shopping-cart"></i></div>
                                     <p class="grand-total">
                                         {% if grand_total %}
-                                            €{{ grand_total|floatformat:2 }}
+                                            €{{ grand_total|floatformat:2 | intcomma }}
                                         {% else %}
                                             €0.00
                                         {% endif %}

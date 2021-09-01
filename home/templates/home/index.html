@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load humanize %}
 
 {% block extra_title %}- Home{% endblock %}
 
@@ -45,7 +46,7 @@
                                 <p class="product-info large-text info-text">{{ new_arrival.name }}</p>
                                 <p class="new-badge ms-auto ">NEW</p>
                             </div>
-                            <p class="product-price">€{{ new_arrival.price }}</p>
+                            <p class="product-price">€{{ new_arrival.price | intcomma }}</p>
                             <!-- Product edit/delete links -->
                             {% if request.user.is_superuser %}
                                 <div class="edit-delete-links">

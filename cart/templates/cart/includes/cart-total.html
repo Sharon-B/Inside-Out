@@ -1,7 +1,8 @@
+{% load humanize %}
 <!-- Cart Total -->
-<p class="p-text text-bold">Cart Total: €{{ total|floatformat:2 }}</p>
-<p class="p-text">Delivery: €{{ delivery|floatformat:2 }}</p>
-<p class="p-text text-bold">Grand Total: €{{ grand_total|floatformat:2 }}</p>
+<p class="p-text text-bold">Cart Total: €{{ total|floatformat:2 | intcomma }}</p>
+<p class="p-text">Delivery: €{{ delivery|floatformat:2 | intcomma }}</p>
+<p class="p-text text-bold">Grand Total: €{{ grand_total|floatformat:2 | intcomma }}</p>
 {% if free_delivery_delta > 0 %}
     <p class="info-text">
         You could get free delivery by spending just <strong>€{{ free_delivery_delta }}</strong> more!

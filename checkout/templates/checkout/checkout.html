@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 {% load cart_tools %}
+{% load humanize %}
 
 {% block extra_title %}- Checkout{% endblock %}
 
@@ -54,7 +55,7 @@
                             <p class="p-text">Qty: {{ item.quantity }}</p>
                         </div>
                         <div class="col-3">
-                            <p class="p-text text-bold">€{{ item.product.price | calc_subtotal:item.quantity }}</p>
+                            <p class="p-text text-bold">€{{ item.product.price | calc_subtotal:item.quantity | intcomma }}</p>
                         </div>
                     </div>
                 {% endfor %}
@@ -66,9 +67,9 @@
                         <p class="p-text text-bold">Grand Total:</p>
                     </div>
                     <div class="col-3">
-                        <p class="p-text">€{{ total | floatformat:2 }}</p>
-                        <p class="p-text">€{{ delivery | floatformat:2 }}</p>
-                        <p class="p-text text-bold">€{{ grand_total | floatformat:2 }}</p>
+                        <p class="p-text">€{{ total | floatformat:2 | intcomma }}</p>
+                        <p class="p-text">€{{ delivery | floatformat:2 | intcomma }}</p>
+                        <p class="p-text text-bold">€{{ grand_total | floatformat:2 | intcomma }}</p>
                     </div>
                 </div>
             </div>
@@ -130,7 +131,7 @@
                             <span class="icons">
                                 <i class="fas fa-exclamation-circle"></i>
                             </span>
-                            <span class="text-dark text-bold">Your card will be charged €{{ grand_total|floatformat:2 }}</span>
+                            <span class="text-dark text-bold">Your card will be charged €{{ grand_total|floatformat:2|intcomma }}</span>
                         </p>
                     </div>
                 </form>

@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load humanize %}
 
 {% block extra_title %}- Products{% endblock %}
 
@@ -76,7 +77,7 @@
                                 <span class="ms-auto new-badge">NEW</span>
                             {% endif %}
                         </div>
-                        <p class="product-price">€{{ product.price }}</p>
+                        <p class="product-price">€{{ product.price | intcomma}}</p>
                         
                         <!-- Product edit/delete links -->
                         {% if request.user.is_superuser %}

@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load humanize %}
 
 {% block extra_title %}- {{ product.name }}{% endblock %}
 
@@ -64,7 +65,7 @@
             <div class="col-12 col-md-6 offset-md-3">
                 <!-- Product Price -->
                 <div class="product-new d-flex mt-4">
-                    <p class="product-price text-bold">€{{ product.price }}</p>
+                    <p class="product-price text-bold">€{{ product.price | intcomma }}</p>
                     {% if product.category.name == 'new_arrivals' %}
                         <span class="ms-auto new-badge">NEW</span>
                     {% endif %}

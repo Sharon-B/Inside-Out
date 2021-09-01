@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load humanize %}
 
 {% block extra_title %}- Checkout Success{% endblock %}
 
@@ -65,7 +66,7 @@
                             </div>
                             <div class="col-12 col-md-6">
                                 <span class="p-text">{{ item.quantity }} @</span>
-                                <span class="p-text">€{{ item.product.price }} each</span>
+                                <span class="p-text">€{{ item.product.price | intcomma }} each</span>
                             </div>
                         </div>
                         {% endfor %}
@@ -83,7 +84,7 @@
                                 <p class="p-text">Order Total:</p>
                             </div>
                             <div class="col-12 col-md-6">
-                                <p class="p-text">{{ order.order_total }}</p>
+                                <p class="p-text">{{ order.order_total | intcomma }}</p>
                             </div>
                         </div>
                         <div class="row">
@@ -91,7 +92,7 @@
                                 <p class="p-text">Delivery:</p>
                             </div>
                             <div class="col-12 col-md-6">
-                                <p class="p-text">{{ order.delivery_cost }}</p>
+                                <p class="p-text">{{ order.delivery_cost | intcomma }}</p>
                             </div>
                         </div>
                         <div class="row">
@@ -99,7 +100,7 @@
                                 <p class="p-text text-bold">Grand Total:</p>
                             </div>
                             <div class="col-12 col-md-6">
-                                <p class="p-text text-bold">{{ order.grand_total }}</p>
+                                <p class="p-text text-bold">{{ order.grand_total | intcomma }}</p>
                             </div>
                         </div>
                     </div>
