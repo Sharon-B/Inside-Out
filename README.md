@@ -321,6 +321,8 @@ The logo uses two colours blue #0E5CA5 and green #097485, both used due to their
 
 [crispy-bootstrap5](https://github.com/django-crispy-forms/crispy-bootstrap5) - Used to facilitate using crispy forms with bootstrap 5.
 
+[django-humanize](https://docs.djangoproject.com/en/3.2/ref/contrib/humanize/) - Used the intcomma filter to display numbers with a comma eg 1,000.
+
 [Google Fonts](https://fonts.google.com) - The 2 fonts used throughout the website are from Google fonts.
 
 [Fontawesome](https://fontawesome.com/) - Used for icons.
