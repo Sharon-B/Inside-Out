@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .models import UserProfile
@@ -42,10 +42,17 @@ def profile(request):
 def order_history(request, order_number):
     order = get_object_or_404(Order, order_number=order_number)
 
-    messages.info(request, (
-        f'This is a past order confirmation for {order_number}.'
-        'A confirmation email was sent on the order date.'
-    ))
+    if request.user != order.user_profile.user:
+        messages.error(request, (
+            'This order does not belong to you.'
+        ))
+        return redirect('profile')
+
+    else:
+        messages.info(request, (
+            f'This is a past order confirmation for {order_number}.'
+            'A confirmation email was sent on the order date.'
+        ))
 
     template = 'checkout/checkout_success.html'
     context = {
