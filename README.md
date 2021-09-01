@@ -361,7 +361,7 @@ The logo uses two colours blue #0E5CA5 and green #097485, both used due to their
 
 # Implementation 
 
-Once the initial concept for the project was decided upon I first developed the wireframes. From these wireframes I then developed the basic database structure required.
+Once the initial concept for the project was decided upon I first developed the wireframes. From these wireframes I then developed the basic database structure required. The initial database diagram can be seen [here](https://github.com/Sharon-B/Inside-Out/blob/main/readme-documentation/inside-out-db-diagram.png)
 
 I then set up the Django framework first by installing Django using:
 
