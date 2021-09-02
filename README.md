@@ -6,7 +6,12 @@
 
 # Project Summary
 
-Inside Out Garden Furniture is an e-commerce store where users can browse and purchase garden furniture items. Users can browse by category and search for specific items.
+Inside Out Garden Furniture is an e-commerce store where users can browse and purchase garden furniture items. Users can browse by category and search for specific items. A purchse can be made using a test card with the following details:
+
+* Card no: 4242 4242 4242 4242
+* Exp: Any future date
+* CVV: Any 3 digits
+* Zip: Any 5 digits
 
 # Contents
 
