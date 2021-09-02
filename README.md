@@ -316,7 +316,7 @@ The logo uses two colours blue #0E5CA5 and green #097485, both used due to their
 
 [AWS](https://aws.amazon.com/) - Used for hosting static and media files.
 
-[Bootstrap 5](https://getbootstrap.com) - Bootstrap grid system, utility classes, nav-bar, toasts, cards.
+[Bootstrap 5](https://getbootstrap.com) - Bootstrap grid system, utility classes, nav-bar, toasts, cards, badges and tables.
 
 [Django Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/) - Used for rendering forms.
 
@@ -753,15 +753,45 @@ And the second item is the ‘ARN/*’
 
 # Credits
 
-## Code
-
-
 ## Resources
 
+[Code Institute](https://codeinstitute.net/) course material and mini projects form the main resource for this project.
 
+[Bootstrap Documentation](https://getbootstrap.com/docs/5.1/getting-started/introduction/) - General resource, used for grid system, utility classes, nav-bar, toasts, cards, badges and tables.
+
+[W3Schools](https://www.w3schools.com/) - General resource.
+
+[MDN web docs](https://developer.mozilla.org/en-US/) - General resource.
+
+[CSS Tricks](https://css-tricks.com/) - General resource.
+
+[Django Docs](https://docs.djangoproject.com/en/3.2/) - General resource.
+
+[Django Crispy Forms Docs](https://django-crispy-forms.readthedocs.io/en/latest/index.html) - General resource.
+
+[Django Migrations](https://realpython.com/django-migrations-a-primer/) - Article to learn more about migrations.
+
+[The complete django-allauth guide](https://dev.to/gajesh/the-complete-django-allauth-guide-la3) - Article to learn more about Django allauth and its configuration settings.
+
+[Stripe Docs](https://stripe.com/docs) - General resource.
+
+[Django Humanize Docs](https://docs.djangoproject.com/en/3.2/ref/contrib/humanize/) - General resource for using Django humanize.
+
+[What is a webhook?](https://www.getvero.com/resources/webhooks/) - Article to learn more about webhooks and when to use them.
+
+[Creating a comments system tutorial](https://djangocentral.com/creating-comments-system-with-django/) - Used to learn about how to make a comments system.
+
+[Building a blog application with Django](https://djangocentral.com/building-a-blog-application-with-django/) - Article to how to make a blog app.
+
+[How to set up a contact form with Django tutorial](https://hellowebbooks.com/news/tutorial-setting-up-a-contact-form-with-django/) Used to learn about how to set uo a contact form in Django.
 
 ## Content
 
+Site text and product descriptions are written by myself, except for the blog posts:
+
+[Blog post 1](https://summerclassics.com/blog/a-simple-guide-to-outdoor-furniture-care/) - Adapted from this article in the Summer Classics blog.
+
+[Blog post 2](https://www.homebeautiful.com.au/5-tips-for-styling-a-small-outdoor-area) - Adapted from this article in Home Beautiful Austrailia.
 
 ## Media
 
