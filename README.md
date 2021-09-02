@@ -876,6 +876,14 @@ Site text and product descriptions are written by myself, except for the blog po
 
 [Santorini Bistro Set](https://unsplash.com/photos/9mPl0Zo7_gQ) - Photo by [Hutomo Abrianto](https://unsplash.com/@hutomoabrianto) on [Unsplash](https://unsplash.com/)
 
+[Helsinki Chair](https://unsplash.com/photos/b3xo3WvH_g8) - Photo by [Enrique Ortega Miranda](https://unsplash.com/@enriqueo) on [Unsplash](https://unsplash.com/)
+
+[Madrid Chair](https://unsplash.com/photos/TD2kwvI55vw) - Photo by [Kmws](https://unsplash.com/@kmws) on [Unsplash](https://unsplash.com/)
+
+[Dover Lounge Set](https://unsplash.com/photos/jDlTJSrjlgI) - Photo by [Alen Rojnic](https://unsplash.com/@alenrojnicphotography) on [Unsplash](https://unsplash.com/)
+
+[Trogir Corner Sofa](https://unsplash.com/photos/Pievx4bH1IE) - Photo by [Zane Persaud](https://unsplash.com/@zapsizzle) on [Unsplash](https://unsplash.com/)
+
 ## Acknowledgements
 
 My mentor @spence_mentor for great support and positivity throughout.
