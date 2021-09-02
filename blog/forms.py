@@ -4,6 +4,9 @@ from .models import BlogComment, BlogPost
 
 
 class BlogCommentForm(forms.ModelForm):
+    """
+    Creates a blog comment form
+    """
 
     class Meta:
         model = BlogComment

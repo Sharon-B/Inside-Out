@@ -4,6 +4,9 @@ from .models import Order
 
 # Order form class
 class OrderForm(forms.ModelForm):
+    """
+    Creates an order form
+    """
     class Meta:
         """
         Set model and fields to be used

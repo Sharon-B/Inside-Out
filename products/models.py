@@ -3,7 +3,9 @@ from django.db import models
 
 # Create your models here.
 class Category(models.Model):
-
+    """
+    Creates a category model with the names of the categories
+    """
     class Meta:
         verbose_name_plural = 'Categories'
 
@@ -18,6 +20,9 @@ class Category(models.Model):
 
 
 class Product(models.Model):
+    """
+    Creates a product model with info about the product
+    """
     category = models.ForeignKey(
                                  'Category',
                                  null=True, blank=True,

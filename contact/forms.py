@@ -3,7 +3,9 @@ from .models import Contact
 
 
 class ContactForm(forms.ModelForm):
-
+    """
+    Creates a contact form
+    """
     class Meta:
         model = Contact
 
