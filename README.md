@@ -21,6 +21,7 @@ To grow my skills as a developer and create a simple easy to use site. Develop t
 
 ### Target Audience
 
+*   People looking to purchase garden furniture
 *   People looking for inspiration for their gardens
 *   General public
 
