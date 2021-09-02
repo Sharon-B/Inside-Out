@@ -319,11 +319,14 @@ The logo uses two colours blue #0E5CA5 and green #097485, both used due to their
 
 ## Future Features
 
-*   Confirm delete
-*   Add reviews app to enable users to leave reviews for products.
+*   Add Confirm delete functionality
+*   Add reviews app to enable users to leave reviews for products
 *   Allow users to login via their social media accounts
 *   Save shopping cart items for later
 *   Discount code
+*   Have more than one image per product to give users a better view of the item
+*   Have it so products can belong to more than one category eg. new arrivals and chairs
+
 
 # Technologies Used
 
