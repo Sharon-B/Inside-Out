@@ -14,7 +14,7 @@
 
 {% block content %}
     <div class="container">
-
+        <!-- Page Heading -->
         <div class="row">
             <div class="col page-heading">
                 <h1 class="heading">Contact Us</h1>
@@ -24,10 +24,12 @@
         <div class="row">
             <div class="col-12 col-md-8 offset-md-2">
                 <div>
+                    <!-- Contact Form -->
                     <form action="{% url 'contact' %}" method="POST" class="form">
                         {% csrf_token %}
                         {{ contact_form|crispy }}
                         <div class="text-end">
+                            <!-- Submit button -->
                             <button id="submit-button" class="btn button dark-bg-btn">
                                 <span class="p-text text-bold">Send Message</span>
                             </button>

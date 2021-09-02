@@ -14,17 +14,18 @@
 
 {% block content %}
     <div class="container">
+        <!-- Page Heading -->
         <div class="row">
             <div class="col page-heading">
                 <h1 class="heading">Product Management</h1>
             </div>
         </div>
     
-
         <div class="row">
             <div class="col-12 col-md-8 offset-md-2">
                 <h3 class='sub-heading'>Edit A Product</h3>
                 <div>
+                    <!-- Edit Product form -->
                     <form action="{% url 'edit_product' product.id %}" method="POST" class="form" enctype="multipart/form-data">
                         {% csrf_token %}
                         {% for field in form %}
@@ -38,6 +39,7 @@
                             <a href="{% url 'products' %}" class="btn button no-bg-btn">
                                 <span class="p-text">Cancel</span>
                             </a>
+                            <!-- Submit button -->
                             <button id="submit-button" class="btn button dark-bg-btn">
                                 <span class="p-text text-bold">Update Product</span>
                             </button>
