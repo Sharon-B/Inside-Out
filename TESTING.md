@@ -2,6 +2,32 @@
 
 # Contents
 
+- [Code Validators](#code-validators)
+- [Lighthouse from Chrome Dev Tools Report](#lighthouse-from-chrome-dev-tools-report)
+- [Responsiveness Testing](#responsiveness-testing)
+- [Device Testing](#device-testing)
+- [Browser Testing](#browser-testing)
+- [Friends And Family User Testing](#friends-and-family-user-testing)
+- [Testing User Stories](#testing-user-stories)
+- [Manual Testing](#manual-testing)
+  * [base.html](#basehtml)
+  * [Home Page](#home-page)
+  * [Products Page](#products-page)
+  * [Full Product Detail Page](#full-product-detail-page)
+  * [Add Product Page](#add-product-page)
+  * [Edit Product Page](#edit-product-page)
+  * [Cart Page](#cart-page)
+  * [Checkout Page](#checkout-page)
+  * [Checkout Success Page:](#checkout-success-page-)
+  * [User Profile Page](#user-profile-page)
+  * [Blog Page](#blog-page)
+  * [Blog Detail Page](#blog-detail-page)
+  * [Add Blog Page](#add-blog-page)
+  * [Edit Blog Page](#edit-blog-page)
+  * [Contact Page](#contact-page)
+  * [404 Page](#404-page)
+  * [500 Page](#500-page)
+
 # Code Validators
 
 ## CSS code was passed through Auto Prefixer to add vendor prefixes

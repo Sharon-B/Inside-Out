@@ -10,6 +10,24 @@ Inside Out Garden Furniture is an e-commerce store where users can browse and pu
 
 # Contents
 
+- [User Experience](#user-experience)
+- [Strategy](#strategy)
+- [Scope](#scope)
+- [Structure](#structure)
+- [Skeleton](#skeleton)
+  * [Wireframes](#wireframes)
+- [Surface](#surface)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Implementation](#implementation)
+  * [Issues/Solutions](#issues-solutions)
+  * [Known Bugs](#known-bugs)
+- [Defensive Design](#defensive-design)
+- [Testing](#testing)
+- [Deployment](#deployment)
+  * [Heroku Deployment](#heroku-deployment)
+  * [Amazon Web Services (AWS)](#amazon-web-services--aws-)
+- [Credits](#credits)
 
 # User Experience 
 
