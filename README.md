@@ -170,6 +170,8 @@ Will allow for the prioritisation of information to be displayed in a clear and 
 
 # Skeleton
 
+Django allauth templates are used for the main sign up, log in and log out pages.
+
 ## Wireframes
 
 [Home Page](https://github.com/Sharon-B/Inside-Out/blob/main/readme-documentation/wireframes/home.pdf)
