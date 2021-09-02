@@ -771,6 +771,8 @@ And the second item is the ‘ARN/*’
 
 [Blog image 1](https://unsplash.com/photos/qMfjjGHEtSs) - Photo by [Collov Home Design](https://unsplash.com/@collovhome) on [Unsplash](https://unsplash.com/)
 
+[Blog image 2](https://unsplash.com/photos/JTUmzXLoqHQ) - Photo by [Datingscout](https://unsplash.com/@datingscout) on [Unsplash](https://unsplash.com/)
+
 [Table and 6 Rattan Chairs](https://www.pexels.com/photo/armchair-chairs-concrete-floor-contemporary-238389/) - Photo by [Marianne](https://www.pexels.com/@marianne-67058) from [Pexels](https://www.pexels.com/)
 
 [Rattan Two Seater Sofa](https://www.pexels.com/photo/cozy-rattan-sofa-with-cushions-in-tropical-garden-6430742/) - Photo by [Skylar-Kang](https://www.pexels.com/@skylar-kang) from [Pexels](https://www.pexels.com/)
