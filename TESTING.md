@@ -42,14 +42,14 @@ Stripe – undefined variable, this relates to using Stripe for payments.
 |                  | Performance | Accessibility | Best Practice | SEO | Performance | Accessibility | Best Practice | SEO |
 | Home Page        | 85          | 98            | 100           | 90  | 64          | 96            | 100           | 92  |
 | Products         | 95          | 98            | 100           | 100 | 72          | 96            | 100           | 100 |
-| Product detail   | 95          | 92            | 87            | 100 | 73          | 90            | 93            | 97  |
+| Product detail   | 92          | 92            | 100           | 100 | 70          | 90            | 100           | 100 |
 | Add Product      | 97          | 99            | 100           | 100 | 84          | 97            | 100           | 100 |
 | Edit Product     | 95          | 99            | 93            | 100 | 89          | 97            | 93            | 100 |
 | Contact          | 98          | 100           | 100           | 100 | 82          | 98            | 100           | 100 |
 | Profile          | 93          | 98            | 100           | 100 | 84          | 96            | 100           | 91  |
 | Cart             | 97          | 94            | 100           | 100 | 68          | 92            | 100           | 100 |
 | Blog             | 96          | 98            | 100           | 90  | 85          | 96            | 100           | 92  |
-| Blog detail      | 97          | 98            | 87            | 100 | 79          | 96            | 93            | 100 |
+| Blog detail      | 97          | 98            | 93            | 100 | 79          | 96            | 100           | 100 |
 | Add Blog         | 97          | 99            | 100           | 100 | 84          | 97            | 100           | 100 |
 | Edit Blog        | 97          | 99            | 93            | 100 | 91          | 97            | 93            | 100 |
 | Checkout         | 94          | 96            | 100           | 100 | 74          | 95            | 100           | 100 |
