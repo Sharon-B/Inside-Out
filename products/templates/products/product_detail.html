@@ -49,12 +49,12 @@
                 <!-- Product Image -->
                 <div class="product-image-container">
                     {% if product.image %}
-                        <a href="{{ product.image.url }}" target="_blank">
-                            <img src="{{ product.image.url }}" alt="{{ product.name }}" class="img-fluid" rel="noopener">
+                        <a href="{{ product.image.url }}" target="_blank" rel="noopener">
+                            <img src="{{ product.image.url }}" alt="{{ product.name }}" class="img-fluid">
                         </a>
                     {% else %}
-                        <a href="{{ MEDIA_URL }}noimage.png" target="_blank">
-                            <img src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}" class="img-fluid" rel="noopener">
+                        <a href="{{ MEDIA_URL }}noimage.png" target="_blank" rel="noopener">
+                            <img src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}" class="img-fluid">
                         </a>
                     {% endif %}
                 </div>
