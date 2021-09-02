@@ -806,9 +806,9 @@ And the second item is the ‘ARN/*’
 
 [Creating a comments system tutorial](https://djangocentral.com/creating-comments-system-with-django/) - Used to learn about how to make a comments system.
 
-[Building a blog application with Django](https://djangocentral.com/building-a-blog-application-with-django/) - Article to how to make a blog app.
+[Building a blog application with Django](https://djangocentral.com/building-a-blog-application-with-django/) - Article on how to make a blog app.
 
-[How to set up a contact form with Django tutorial](https://hellowebbooks.com/news/tutorial-setting-up-a-contact-form-with-django/) Used to learn about how to set uo a contact form in Django.
+[How to set up a contact form with Django tutorial](https://hellowebbooks.com/news/tutorial-setting-up-a-contact-form-with-django/) - Used to learn about how to set up a contact form in Django.
 
 ## Content
 
