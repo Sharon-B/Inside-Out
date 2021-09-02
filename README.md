@@ -431,6 +431,16 @@ which was very similar to the url path for delete_blog_post, so django wasn't ma
 
 the issue was resolved.
 
+During deployment I can across two issues due to Gitpod: 
+
+First when trying to run the migrations for the postgres database I had an error due to a gitpod issue when connecting to Heroku Postgres, to resolve this I had to run the following command in the CLI: `Unset PGHOSTADDR`, and then I was able to do the migrations.
+
+Secondly when trying to run the server from Gitpod I encountered an error as Gitpod set postgresql://gitpod@localhost and it is not a valid Postgres URL (no name), so it throws an error.and had to do the following each time I wanted to run the server:
+
+* In terminal I entered: `echo $DATABASE_URL`
+* The response in the terminal was: postgresql://gitpod@localhost
+* Then in the terminal I entered: `unset DATABASE_URL`
+
 ## Known Bugs
 
 On the shopping cart page the quantity select +/- buttons enable/disable appropriately only when the update link is clicked, not when the buttons themselves are clicked. This only happens on larger screen sizes and needs to be further investigated. Due to time restraints this issue is unresolved.
@@ -504,15 +514,11 @@ And setting up the new database settings:
 
 Comment out the original database setting for now so that we are connected to the postgres database.
 
-6.	Now we need to run migrations for the new postgres database. We can first showmigrations to see that the migrations still need to be applied using
+6.	Now run migrations for the new postgres database. First showmigrations to see that the migrations still need to be applied using
 
         python3 manage.py showmigrations
 
-When I did this I had an error due to a gitpod issue when connecting to Heroku Postgres, to resolve this I had to run the following command in the CLI:
-
-        Unset PGHOSTADDR
-
-Once all is ok we can show the migrations again and then apply the migrations using:
+Apply the migrations using:
 
         python3 manage.py migrate
 
@@ -532,13 +538,7 @@ Once all is ok we can show the migrations again and then apply the migrations us
 
         ./manage.py loaddata db.json
 
-9.	Then we can run the site using the postgres database however I encountered an error here and had to do the following:
-
-* In terminal I entered: `echo $DATABASE_URL`
-* The response in the terminal was: postgresql://gitpod@localhost
-* Then in the terminal I entered: `unset DATABASE_URL`
-
-This is another gitpod issue with the code institute template and was because Gitpod sets postgresql://gitpod@localhost and it is not a valid Postgres URL (no name), so it throws an error.
+9.	Then we can run the site using the postgres database.
 
 10.	Setup settings.py file to use either the sqlite database when running on gitpod or the postgres database when running on Heroku by using the following code:
 
@@ -573,7 +573,7 @@ To save it in the requirements.txt file.
 
         Web: gunicorn <app_name>.wsgi:application
 
-13.	 We will initially disable collectstatic in Heroku, this can be done in the cli:
+13.	 Initially disable collectstatic in Heroku, this can be done in the cli:
 
 * Heroku login -i
 * Enter Heroku login details
@@ -585,9 +585,7 @@ To save it in the requirements.txt file.
 
         ALLOWED_HOSTS = [‘<heroku_app_name>.herokuapp.com’, ‘localhost’]
 
-
 15.	Git add, git commit and git push files to GitHub so they are available to Heroku which will use them to build the app.
-
 
 16.	 Initialise the Heroku git remote in the CLI:
 
