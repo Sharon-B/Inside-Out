@@ -126,6 +126,7 @@ body {
 
 .dropdown-menu.mobile-account-dd-menu.dd-menu {
     position: absolute;
+    left: -5rem;
 }
 
 /*------ Navigation -------*/
