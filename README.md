@@ -6,7 +6,7 @@
 
 # Project Summary
 
-Inside Out Garden Furniture is an e-commerce store where users can browse and purchase garden furniture items from various categories. 
+Inside Out Garden Furniture is an e-commerce store where users can browse and purchase garden furniture items. Users can browse by category and search for specific items.
 
 # Contents
 
