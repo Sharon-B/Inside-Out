@@ -391,10 +391,7 @@ Each page was tested and passed under the criteria set out below.
 ### Back To Top Button:
 
 * Displays at the bottom right corner of the page.
-
 * Highlights on hover.
-
-
 * Clicking on it brings the user to the top of the page
 
 ## Full Product Detail Page
@@ -406,10 +403,7 @@ Each page was tested and passed under the criteria set out below.
 ### Quantity Select Box:
 
 *   Allows the user select the quantity of the product that they would like to purchase.
-
 *   The quantity can either be typed in or adjusted using the +/- buttons.
-
-
 *   The quantity is limited to a number between 1 and 99.
 
 ### Continue Shopping Button:
@@ -443,7 +437,8 @@ Each page was tested and passed under the criteria set out below.
 ### Add Product Button:
 
 * Highlights on hover.
-* Adds the product to the database
+* Submits the product to the database.
+* Form only submits if valid.
 * Displays a message letting the user know that the item was added to the database.
 
 ### Cancel Button:
@@ -481,6 +476,9 @@ Each page was tested and passed under the criteria set out below.
 * Displays an order summary, with the items to be purchased, their quantity and subtotal for each item.
 * Displays the order total, delivery and grand total.
 * Displays a form for the user to enter their details, delivery info and payment details.
+* Logged in users have the option to save their payment details to their profile, once this box is checked their payment details are saved to their profile and the form will be prepopulated the next time they make a purchase.
+* Users who are not logged in are advised to register and or login in order to save their details.
+* The amount to be charged to the card is displayed under the checkout button.
 
 ### Update Cart/ Checkout Buttons:
 
@@ -491,11 +489,7 @@ Each page was tested and passed under the criteria set out below.
 * If the form is not valid users are advised to check the form for errors.
 * Once the payment is processed successfully a checkout success page is displayed with an overview of the order.
 * Once the payment is confirmed a confirmation email is sent.
-* For registered, logged in users the order is saved to their order history which can be viewed from their profile page.
-* Logged in users have the option to save their payment details to their profile, once this box is checked their payment details are saved to their profile and the form will be prepopulated the next time they make a purchase.
-* Users who are not logged in are advised to register and or login in order to save their details.
-* The amount to be charged to the card is displayed under the checkout button.
-
+* For logged in users the order is saved to their order history which can be viewed from their profile page.
 
 ## Checkout Success Page:
 
@@ -550,6 +544,7 @@ Each page was tested and passed under the criteria set out below.
 
 * Comments can be read by all users.
 * Logged in users can leave a comment by filling in the comment form and clicking Add Comment
+* Comment form only submits if valid.
 * Users who are not logged in are advised to register or login to leave a comment.
 * A superuser can delete a comment via a delete link that displays for them.
 
@@ -574,7 +569,8 @@ Each page was tested and passed under the criteria set out below.
 
 ### Add Blog Button:
 
-* Adds the blog post to the database
+* Submits the blog post to the database.
+* Only submits if the form is valid.
 * Displays a message letting the user know that the blog post was added to the database.
 
 ### Cancel Button:
@@ -590,6 +586,7 @@ Each page was tested and passed under the criteria set out below.
 * Displays for all users.
 * Displays a contact form.
 * Users must fill out all fields in the form.
+* Form only submits if valid.
 
 ### Send Message Button:
 
