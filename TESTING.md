@@ -269,6 +269,8 @@ Each blog post also allows users to post comments about the content they are rea
 
 Each page was tested and passed under the criteria set out below.
 
+Sign up, log in and log out pages are all django-allauth templates with some minor styling modifications - all work as expected.
+
 ## base.html
 
 ### Header
@@ -500,11 +502,14 @@ Each page was tested and passed under the criteria set out below.
 ## Checkout Page
 
 * Displays an order summary, with the items to be purchased, their quantity and subtotal for each item.
-* Displays the order total, delivery and grand total.
+* Displays the correct order total, delivery and grand total.
 * Displays a form for the user to enter their details, delivery info and payment details.
 * Logged in users have the option to save their payment details to their profile, once this box is checked their payment details are saved to their profile and the form will be prepopulated the next time they make a purchase.
 * Users who are not logged in are advised to register and or login in order to save their details.
 * The amount to be charged to the card is displayed under the checkout button.
+* A Stripe payment intent is created when the user goes to the checkout page.
+
+![Payment Intent Created](https://github.com/Sharon-B/Inside-Out/blob/main/readme-documentation/payment-intent-created.png)
 
 ### Update Cart/ Checkout Buttons:
 
@@ -513,9 +518,11 @@ Each page was tested and passed under the criteria set out below.
 * Checkout button submits the checkout form.
 * Once the form is valid the order is processed.
 * If the form is not valid users are advised to check the form for errors.
-* Once the payment is processed successfully a checkout success page is displayed with an overview of the order.
+* Once the payment is processed successfully the order is created in the database and a checkout success page is displayed with an overview of the order.
 * Once the payment is confirmed a confirmation email is sent.
 * For logged in users the order is saved to their order history which can be viewed from their profile page.
+
+![Payment Succeeded](https://github.com/Sharon-B/Inside-Out/blob/main/readme-documentation/payment-succeeded.png)
 
 ## Checkout Success Page:
 
