@@ -813,9 +813,13 @@ And the second item is the ‘ARN/*’
 
 [York Cast Iron Bench](https://www.freeimages.com/photo/banco-1418026) - Photo by [Antonio Jiménez Alonso](https://www.freeimages.com/photographer/Capgros-58778) from [Freeimages](https://www.freeimages.com/)
 
-[Ibiza String Chair](https://unsplash.com/photos/ZNzwkm9z9Yc) - Photo by [Ron McClenny](https://unsplash.com/@ronmcclenny) on [Unsplash](https://unsplash.com/)
+[Maine Chairs](https://unsplash.com/photos/dILfod04Ges) - Photo by [Andrea Niosi](https://unsplash.com/@aeniosi) on [Unsplash](https://unsplash.com/)
 
-[Ornate Wicker Chair](https://unsplash.com/photos/1jOHz3g25H8) - Photo by [Nicholas Ng](https://unsplash.com/@nicholasng210) on [Unsplash](https://unsplash.com/)
+[Safari Wicker Chair](https://www.pexels.com/photo/lounge-chair-on-wooden-tropical-terrace-5028910/)  - Photo by [Evgenia Basyrova](https://www.pexels.com/@neverlandphotos) from [Pexels](https://www.pexels.com/)
+
+[Fort Worth Bench](https://pixabay.com/photos/fort-worth-outdoor-furniture-1237995/) - Photo by [averynichols](https://pixabay.com/users/averynichols-1937971/) from [Pixabay](https://pixabay.com/)
+
+[Santorini Bistro Set](https://unsplash.com/photos/9mPl0Zo7_gQ) - Photo by [Hutomo Abrianto](https://unsplash.com/@hutomoabrianto) on [Unsplash](https://unsplash.com/)
 
 ## Acknowledgements
 
